@@ -13,6 +13,7 @@ class App extends Component {
         <div className="App">
             <header>
               <nav>
+                <div className='logo'><NavLink to='/'>Logo</NavLink></div>
                 <ul>
                   <li><NavLink to='/'>Home</NavLink></li>
                   <li><NavLink to='/about'>About</NavLink></li>
@@ -29,9 +30,9 @@ class App extends Component {
               </Routes>
             </main>
 
-            <aside></aside>
+            <aside><p>content</p></aside>
 
-            <footer>Coded by Hana</footer>
+            <footer><p>Coded by Hana</p></footer>
         </div>
       </BrowserRouter>
     );

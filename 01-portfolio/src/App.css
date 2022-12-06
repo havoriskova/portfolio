@@ -3,17 +3,41 @@
   color: red;
   --primary-color: black;
   --secondary-color: gray;
-  --contrast-color: blue;
+  --contrast-color: orange;
 }
 
-.App .logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ------ width of content ----------*/
+header, main, aside, footer {
+  color: blue;
 }
 
+header > *, main > *, aside > *, footer > * {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*--------- background-colors -------*/
+
+header {
+  background-color: var(--primary-color);
+}
+
+main {
+  background-color: var(--secondary-color);
+}
+
+aside {
+  background-color: var(--primary-color);
+}
+
+footer {
+  background-color: var(--secondary-color);
+}
+
+
+/*------------------*/
 
 .App header {
-  background-color: var(--primary-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,10 +47,40 @@
   color: white;
 }
 
-a {
-color: white;
+.App header nav {
+  margin: 2rem;
+  position: fixed;
+  top: 0;
+  /* width: 80%; */
+  display: flex;
 }
 
-a.active {
+.App .logo {
+  /* height: 40vmin; */
+  /* pointer-events: none; */
+  flex: 1;
+  text-align: left;
+}
+
+.App .logo a {
   color: red;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  }
+  
+  a.active {
+    color: var(--contrast-color);
+  }
+
+.App header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.App header nav li {
+ background-color: blue;
 }
