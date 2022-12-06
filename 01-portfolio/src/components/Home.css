@@ -1,0 +1,16 @@
+
+.Home .extension-of-header {
+    min-height: 100vh;
+    background-color: var(--primary-color);
+}
+
+.Home .full-width {
+    width: 100vw;
+    margin-inline-start: 50%;
+    transform: translate(-50%);
+}
+
+/* .Home .full-width {
+    box-shadow: 0 0 0 100vmax black;
+    clip-path: inset(0 - 100vmax);
+} */

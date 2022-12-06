@@ -1,0 +1,6 @@
+.Loader.container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(47, 226, 47, 0.7);
+}

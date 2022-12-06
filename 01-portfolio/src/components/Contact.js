@@ -3,7 +3,7 @@ export default function Contact() {
 
     return (
         <div className="Contact container">
-            Contact !!!
+            Contact !!! // little game would be nicer
         </div>
     )
 }
