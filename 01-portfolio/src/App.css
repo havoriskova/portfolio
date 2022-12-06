@@ -1,16 +1,19 @@
 .App {
   text-align: center;
   color: red;
+  --primary-color: black;
+  --secondary-color: gray;
+  --contrast-color: blue;
 }
 
-.App-logo {
+.App .logo {
   height: 40vmin;
   pointer-events: none;
 }
 
 
-.App-header {
-  background-color: #282c34;
+.App header {
+  background-color: var(--primary-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,4 +21,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+a {
+color: white;
+}
+
+a.active {
+  color: red;
 }
