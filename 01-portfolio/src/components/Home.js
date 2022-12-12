@@ -1,7 +1,8 @@
 import'./Home.css';
+import RandomBackground from '../hoc/RandomBackground';
 
 
-export default function Home(props) {
+const Home = (props) => {
 
     console.log("no")
     console.log(props);
@@ -13,3 +14,5 @@ export default function Home(props) {
         </div>
     )
 }
+
+export default RandomBackground(Home);

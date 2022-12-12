@@ -1,7 +1,7 @@
 // import logo from './logo.svg';    <img src={logo} className="App-logo" alt="logo" />
 import './App.css';
 import {NavLink, Route, BrowserRouter, Routes} from 'react-router-dom';
-import About from './components/About.js';
+import Projects from './components/Projects.js';
 import Home from './components/Home.js';
 import Contact from './components/Contact.js';
 import { Component } from 'react';
@@ -20,9 +20,8 @@ class App extends Component {
             <nav>
               <div className='logo'><NavLink to='/'>Logo</NavLink></div>
               <ul>
-                <li><NavLink to='/'>Home</NavLink></li>
-                <li><NavLink to='/about'>About</NavLink></li>
-                <li><NavLink to='/contact'>Contacts</NavLink></li>
+                <li><NavLink to='/projects'>Projects</NavLink></li>
+                <li><NavLink to='/contact'>Contact</NavLink></li>
               </ul>
             </nav>
           </header>
@@ -30,7 +29,7 @@ class App extends Component {
           <main>
             <Routes>
               <Route exact path='/' element={<Home />} /> 
-              <Route path='/about' element={<About />} />
+              <Route path='/projects' element={<Projects />} />
               <Route path='/contact' element={<Contact />} />
             </Routes>
           </main>
@@ -46,9 +45,9 @@ class App extends Component {
   render() {
 
     if ( this.state.isLoading ) {
-      {setTimeout(()=> {this.setState(state => ({
+      setTimeout(()=> {this.setState(state => ({
         isLoading: false
-      }))}, 2000)}
+      }))}, 2000)
       return <Loader />
     } else {
     return (

@@ -6,6 +6,8 @@ import Weather from "./projects/Weather.js";
 const Projects = (props) => {
 
 
+    // scroll, paralax effect
+
     return(
         <div className="Projects container">
             <Weather />

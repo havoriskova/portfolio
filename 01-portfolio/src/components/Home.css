@@ -14,3 +14,19 @@
     box-shadow: 0 0 0 100vmax black;
     clip-path: inset(0 - 100vmax);
 } */
+
+/*-------- themes, that are randomly choosed through HOC RandomBackground.js ----------*/
+
+.warm-theme  .Home  .extension-of-header{
+background-color: red;
+}
+
+.pastel-warm-theme .Home  .extension-of-header  {
+    background-color: pink;
+}
+
+.pastel-cold-theme  .Home  .extension-of-header{
+    background-color: lightblue;
+}
+
+/*------------- */
