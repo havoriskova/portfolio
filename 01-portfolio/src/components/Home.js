@@ -1,5 +1,5 @@
 import'./Home.css';
-import RandomBackground from '../hoc/RandomBackground';
+//import RandomBackground from '../hoc/RandomBackground';
 
 
 const Home = (props) => {
@@ -15,4 +15,4 @@ const Home = (props) => {
     )
 }
 
-export default RandomBackground(Home);
+export default Home;

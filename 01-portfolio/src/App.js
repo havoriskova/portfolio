@@ -6,6 +6,7 @@ import Home from './components/Home.js';
 import Contact from './components/Contact.js';
 import { Component } from 'react';
 import Loader from './components/Loader';
+import RandomBackground from './hoc/RandomBackground';
 
 class App extends Component {
 
@@ -56,4 +57,4 @@ class App extends Component {
     
 }}
 
-export default App;
+export default RandomBackground(App);

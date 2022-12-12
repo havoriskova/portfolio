@@ -1,20 +1,45 @@
+/*-------- themes, that are randomly choosed through HOC RandomBackground.js ----------*/
+
+.warm-theme  {
+  --darkest-color: #B01E68;
+  --dark-color: #DC3535;
+  --light-color: #F49D1A;
+  --lightest-color: #FFE15D;
+}
+  
+.pastel-warm-theme {
+    --darkest-color: #874C62;
+    --dark-color: #C98474;
+    --light-color: #F2D388;
+    --lightest-color: #A7D2CB;
+}
+  
+.pastel-cold-theme {
+    --darkest-color: #0D4C92;
+    --dark-color: #59C1BD;
+    --light-color: #A0E4CB;
+    --lightest-color: #CFF5E7;
+}
+  
+  /*------------- */
+
+
 .App {
   text-align: center;
-  color: red;
-  --primary-color: black;
-  --secondary-color: gray;
-  --contrast-color: orange;
+  color: var(--lightest-color);
+  --contrast-color: var(--light-color);
 }
 
 /* ------ width of content ----------*/
 header, main, aside, footer {
-  color: blue;
+  color: var(--light-color);
 }
 
 header > *, main > *, aside > *, footer > * {
   width: 80%;
   margin: 0 auto;
 }
+
 
 /*--------- background-colors -------*/
 
@@ -63,7 +88,7 @@ footer {
 }
 
 .App .logo a {
-  color: red;
+  color: var(--light-color);
 }
 
 a {
