@@ -3,5 +3,84 @@
     height: 100vh;
     width: 100vw;
     background-color: var(--primary-color);
-    color: var(--dark-color);
+}
+
+
+.Loader .frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  aspect-ratio: 1/1;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 400px) {
+    .Loader .frame {
+        width: 80%;
+
+    }
+}
+
+
+.Loader  .center {
+    width: 70%;
+	height: 70%;
+	background: blue;
+    border-radius: 50%;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: solid 5px red;
+
+}
+
+.Loader  .moving-thingie {
+	height: 63%;
+	width: 63%;
+	position: absolute;
+	border-radius: 50%;
+	border: solid 1px rgba(1,1,1, 0); /*pak jen dám NEVIDITELNOST, aby mi to nerozhlázelo flow*/
+	z-index: 10;
+}
+
+.Loader  svg {
+	width: 100%;
+	height: 100%;
+}
+
+.Loader circle {
+    fill: none;
+	stroke: white; /**/
+	stroke-width: 90%; /**/
+	animation: strokeAnimation 4s forwards infinite;
+	stroke-dasharray: 760; /*délka mezery pro zakrytí celého kruhu!*/
+	transform: rotate(-90deg);
+	transform-origin: center center;
+}
+
+.Loader img {
+	position: absolute;
+    width: 200px;
+}
+
+.Loader  img:nth-of-type(2){
+	animation: changeZIndex 8s forwards infinite 2s;
+}
+
+@keyframes strokeAnimation {
+	0% {stroke-dashoffset: 760; transform: scaleY(1) rotate(-90deg);}
+	50% {stroke-dashoffset: 0; transform:scaleY(1) rotate(-90deg);}
+	50.0001%  {transform: rotate(-90deg) scaleY(-1);}
+	100% {stroke-dashoffset: 760; transform: rotate(-90deg) scaleY(-1);}
+}
+
+@keyframes changeZIndex {
+	0%, 49% {opacity: 1}
+	50%, 99% {opacity: 0}
+	100%{opacity: 1}
 }
