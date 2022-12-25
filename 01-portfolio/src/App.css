@@ -109,3 +109,9 @@ a {
 .App header nav li {
  background-color: blue;
 }
+
+
+.App footer a[href*="linkedin"] {
+ background-color: red;
+ color: inherit; /*prebere barvu od parent el*/
+}

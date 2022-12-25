@@ -37,7 +37,7 @@ class App extends Component {
   
           <aside><p>content</p></aside>
   
-          <footer><p>Coded by Hana</p></footer>
+          <footer><p>Coded by <a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US">Hana Voriskova</a></p></footer>
       </div>
     </BrowserRouter>);
   }
@@ -47,7 +47,7 @@ class App extends Component {
 
     if ( this.state.isLoading ) {
       setTimeout(()=> {this.setState(state => ({
-        isLoading: true
+        isLoading: false
       }))}, 4000)
       return <Loader />
     } else {
