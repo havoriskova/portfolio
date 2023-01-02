@@ -9,3 +9,6 @@ const Planner = (props) => {
 };
 
 export default Planner;
+
+
+// ze je to ve vanilla JS, a funguje to pro PC. V soucasne dobe mam rozpracovany i React Planner

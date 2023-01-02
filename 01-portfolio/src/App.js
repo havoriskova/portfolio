@@ -35,9 +35,12 @@ class App extends Component {
             </Routes>
           </main>
   
-          <aside><p>content</p></aside>
+          <aside><p>aside</p></aside>
   
-          <footer><p>Coded by <a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US">Hana Voriskova</a></p></footer>
+          <footer>
+            <p>Coded by <a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US">Hana Voriskova</a>
+            </p>
+          </footer>
       </div>
     </BrowserRouter>);
   }
