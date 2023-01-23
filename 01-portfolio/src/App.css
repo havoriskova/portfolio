@@ -1,3 +1,6 @@
+
+/*-----MOBILE FIRST */
+
 /*-------- themes, that are randomly choosed through HOC RandomBackground.js ----------*/
 
 .warm-theme  {
@@ -30,18 +33,21 @@
   --contrast-color: var(--light-color);
 }
 
+
+
 /* ------ width of content ----------*/
-header, main, aside, footer {
-  color: var(--light-color);
-}
 
 header > *, main > *, aside > *, footer > * {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
 
-/*--------- background-colors -------*/
+/*--------- colors & background-colors -------*/
+
+header, main, aside, footer {
+  color: var(--light-color);
+}
 
 header {
   background-color: var(--primary-color);
@@ -100,10 +106,16 @@ a {
     color: var(--contrast-color);
   }
 
-.App header nav ul {
+
+.App header .nav-ul {
   list-style: none;
-  display: flex;
+  display: none;
   gap: 1rem;
+  flex-direction: column;
+}
+
+.App header .nav-icon.active ~ .nav-ul {
+  display: flex;
 }
 
 .App header nav li {
@@ -114,4 +126,28 @@ a {
 .App footer a[href*="linkedin"] {
  background-color: red;
  color: inherit; /*prebere barvu od parent el*/
+}
+
+
+/* mobile first */
+
+@media (min-width: 800px) {
+  header > *, main > *, aside > *, footer > * {
+    width: 80%;
+    max-width: 1500px; /*might change in the future*/
+  }
+
+  .App header .nav-icon {
+    display: none;
+  }
+
+  .App header .nav-ul, .App header .icon-nav:not(.active) ~ .nav-ul {
+    flex-direction: row;
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+
+
 }

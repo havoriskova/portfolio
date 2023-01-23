@@ -15,12 +15,15 @@ class App extends Component {
     this.state = {
       isLoading: true
     };
+    this.toggle = (e) => {e.target.classList.toggle('active')};
     this.myPage = (<BrowserRouter>
       <div className="App">
           <header>
             <nav>
               <div className='logo'><NavLink to='/'>Logo</NavLink></div>
-              <ul>
+              <div className='nav-icon active' onClick={this.toggle}>X</div>
+              <ul className='nav-ul'>
+                <li><NavLink to='/home'>Home</NavLink></li>
                 <li><NavLink to='/projects'>Projects</NavLink></li>
                 <li><NavLink to='/contact'>Contact</NavLink></li>
               </ul>
@@ -29,6 +32,7 @@ class App extends Component {
           
           <main>
             <Routes>
+              <Route exact path='/home' element={<Home />} />
               <Route exact path='/' element={<Home />} /> 
               <Route path='/projects' element={<Projects />} />
               <Route path='/contact' element={<Contact />} />
