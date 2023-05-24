@@ -4,6 +4,7 @@ import {NavLink, Route, BrowserRouter, Routes} from 'react-router-dom';
 import Projects from './components/Projects.js';
 import Home from './components/Home.js';
 import Contact from './components/Contact.js';
+import Thanks from './components/Thanks.js';
 import { Component } from 'react';
 import Loader from './components/Loader';
 import RandomBackground from './hoc/RandomBackground';
