@@ -14,19 +14,29 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoading: true
+      isLoading: true,
+      isActive: false
     };
-    this.toggle = (e) => {e.target.classList.toggle('active')};
+    this.toggle = (e) => {
+      e.target.classList.toggle('active');
+      this.setState(prevState => {
+        return {
+        isActive: !prevState.isActive
+        };
+      });
+
+    };
+    this.removeActiveNav = (e) => {setTimeout(console.log('hi, remove active'), 1000)};
     this.myPage = (<BrowserRouter>
       <div className="App">
           <header>
-            <div className='nav-icon active' onClick={this.toggle}>X</div>
+            <div className='nav-icon' onClick={this.toggle}>X</div>
             <nav>
-              <div className='logo'><NavLink to='/'>Logo</NavLink></div>
+              <div className='logo'><NavLink to='/' onClick={this.state.isActive ? this.removeActiveNav : null}>Logo</NavLink></div>
               <ul className='nav-ul'>
-                <li><NavLink to='/home'>Home</NavLink></li>
-                <li><NavLink to='/projects'>Projects</NavLink></li>
-                <li><NavLink to='/contact'>Contact</NavLink></li>
+                <li><NavLink to='/home' onClick={this.state.isActive ? this.removeActiveNav : null}>Home</NavLink></li>
+                <li><NavLink to='/projects' onClick={this.state.isActive ? this.removeActiveNav : null}>Projects</NavLink></li>
+                <li><NavLink to='/contact' onClick={this.state.isActive ? this.removeActiveNav : null}>Contact</NavLink></li>
                 {/* <li className='logo-li'><NavLink to='/home'>logo</NavLink></li> */}
               </ul>
             </nav>
