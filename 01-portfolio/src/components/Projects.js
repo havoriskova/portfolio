@@ -18,7 +18,7 @@ const Projects = (props) => {
             <CSSChallenge />
             <Dictionary />
             <Icf />
-            <Resume />
+            <Resume /> 
 
 
         </div>
