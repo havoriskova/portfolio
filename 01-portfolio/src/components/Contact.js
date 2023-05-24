@@ -11,7 +11,7 @@ export default function Contact() {
                     <input type="email" name="email" required />
                     <textarea name="text" required></textarea>
                     <input type="hidden" name="_captcha" value="false" />
-                    {/* <input type="hidden" name="_next" value="https://localhost:3000/pages/thanks.html" /> */}
+                    <input type="hidden" name="_next" value="https://hanavoriskova.netlify.app/thanks" />
                     <button type="submit">Send</button>
                     
                 </form>
