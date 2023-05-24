@@ -44,7 +44,7 @@ class App extends Component {
           <aside><p>aside</p></aside>
   
           <footer>
-            <p>Coded by <a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US">Hana Voriskova</a>
+            <p>Coded by <a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US" rel="noreferrer" target='_blank'>Hana Voriskova</a>
             </p>
           </footer>
       </div>
@@ -54,15 +54,20 @@ class App extends Component {
 
   render() {
 
-    if ( this.state.isLoading ) {
+    // console.log(window);
+    //console.log(window.document.URL);
+    let isThanksPage = window.document.URL.includes('thanks');
+
+    if ( this.state.isLoading && !isThanksPage) {
       setTimeout(()=> {this.setState(state => ({
         isLoading: false
-      }))}, 4000)
+      }))}, 2000) // 4000
       return <Loader />
     } else {
-    return (
-      this.myPage
-    );};
+      return (
+        this.myPage
+      );
+    };
     
 }}
 
