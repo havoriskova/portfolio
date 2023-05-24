@@ -20,13 +20,14 @@ class App extends Component {
     this.myPage = (<BrowserRouter>
       <div className="App">
           <header>
+            <div className='nav-icon active' onClick={this.toggle}>X</div>
             <nav>
               <div className='logo'><NavLink to='/'>Logo</NavLink></div>
-              <div className='nav-icon active' onClick={this.toggle}>X</div>
               <ul className='nav-ul'>
                 <li><NavLink to='/home'>Home</NavLink></li>
                 <li><NavLink to='/projects'>Projects</NavLink></li>
                 <li><NavLink to='/contact'>Contact</NavLink></li>
+                {/* <li className='logo-li'><NavLink to='/home'>logo</NavLink></li> */}
               </ul>
             </nav>
           </header>

@@ -31,6 +31,7 @@
   text-align: center;
   color: var(--lightest-color);
   --contrast-color: var(--light-color);
+  position: relative;
 }
 
 
@@ -71,6 +72,7 @@ footer {
 .App header {
   /* min-height: 100vh; */
   height: 5rem;
+  position: static;
   /* display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,17 +82,32 @@ footer {
 }
 
 .App header nav {
-  /* position: fixed; */
-  padding-top: 2rem;
-  top: 1rem;
-  display: flex;
+  position: relative;
+  width: 90%;
+}
+
+.App header .nav-icon.active ~ nav {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  display: grid;
+  place-content: center;
+  background-color: var(--dark-color);
+  z-index: 2;
+
+  /* padding-top: 2rem; */
+  /* top: 1rem; */
+  /* display: flex; */
 }
 
 .App .logo {
   /* height: 40vmin; */
   /* pointer-events: none; */
+  padding: 1rem 0;
   flex: 1;
   text-align: left;
+  order: 3;
+  width: max-content;
 }
 
 .App .logo a {
@@ -114,7 +131,22 @@ a {
   flex-direction: column;
 }
 
-.App header .nav-icon.active ~ .nav-ul {
+
+.App header .nav-icon {
+  position: absolute;
+  width: fit-content;
+  right: 0;
+  z-index: 3;
+  padding: 1rem;
+}
+
+.App header .nav-icon.active {
+  position: absolute;
+  right: 0;
+  z-index: 3;
+}
+
+.App header .nav-icon.active ~ nav .nav-ul {
   display: flex;
 }
 
@@ -131,18 +163,32 @@ a {
 
 /* mobile first */
 
-@media (min-width: 800px) {
+@media (min-width: 400px) {
   header > *, main > *, aside > *, footer > * {
     width: 80%;
     max-width: 1500px; /*might change in the future
     */
   }
 
+  .App header nav, .App header .nav-icon.active ~ nav {
+    position: relative;
+    background-color: transparent;
+    width: 90%;
+    padding-top: 2rem; 
+    top: 1rem;
+    display: flex;
+  }
+
+  .App .logo {
+    order: 0;
+    padding: 0;
+  }
+
   .App header .nav-icon {
     display: none;
   }
 
-  .App header .nav-ul, .App header .icon-nav:not(.active) ~ .nav-ul {
+  .App header .nav-ul, .App header .icon-nav:not(.active) ~ nav .nav-ul {
     flex-direction: row;
     display: flex;
   }
