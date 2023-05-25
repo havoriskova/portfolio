@@ -34,7 +34,7 @@
 
 .Loader circle {
     fill: none;
-	stroke: white; /**/
+	stroke: var(--primary-color); /**/
 	stroke-width: 95%; /**/
 	animation: strokeAnimation 4s forwards infinite;
 	stroke-dasharray: 760; /*délka mezery pro zakrytí celého kruhu!*/
@@ -47,7 +47,7 @@
 		/* transform: scale(0.5, 0.5) translate(-20px, -20px); */
 		animation: strokeAnimationSmaller 4s forwards infinite;
 		stroke-width: 118%;
-		stroke: red;
+		stroke: var(--primary-color); /**/
 	}
 
 	@keyframes strokeAnimationSmaller {
@@ -63,10 +63,17 @@
 .Loader img {
 	position: absolute;
     width: 200px;
+	filter: invert(90%);
+}
+
+.Loader  img:nth-of-type(1){
+	opacity: 0;
+	animation: changeZIndex 8s forwards infinite 6s; /*dart vader, 2s obecne + 4s delay*/
 }
 
 .Loader  img:nth-of-type(2){
-	animation: changeZIndex 8s forwards infinite 2s;
+	opacity: 1;
+	animation: changeZIndex 8s forwards infinite 2s; /*stormtrooper, 2s delay jsou schvalne u obou*/
 }
 
 @keyframes strokeAnimation {

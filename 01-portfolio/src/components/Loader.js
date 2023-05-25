@@ -1,6 +1,6 @@
 import './Loader.css';
-import loaderImg1 from '../img/loaderImg1.jpg';
-import loaderImg2 from '../img/loaderImg2.jpeg';
+import loaderImg1 from '../img/loaderImg1.png';
+import loaderImg2 from '../img/loaderImg2.png';
 
 
 const Loader = (props) => {
