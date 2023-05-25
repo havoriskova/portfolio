@@ -3,7 +3,7 @@ const PlannerCaseStudy = (props) => {
 
     return(
         <div className="PlannerCaseStudy container">
-            <a><h2>Planner</h2></a> {/* img souhvezdi */}
+            <h2>Planner</h2> {/* img souhvezdi */}
             <h3>Vanilla JavaScript Webpage</h3> {/* mensi font, ale UPPERCASE */}
 
             <p>My goal was to create a generator of monthly planner in your desired style. 
@@ -17,4 +17,3 @@ const PlannerCaseStudy = (props) => {
 };
 
 export default PlannerCaseStudy;
-
