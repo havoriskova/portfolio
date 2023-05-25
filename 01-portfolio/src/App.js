@@ -15,28 +15,28 @@ class App extends Component {
     super(props);
     this.state = {
       isLoading: true,
-      isActive: false
+      // isActive: false
     };
     this.toggle = (e) => {
       e.target.classList.toggle('active');
-      this.setState(prevState => {
-        return {
-        isActive: !prevState.isActive
-        };
-      });
-
+      // this.setState(state => ({
+      //   isActive: true
+      // }));
+      //   console.log(this.isActive);
     };
-    this.removeActiveNav = (e) => {setTimeout(console.log('hi, remove active'), 1000)};
+    this.removeActiveNav = (e) => {setTimeout(() => {
+      // console.log('hi, remove active class from nav-icon');
+      document.getElementById('toggleNavButton').classList.remove('active')}, 0)};
     this.myPage = (<BrowserRouter>
       <div className="App">
           <header>
-            <div className='nav-icon' onClick={this.toggle}>X</div>
+            <div className='nav-icon' onClick={this.toggle} id="toggleNavButton">X</div>
             <nav>
-              <div className='logo'><NavLink to='/' onClick={this.state.isActive ? this.removeActiveNav : null}>Logo</NavLink></div>
+              <div className='logo'><NavLink to='/' onClick={this.removeActiveNav}>Logo</NavLink></div>
               <ul className='nav-ul'>
-                <li><NavLink to='/home' onClick={this.state.isActive ? this.removeActiveNav : null}>Home</NavLink></li>
-                <li><NavLink to='/projects' onClick={this.state.isActive ? this.removeActiveNav : null}>Projects</NavLink></li>
-                <li><NavLink to='/contact' onClick={this.state.isActive ? this.removeActiveNav : null}>Contact</NavLink></li>
+                <li><NavLink to='/home' onClick={this.removeActiveNav}>Home</NavLink></li>
+                <li><NavLink to='/projects' onClick={this.removeActiveNav}>Projects</NavLink></li>
+                <li><NavLink to='/contact' onClick={this.removeActiveNav}>Contact</NavLink></li>
                 {/* <li className='logo-li'><NavLink to='/home'>logo</NavLink></li> */}
               </ul>
             </nav>
