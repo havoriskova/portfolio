@@ -4,15 +4,16 @@
     display: flex;
     place-content: flex-end;
 
-
 }
 
 
 .robots_container img {
     max-width: 100%;
+    min-width: fit-content;
     position: relative;
    /* bottom: .2rem; */
    filter: invert(90%);
+
 }
 
 .robots_container ~ .hr {
