@@ -8,6 +8,7 @@ import Thanks from './components/Thanks.js';
 import { Component } from 'react';
 import Loader from './components/Loader';
 import RandomBackground from './hoc/RandomBackground';
+import Footer from './components/Footer';
 
 class App extends Component {
 
@@ -55,8 +56,7 @@ class App extends Component {
           <aside><p>aside</p></aside>
   
           <footer>
-            <p>Coded by <a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US" rel="noreferrer" target='_blank'>Hana Voriskova</a>
-            </p>
+            <Footer />
           </footer>
       </div>
     </BrowserRouter>);

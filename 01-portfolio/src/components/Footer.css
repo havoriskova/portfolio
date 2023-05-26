@@ -1,0 +1,23 @@
+.robots_container {
+    position: relative;
+    height: 15rem;
+    display: flex;
+    place-content: flex-end;
+
+
+}
+
+
+.robots_container img {
+    max-width: 100%;
+    position: relative;
+   /* bottom: .2rem; */
+   filter: invert(90%);
+}
+
+.robots_container ~ .hr {
+    position: relative;
+    top: -4.2rem;
+    border-top: solid rgb(229, 229, 229) .1rem;
+    
+}
