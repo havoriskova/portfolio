@@ -1,6 +1,6 @@
 .robots_container {
     position: relative;
-    height: 15rem;
+    height: 10rem;
     display: flex;
     place-content: flex-end;
 
@@ -18,7 +18,19 @@
 
 .robots_container ~ .hr {
     position: relative;
-    top: -4.2rem;
+    top: -2.8rem;
     border-top: solid rgb(229, 229, 229) .1rem;
     
+}
+
+
+
+@media (min-width:400px) {
+    .robots_container {
+            height: 15rem;
+        }
+
+    .robots_container ~ .hr {
+        top: -4.2rem;
+    }
 }
