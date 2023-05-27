@@ -114,6 +114,12 @@ footer {
   color: var(--light-color);
 }
 
+.App .logo img {
+  height: 1.5rem;
+  margin-top: .5rem;
+  filter: invert(90%);
+}
+
 a {
   color: white;
   text-decoration: none;
@@ -122,6 +128,7 @@ a {
   a.active {
     color: var(--contrast-color);
   }
+
 
 
 .App header .nav-ul {
@@ -138,12 +145,19 @@ a {
   right: 0;
   z-index: 3;
   padding: 1rem;
+  background-image: url(./img/hamburgr.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1.5rem;
+  margin: 1.5rem;
+  filter: invert(90%);
 }
 
 .App header .nav-icon.active {
   position: absolute;
   right: 0;
   z-index: 3;
+  background-image: url(./img/x.png);
 }
 
 .App header .nav-icon.active ~ nav .nav-ul {
@@ -182,6 +196,11 @@ a {
   .App .logo {
     order: 0;
     padding: 0;
+  }
+
+  .App .logo img {
+    height: 1.5rem;
+    margin-top: 0rem;
   }
 
   .App header .nav-icon {

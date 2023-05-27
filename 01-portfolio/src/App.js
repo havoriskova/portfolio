@@ -9,6 +9,7 @@ import { Component } from 'react';
 import Loader from './components/Loader';
 import RandomBackground from './hoc/RandomBackground';
 import Footer from './components/Footer';
+import logo from './img/voriskova.png';
 
 class App extends Component {
 
@@ -31,9 +32,11 @@ class App extends Component {
     this.myPage = (<BrowserRouter>
       <div className="App">
           <header>
-            <div className='nav-icon' onClick={this.toggle} id="toggleNavButton">X</div>
+            <div className='nav-icon' onClick={this.toggle} id="toggleNavButton"></div>
             <nav>
-              <div className='logo'><NavLink to='/' onClick={this.removeActiveNav}>Logo</NavLink></div>
+              <div className='logo'><NavLink to='/' onClick={this.removeActiveNav}>
+                <img alt='logo' src={logo}/>
+                </NavLink></div>
               <ul className='nav-ul'>
                 <li><NavLink to='/home' onClick={this.removeActiveNav}>Home</NavLink></li>
                 <li><NavLink to='/projects' onClick={this.removeActiveNav}>Projects</NavLink></li>
