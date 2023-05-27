@@ -72,7 +72,7 @@ class App extends Component {
     if ( this.state.isLoading && !isThanksPage) {
       setTimeout(()=> {this.setState(state => ({
         isLoading: false
-      }))}, 2000) // 4000
+      }))}, 4000) // 4000
       return <Loader />
     } else {
       return (
