@@ -9,7 +9,7 @@ const Footer = (props) => {
     return(
         <>
 
-            <div className="robots_container">
+            <div className="robots_footer_container">
                 {/* <img alt="robots" src={robot} srcset={`${robot} 590w, ${robots} 1087w`} sizes="(max-width: 400px) 300px, 700px"/> */}
                 {/* <img alt="robots" src={robot} srcset={`${robot}, ${robots} 2x`}/> */}
                 {/* <img alt="robots" src={robot} srcset={`${robot} 590w, ${robots} 1087w`} sizes="(max-width: 400px) 90vw, 50vw"/> */}

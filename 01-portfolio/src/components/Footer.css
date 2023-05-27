@@ -1,4 +1,4 @@
-.robots_container {
+.robots_footer_container {
     position: relative;
     height: 10rem;
     display: flex;
@@ -7,7 +7,7 @@
 }
 
 
-.robots_container img {
+.robots_footer_container img {
     max-width: 100%;
     min-width: fit-content;
     position: relative;
@@ -16,7 +16,7 @@
 
 }
 
-.robots_container ~ .hr {
+.robots_footer_container ~ .hr {
     position: relative;
     top: -2.8rem;
     border-top: solid rgb(229, 229, 229) .1rem;
@@ -26,11 +26,11 @@
 
 
 @media (min-width:420px) {
-    .robots_container {
-            height: 15rem;
+    .robots_footer_container {
+        height: 15rem;
         }
 
-    .robots_container ~ .hr {
+    .robots_footer_container ~ .hr {
         top: -4.2rem;
     }
 }
