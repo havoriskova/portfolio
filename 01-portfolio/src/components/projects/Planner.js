@@ -1,10 +1,14 @@
+import headerPlanner from '../../img/headers/PLANNER_GENERATOR.png'
+
 
 const Planner = (props) => {
 
     return(
         <div className="Planner container">
             <div className="col-1">
-                <h2>Planner</h2> {/* link => img souhvezdi */}
+                <h2 className='constellation_header'>
+                        <img alt='header for planner generator' src={headerPlanner}/>
+                </h2> {/* link => img souhvezdi */}
                 <h3>Vanilla JavaScript Webpage</h3> {/* mensi font, ale UPPERCASE */}
 
                 <p>My goal was to create a generator of monthly planner in your desired style. 

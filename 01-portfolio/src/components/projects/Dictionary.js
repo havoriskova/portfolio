@@ -1,3 +1,4 @@
+import headerDictionary from '../../img/headers/DICTIONARY.png';
 
 const Dictionary = (props) => {
 
@@ -6,7 +7,10 @@ const Dictionary = (props) => {
         <div className="Dictionary container">
         
             <div className="col-1">
-                    <h2>Dictionary</h2> {/* link => img souhvezdi */}
+                    <h2 className='constellation_header'>
+                        <img alt='header for dictionary' src={headerDictionary}/>
+                    </h2> {/* link => img souhvezdi */}
+                    
                     <h3>React Webpage</h3> {/* mensi font, ale UPPERCASE */}
 
                     <p>On this webpage I am using 2 API calls. It is fully responsive.</p>
