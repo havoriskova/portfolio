@@ -9,7 +9,7 @@ import { Component } from 'react';
 import Loader from './components/Loader';
 import RandomBackground from './hoc/RandomBackground';
 import Footer from './components/Footer';
-import logo from './img/voriskova.png';
+import logo from './img/voriskova_1_rem.png';
 
 class App extends Component {
 

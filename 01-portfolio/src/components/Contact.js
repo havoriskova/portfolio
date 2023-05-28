@@ -1,6 +1,7 @@
 
 // import Thanks from './Thanks.js';
 // import {Route, BrowserRouter, Routes} from 'react-router-dom';
+import contactHeader from '../img/headers/contact_4_rem.png';
 
 
 export default function Contact() {
@@ -8,7 +9,9 @@ export default function Contact() {
     return (
 
             <div className="Contact container">
-                Contact !!! // little game would be nicer
+                    <h1 className='constellation_header_4'>
+                        <img alt='header for contact' src={contactHeader}/>
+                    </h1>
 
                     <form action="https://formsubmit.co/89f7a2105b81292e989a4eee19407380" method="POST">
                         <input type="hidden" name="_subject" value="New message from portfolio page!" />
