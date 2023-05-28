@@ -1,11 +1,11 @@
-import headerWeather from '../../img/headers/WEATHER_APP.png'
+import headerWeather from '../../img/headers/WEATHER_APP_5_rem.png'
 
 const Weather = (props) => {
 
 
     return(
         <div className="Weather container">
-            <h2 className='constellation_header'>
+            <h2 className='constellation_header_5'>
                 <img alt='header for weather' src={headerWeather}/>
             </h2> {/* link => img souhvezdi */}
         </div>

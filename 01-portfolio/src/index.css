@@ -22,3 +22,11 @@ code {
 .constellation_header img {
   height: 3rem;
 }
+
+.constellation_header_5 img {
+  height: calc(1rem * 5);
+}
+
+.constellation_header_7 img {
+  height: calc(1rem * 7);
+}

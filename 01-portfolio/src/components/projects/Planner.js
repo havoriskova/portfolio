@@ -1,4 +1,4 @@
-import headerPlanner from '../../img/headers/PLANNER_GENERATOR.png'
+import headerPlanner from '../../img/headers/PLANNER_GENERATOR_7_rem.png'
 
 
 const Planner = (props) => {
@@ -6,7 +6,7 @@ const Planner = (props) => {
     return(
         <div className="Planner container">
             <div className="col-1">
-                <h2 className='constellation_header'>
+                <h2 className='constellation_header_7'>
                         <img alt='header for planner generator' src={headerPlanner}/>
                 </h2> {/* link => img souhvezdi */}
                 <h3>Vanilla JavaScript Webpage</h3> {/* mensi font, ale UPPERCASE */}
