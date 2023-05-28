@@ -1,11 +1,11 @@
-import cssHeader from '../../img/headers/CSS_CHALLENGES.png'
+import cssHeader from '../../img/headers/CSS_CHALLENGES_5_rem.png'
 
 const CSSChallenge = (props) => {
 
 
     return(
         <div className="CSSChallenge container">
-            <h2 className='constellation_header'>
+            <h2 className='constellation_header_5'>
                 <img alt='header for CSS challenge' src={cssHeader}/>
             </h2>
 

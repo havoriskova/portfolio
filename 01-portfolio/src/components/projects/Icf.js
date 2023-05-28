@@ -1,11 +1,11 @@
-import headerICF from '../../img/headers/ICF_WEBSITE.png'
+import headerICF from '../../img/headers/ICF_WEBSITE_5_rem.png'
 
 const Icf = (props) => {
 
 
     return(
         <div className="Icf container">
-            <h2 className='constellation_header'>
+            <h2 className='constellation_header_5'>
                 <img alt='header for ICF' src={headerICF}/>
             </h2> {/* link => img souhvezdi */}
         </div>

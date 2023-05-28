@@ -1,4 +1,4 @@
-import headerDictionary from '../../img/headers/DICTIONARY.png';
+import headerDictionary from '../../img/headers/DICTIONARY_5_rem.png';
 
 const Dictionary = (props) => {
 
@@ -7,7 +7,7 @@ const Dictionary = (props) => {
         <div className="Dictionary container">
         
             <div className="col-1">
-                    <h2 className='constellation_header'>
+                    <h2 className='constellation_header_5'>
                         <img alt='header for dictionary' src={headerDictionary}/>
                     </h2> {/* link => img souhvezdi */}
                     

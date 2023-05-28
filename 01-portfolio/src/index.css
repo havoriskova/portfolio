@@ -19,8 +19,8 @@ code {
     monospace;
 }
 
-.constellation_header img {
-  height: 3rem;
+[class*="constellation_header"] img {
+  filter: invert(90%);
 }
 
 .constellation_header_5 img {
