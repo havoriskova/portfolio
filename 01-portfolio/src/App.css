@@ -136,6 +136,7 @@ a {
   display: none;
   gap: 1rem;
   flex-direction: column;
+  text-transform: uppercase;
 }
 
 
@@ -164,9 +165,9 @@ a {
   display: flex;
 }
 
-.App header nav li {
+/* .App header nav li {
  background-color: blue;
-}
+} */
 
 
 .App footer a[href*="linkedin"] {

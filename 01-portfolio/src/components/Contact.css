@@ -1,0 +1,36 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    background-color: var(--primary-color);
+    padding: .7rem;
+    margin: .3rem 0;
+    border: none;
+    color: white;
+}
+
+form input:focus-visible, form textarea:focus-visible {
+    outline: none;
+    filter: invert(5%);
+}
+
+form input[type='search']:focus {
+    box-shadow: 0 0 0 4px rgba(31, 116, 152, 0.3);
+}
+
+form button {
+    border: none;
+    background-color: var(--darkest-color);
+    color: inherit;
+    padding: .7rem;
+    margin: .3rem 0;
+    cursor: pointer;
+}
+
+form button:hover {
+    filter: invert(5%);
+}
