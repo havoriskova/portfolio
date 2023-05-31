@@ -23,6 +23,21 @@
     
 }
 
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.socials .socials-img {
+    height: 2rem;
+    filter: invert(90%);
+}
+
+.socials .socials-img:hover {
+    filter: invert(70%);
+}
 
 
 @media (min-width:420px) {

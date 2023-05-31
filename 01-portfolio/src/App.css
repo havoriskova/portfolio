@@ -139,6 +139,11 @@ a {
   text-transform: uppercase;
 }
 
+.App header .nav-li {
+  height: 1rem;
+  filter: invert(90%);
+}
+
 
 .App header .nav-icon {
   position: absolute;
@@ -171,7 +176,7 @@ a {
 
 
 .App footer a[href*="linkedin"] {
- background-color: red;
+ /* background-color: red; */
  color: inherit; /*prebere barvu od parent el*/
 }
 

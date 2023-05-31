@@ -33,6 +33,10 @@ code {
   height: calc(.5rem * 5);
 }
 
+.constellation_header_6 img {
+  height: calc(.5rem * 6);
+}
+
 .constellation_header_7 img {
   height: calc(.5rem * 7);
 }
@@ -49,6 +53,10 @@ code {
 
   .constellation_header_5 img {
     height: calc(1rem * 5);
+  }
+
+  .constellation_header_6 img {
+    height: calc(1rem * 6);
   }
 
   .constellation_header_7 img {

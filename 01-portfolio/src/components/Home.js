@@ -1,6 +1,7 @@
 import'./Home.css';
 //import RandomBackground from '../hoc/RandomBackground';
 import heroRobots from '../img/robots_hero.png';
+import aboutHeader from '../img/headers/about_6_rem.png';
 
 
 const Home = (props) => {
@@ -16,6 +17,11 @@ const Home = (props) => {
                 </div>
             </div>
             <div>Home !!!!</div>
+            <div>
+                <h2 className='constellation_header_6'>
+                        <img alt='header for abouy' src={aboutHeader}/>
+                </h2>
+            </div>
         </div>
     )
 }

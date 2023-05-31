@@ -10,6 +10,9 @@ import Loader from './components/Loader';
 import RandomBackground from './hoc/RandomBackground';
 import Footer from './components/Footer';
 import logo from './img/voriskova_1_rem.png';
+import homeNav from './img/HOME_1_rem.png';
+import projectsNav from './img/projects_1_rem.png';
+import contactNav from './img/contact_1_rem.png'; 
 
 class App extends Component {
 
@@ -38,9 +41,9 @@ class App extends Component {
                 <img alt='logo' src={logo}/>
                 </NavLink></div>
               <ul className='nav-ul'>
-                <li><NavLink to='/home' onClick={this.removeActiveNav}>Home</NavLink></li>
-                <li><NavLink to='/projects' onClick={this.removeActiveNav}>Projects</NavLink></li>
-                <li><NavLink to='/contact' onClick={this.removeActiveNav}>Contact</NavLink></li>
+                <li><NavLink to='/home' onClick={this.removeActiveNav}><img className='nav-li' alt='home' src={homeNav}/></NavLink></li>
+                <li><NavLink to='/projects' onClick={this.removeActiveNav}><img className='nav-li' alt='projects' src={projectsNav}/></NavLink></li>
+                <li><NavLink to='/contact' onClick={this.removeActiveNav}><img className='nav-li' alt='contact' src={contactNav}/></NavLink></li>
                 {/* <li className='logo-li'><NavLink to='/home'>logo</NavLink></li> */}
               </ul>
             </nav>

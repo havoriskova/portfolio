@@ -1,6 +1,8 @@
 import "./Footer.css";
 import robots from '../img/robots_footer_pc.png';
 //import robot from '../img/robot_footer_phone.png'; //pod 400px width
+import logoLinkedin from '../img/linkedin-logo.png';
+import logoGithub from '../img/github-logo.png';
 
 
 const Footer = (props) => {
@@ -16,8 +18,12 @@ const Footer = (props) => {
                 <img alt="robots" src={robots} />
             </div>
             <div className="hr"></div>
-            <p>Coded by <a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US" rel="noreferrer" target='_blank'>Hana Voriskova</a>
-            </p>
+            <div>Coded by <a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US" rel="noreferrer" target='_blank'>Hana Voriskova</a>
+            </div>
+            <div className="socials">
+                <div><a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US" rel="noreferrer" target='_blank'><img className='socials-img' alt='logo of linkedin' src={logoLinkedin}/></a></div>
+                <div><a href="https://github.com/havoriskova" rel="noreferrer" target='_blank'><img className='socials-img' alt='logo of github' src={logoGithub}/></a></div>
+            </div>
         </>
     )
 };
