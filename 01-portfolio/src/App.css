@@ -144,6 +144,12 @@ a {
   filter: invert(90%);
 }
 
+.App header .nav-li:hover, .App header .logo img:hover {
+  filter: invert(70%);
+}
+
+    /* .active ---> var(--contrast-color), jenomze ta je pokazde jina.. */
+
 
 .App header .nav-icon {
   position: absolute;
