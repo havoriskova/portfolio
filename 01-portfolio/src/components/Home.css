@@ -1,6 +1,6 @@
 
 .Home .extension-of-header {
-    height: calc(100vh - 10rem);
+    height: calc(100vh - 8rem);
     background-color: var(--primary-color);
     position: relative;
     display: flex;
