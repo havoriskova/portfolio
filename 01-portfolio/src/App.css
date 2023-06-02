@@ -37,6 +37,8 @@
   color: var(--lightest-color);
   --contrast-color: var(--light-color);
   position: relative;
+  --color-text: #D7D7D7; /* == invert(90%) z cerne */
+  --color-text-hover: #B2B2B2; /* == invert(70%) z cerne*/
 }
 
 

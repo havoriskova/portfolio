@@ -1,6 +1,6 @@
 
 .Home .extension-of-header {
-    min-height: calc(100vh - 5rem);
+    height: calc(100vh - 10rem);
     background-color: var(--primary-color);
     position: relative;
     display: flex;
@@ -29,11 +29,19 @@
 
 
 
-@media (min-width:400px) {
+@media (min-width:500px) {
+
+    .Home .extension-of-header {
+            height: calc(100vh - 5rem);
+        }
+
+        
     .robots_hero_container img {
         max-width: 50%;
         padding-right: 2rem;
     }
+
+    
     
 }
 

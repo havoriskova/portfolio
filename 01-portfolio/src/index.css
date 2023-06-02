@@ -22,6 +22,7 @@ code {
 
 [class*="constellation_header"] img {
   filter: invert(90%);
+  margin: 1.5rem auto; /*se asi zmeni, a margin bude mit container projektu*/
 }
 
 
@@ -47,6 +48,13 @@ code {
 
 
 @media (min-width:500px) {
+
+[class*="constellation_header"] img {
+    margin: 2rem auto;
+    /*se asi zmeni, a margin bude mit container projektu*/
+  }
+
+
 .constellation_header_4 img {
     height: calc(1rem * 4);
   }
