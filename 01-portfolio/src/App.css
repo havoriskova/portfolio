@@ -44,11 +44,16 @@
 
 
 /* ------ width of content ----------*/
+/* testing 600px width of inner content and 1000px for projects and nav content*/
 
 header > *, main > *, aside > *, footer > * {
   width: 90%;
   margin: 0 auto;
+  max-width: 1400px;
+    /*might change in the future
+      */
 }
+
 
 
 /*--------- colors & background-colors -------*/
@@ -202,8 +207,6 @@ filter: var(--light-color-filter-from-black);
 @media (min-width: 500px) {
   header > *, main > *, aside > *, footer > * {
     width: 80%;
-    max-width: 1500px; /*might change in the future
-    */
   }
 
   .App header nav, .App header .nav-icon.active ~ nav {

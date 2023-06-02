@@ -16,10 +16,136 @@
 
 
 .robots_hero_container {
-    position: relative;
+    position: absolute;
     display: flex;
     place-content: flex-end;
+    width: 100%;
+    max-width: 1400px; /*might change*/
+    z-index: 3;
 }
+
+/* ------------------------shooting stars----------------------------*/
+
+.sky_hero_container {
+    /* background-color: red; */
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 95%;
+}
+
+.sky_hero_container_half_circle {
+    position: absolute;
+    border-top-left-radius: 50% 20%;
+    border-top-right-radius: 50% 20%;
+    width: 100%;
+    height: 100%;
+    /* background-image: linear-gradient(to top, #30cfd0 0%, rgb(51, 8, 103) 100%);*/
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(51 8 103 / 0.8);
+}
+
+.sky_hero_container_half_circle::before {
+    background-image: linear-gradient(to top,
+            var(--lightest-color) 0%,
+            var(--light-color) 30%,
+            var(--dark-color) 50%,
+            var(--darkest-color) 100%);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    top: 0px;
+    left: 0px;
+    animation: moving-gradient 10s ease infinite;
+}
+
+.sky_hero_container_star {
+    background-color: aliceblue;
+    position: absolute;
+    animation: stars 4s ease infinite both;
+}
+
+.sky_hero_container_shooting-star {
+    --shooting-color: rgb(237, 238, 227);
+    background-color: transparent;
+    width: 0.1px;
+    height: 0.1px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: transparent var(--shooting-color) transparent transparent;
+    transform: scaleX(25) translateX(-70%) translateY(var(--osa-y));
+    border-radius: 30%;
+    position: absolute;
+}
+
+.sky_hero_container_shooting-animation {
+    animation: shooting-star 2s ease-in both var(--animation-delay);
+}
+
+.sky_hero_container_shooting-star::after {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245 231 107 / 0.5);
+    position: absolute;
+    content: "";
+    box-shadow: 0 0 3px 2px rgba(245 231 107 / 0.5),
+        -3px 0 4px 3px rgba(200 100 200 / 0.5);
+}
+
+.sky_hero_container_shooting-con {
+    width: 350px;
+    height: 120px;
+    /* border: black solid 3px; */
+    position: absolute;
+    top: 100px;
+    transform: rotate(35deg);
+    overflow: visible;
+}
+
+@keyframes shooting-star {
+    0% {
+        transform: scaleX(25) translateX(-70%) translateY(var(--osa-y));
+    }
+
+    100% {
+        transform: scaleX(25) translateX(220%) translateY(var(--osa-y));
+    }
+}
+
+@keyframes stars {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moving-gradient {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: -20%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+
+/*------------------------------------*/
+
+
 
 .robots_hero_container img {
     max-width: 70%;
@@ -27,6 +153,11 @@
     padding-bottom: 2rem;
 }
 
+.LennonWallImg {
+    max-width: 100%;
+    width: 600px;
+    filter: brightness(0.9) contrast(1.1);
+}
 
 
 @media (min-width:500px) {
@@ -41,6 +172,9 @@
         padding-right: 2rem;
     }
 
+    .sky_hero_container_half_circle {
+        border-radius: 200% 200% 0 0;
+    }
     
     
 }
