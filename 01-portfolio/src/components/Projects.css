@@ -1,0 +1,65 @@
+
+
+
+.project.container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.projectsLink {
+    padding: .5rem 1rem;
+    background-color: var(--darkest-color);
+    display: inline-block;
+    margin: 1rem;
+    position: relative;
+}
+
+.projectsLink:nth-of-type(2n) {
+    padding-left: 3rem;
+}
+
+.projectsLink:hover {
+    filter: brightness(90%);
+}
+
+.projectsGithubLogo {
+    height: 1.5rem;
+    /* padding-right: 1rem; */
+    filter: invert(90%);
+    position: absolute;
+    top: .3rem;
+    left: .7rem;
+}
+
+.col-1 {
+
+}
+
+.col-2 {
+
+}
+
+
+@media (min-width: 1000px) {
+
+    .project.container {
+        flex-direction: row;
+    
+    }
+
+    .project.container:nth-of-type(2n) .col-1 {
+        order: 2;
+    }
+
+    .col-1 {
+            flex: 1 1 50%;
+    }
+    
+    .col-2 {
+        margin-top: 2rem; /*zavisle na '[class*="constellation_header"] img' */
+        flex: 1 1 50%;
+    }
+
+}

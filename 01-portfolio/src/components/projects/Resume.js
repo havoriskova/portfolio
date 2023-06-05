@@ -3,7 +3,7 @@ const Resume = (props) => {
 
 
     return(
-        <div className="Resume container">Resume</div>
+        <div className="project container">Resume</div>
     )
 };
 

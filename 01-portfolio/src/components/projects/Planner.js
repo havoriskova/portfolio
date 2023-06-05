@@ -1,10 +1,10 @@
 import headerPlanner from '../../img/headers/PLANNER_GENERATOR_7_rem.png'
-
+import githubLogo from '../../img/github-logo.png';
 
 const Planner = (props) => {
 
     return(
-        <div className="Planner container">
+        <div className="project container">
             <div className="col-1">
                 <h2 className='constellation_header_7'>
                         <img alt='header for planner generator' src={headerPlanner}/>
@@ -14,12 +14,12 @@ const Planner = (props) => {
                 <p>My goal was to create a generator of monthly planner in your desired style. 
                 You can choose between one month or year option.</p>
 
-                <button>Visit website</button>
-                <button>View code</button>
+                <a className='projectsLink' href='https://voriskova-planner.netlify.app/' target='_blank' rel='noreferrer'>Visit website</a>
+                <a className='projectsLink' href='https://github.com/havoriskova/monthly-planner' target='_blank' rel='noreferrer'><img className='projectsGithubLogo' src={githubLogo} alt='github logo'/>View code</a>
             </div>
             <div className="col-2">
                 {/*img printscreenu pro scroll */}
-                {/* img fotky upravene pres inkscape s vyrizlym monitorem jako 2., protoze musi mit vyssi z-index  */}
+               <p>budouci fotka</p> {/* img fotky upravene pres inkscape s vyrizlym monitorem jako 2., protoze musi mit vyssi z-index  */}
             </div>
         </div>
     )

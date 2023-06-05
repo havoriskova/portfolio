@@ -1,10 +1,11 @@
 import headerDictionary from '../../img/headers/DICTIONARY_5_rem.png';
+import githubLogo from '../../img/github-logo.png';
 
 const Dictionary = (props) => {
 
 
     return(
-        <div className="Dictionary container">
+        <div className="project container">
         
             <div className="col-1">
                     <h2 className='constellation_header_5'>
@@ -15,8 +16,8 @@ const Dictionary = (props) => {
 
                     <p>On this webpage I am using 2 API calls. It is fully responsive.</p>
 
-                    <button>Visit website</button>
-                    <button>View code</button>
+                    <a className='projectsLink' href='https://voriskova-planner.netlify.app/' target='_blank' rel='noreferrer'>Visit website</a>
+                    <a className='projectsLink' href='https://github.com/havoriskova/monthly-planner' target='_blank' rel='noreferrer'><img className='projectsGithubLogo' src={githubLogo} alt='github logo'/>View code</a>
             </div>
             <div className="col-2">
                     {/*img printscreenu PC pro scroll */}

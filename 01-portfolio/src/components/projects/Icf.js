@@ -4,7 +4,7 @@ const Icf = (props) => {
 
 
     return(
-        <div className="Icf container">
+        <div className="project container">
             <h2 className='constellation_header_5'>
                 <img alt='header for ICF' src={headerICF}/>
             </h2> {/* link => img souhvezdi */}

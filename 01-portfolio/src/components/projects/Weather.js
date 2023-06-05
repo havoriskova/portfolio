@@ -4,7 +4,7 @@ const Weather = (props) => {
 
 
     return(
-        <div className="Weather container">
+        <div className="project container">
             <h2 className='constellation_header_5'>
                 <img alt='header for weather' src={headerWeather}/>
             </h2> {/* link => img souhvezdi */}

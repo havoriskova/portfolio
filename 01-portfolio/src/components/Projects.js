@@ -5,6 +5,7 @@ import Weather from "./projects/Weather.js";
 import Icf from "./projects/Icf.js";
 // import Resume from "./projects/Resume.js";
 import headerProject from '../img/headers/projects_4_rem.png';
+import './Projects.css';
 
 
 const Projects = (props) => {

@@ -28,6 +28,7 @@ code {
   filter: invert(90%);
   margin: 1.5rem auto; /*se asi zmeni, a margin bude mit container projektu*/
   pointer-events: none;
+  /* -webkit-touch-callout: none */
 }
 
 
@@ -54,29 +55,29 @@ code {
 
 @media (min-width:500px) {
 
-[class*="constellation_header"] img {
-    margin: 2rem auto;
-    /*se asi zmeni, a margin bude mit container projektu*/
+  [class*="constellation_header"] img {
+      margin: 2rem auto;
+      /*se asi zmeni, a margin bude mit container projektu*/
+    }
+
+
+  .constellation_header_4 img {
+      height: calc(1rem * 4);
+    }
+
+    .constellation_header_5 img {
+      height: calc(1rem * 5);
+    }
+
+    .constellation_header_6 img {
+      height: calc(1rem * 6);
+    }
+
+    .constellation_header_7 img {
+      height: calc(1rem * 7);
+    }
+
+    .constellation_header_12 img {
+    height: calc(1rem * 12);
   }
-
-
-.constellation_header_4 img {
-    height: calc(1rem * 4);
-  }
-
-  .constellation_header_5 img {
-    height: calc(1rem * 5);
-  }
-
-  .constellation_header_6 img {
-    height: calc(1rem * 6);
-  }
-
-  .constellation_header_7 img {
-    height: calc(1rem * 7);
-  }
-
-  .constellation_header_12 img {
-  height: calc(1rem * 12);
-}
 }
