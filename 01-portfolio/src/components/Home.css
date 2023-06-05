@@ -151,6 +151,7 @@
     max-width: 70%;
     filter: invert(90%);
     padding-bottom: 2rem;
+    pointer-events: none;
 }
 
 .LennonWallImg {
