@@ -3,9 +3,9 @@ import'./Home.css';
 import heroRobots from '../img/robots_hero.png';
 import aboutHeader from '../img/headers/about_6_rem.png';
 import aboutImage from '../img/about.jpeg';
-import webHeader from '../img/headers/web_6_rem.png';
-import developmentHeader from '../img/headers/development_14_rem.png';
-import portfolioHeader from '../img/headers/portfolio_12_rem.png';
+// import webHeader from '../img/headers/web_6_rem.png';
+// import developmentHeader from '../img/headers/development_14_rem.png';
+// import portfolioHeader from '../img/headers/portfolio_12_rem.png';
 
 
 const Home = (props) => {
