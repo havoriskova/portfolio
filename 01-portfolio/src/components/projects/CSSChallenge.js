@@ -9,7 +9,7 @@ const CSSChallenge = (props) => {
                 <img alt='header for CSS challenge' src={cssHeader}/>
             </h2>
 
-
+            <div className="projects-hr"></div>
         </div>
     )
 };

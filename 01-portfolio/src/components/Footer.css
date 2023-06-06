@@ -20,7 +20,7 @@
 .robots_footer_container ~ .hr {
     position: relative;
     top: -2.8rem;
-    border-top: solid rgb(229, 229, 229) .1rem;
+    border-top: solid rgb(229, 229, 229) .1rem; /*must be same as .project.container bottom border*/
     
 }
 

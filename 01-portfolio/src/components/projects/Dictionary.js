@@ -24,7 +24,7 @@ const Dictionary = (props) => {
                     {/*img printscreenu PHONE pro scroll */}
                     {/* img fotky upravene pres inkscape s vyrizlym monitorem jako 2., protoze musi mit vyssi z-index  */}
             </div>
-
+            <div className="projects-hr"></div>
         </div>
     )
 };

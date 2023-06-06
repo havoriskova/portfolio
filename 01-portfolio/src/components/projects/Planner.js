@@ -21,6 +21,7 @@ const Planner = (props) => {
                 {/*img printscreenu pro scroll */}
                <p>budouci fotka</p> {/* img fotky upravene pres inkscape s vyrizlym monitorem jako 2., protoze musi mit vyssi z-index  */}
             </div>
+            <div className="projects-hr"></div>
         </div>
     )
 };

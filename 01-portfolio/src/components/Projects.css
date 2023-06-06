@@ -6,6 +6,20 @@
     justify-content: space-between;
     flex-direction: column;
     gap: 2rem;
+    padding-bottom: 3rem;
+    position: relative;
+}
+
+.projects-hr {
+    position: absolute;
+    bottom: 0;
+    border-bottom: solid rgb(229, 229, 229) .1rem;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
+
 }
 
 .projectsLink {

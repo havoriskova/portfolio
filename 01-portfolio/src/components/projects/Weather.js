@@ -8,6 +8,7 @@ const Weather = (props) => {
             <h2 className='constellation_header_5'>
                 <img alt='header for weather' src={headerWeather}/>
             </h2> {/* link => img souhvezdi */}
+            <div className="projects-hr"></div>
         </div>
     )
 };
