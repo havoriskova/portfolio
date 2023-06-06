@@ -11,12 +11,13 @@
 }
 
 .projects-hr {
-    position: absolute;
-    bottom: 0;
     border-bottom: solid rgb(229, 229, 229) .1rem;
     width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
+    /* position: absolute; */
+    /* bottom: 0; */
+    /* left: 50%;
+    transform: translateX(-50%); */
+    margin: 0 auto;
     border-image-slice: 1;
     border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
 
@@ -24,7 +25,7 @@
 
 .projectsLink {
     padding: .5rem 1rem;
-    background-color: var(--darkest-color);
+    background: linear-gradient(to left, var(--darkest-color), var(--light-color));
     display: inline-block;
     margin: 1rem;
     position: relative;
@@ -32,6 +33,10 @@
 
 .projectsLink:nth-of-type(2n) {
     padding-left: 3rem;
+    background: transparent;
+    border: solid rgb(229, 229, 229) .1rem;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
 }
 
 .projectsLink:hover {
@@ -65,6 +70,14 @@
 
     .project.container:nth-of-type(2n) .col-1 {
         order: 2;
+    }
+
+    
+    .projects-hr {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .col-1 {

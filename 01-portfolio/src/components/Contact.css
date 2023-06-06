@@ -30,7 +30,7 @@ form input[type='search']:focus {
 
 form button {
     border: none;
-    background-color: var(--darkest-color);
+    background: linear-gradient(to left, var(--darkest-color), var(--light-color));
     color: inherit;
     padding: .7rem;
     margin: .3rem 0;

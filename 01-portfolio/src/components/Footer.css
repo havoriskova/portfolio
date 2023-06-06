@@ -9,7 +9,7 @@
 
 .robots_footer_container img {
     max-width: 100%;
-    min-width: fit-content;
+    /* min-width: fit-content; v mozile to dela bordel */
     position: relative;
    /* bottom: .2rem; */
    filter: invert(90%);
