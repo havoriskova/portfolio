@@ -3,6 +3,9 @@ import'./Home.css';
 import heroRobots from '../img/robots_hero.png';
 import aboutHeader from '../img/headers/about_6_rem.png';
 import aboutImage from '../img/about.jpeg';
+import webHeader from '../img/headers/web_6_rem.png';
+import developmentHeader from '../img/headers/development_14_rem.png';
+import portfolioHeader from '../img/headers/portfolio_12_rem.png';
 
 
 const Home = (props) => {
@@ -99,8 +102,14 @@ const Home = (props) => {
                             <div className="sky_hero_container_stars">
                                 {/* {stars.map(star => {<div className='sky_hero_container_star' key={star.id}>{star}</div>})} */}
                             </div>
-                            <div className="sky_hero_container_shooting-con"></div>
+                            <div className="sky_hero_container_shooting-con">
+                            </div>
                         </div>
+                </div>
+                <div className='header-container'>
+                    <div className='development constellation_header_14'><img alt='development' src={developmentHeader}/></div>
+                    <div className='web constellation_header_6'><img alt='web' src={webHeader}/></div>
+                    <div className='portfolio constellation_header_12'><img alt='portfolio' src={portfolioHeader}/></div>
                 </div>
             </div>
             <div>Home !!!!</div>

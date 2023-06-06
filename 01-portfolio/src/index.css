@@ -52,6 +52,9 @@ code {
   height: calc(.6rem * 12);
 }
 
+.constellation_header_14 img {
+  height: calc(.6rem * 14);
+}
 
 @media (min-width:500px) {
 
@@ -80,4 +83,8 @@ code {
     .constellation_header_12 img {
     height: calc(1rem * 12);
   }
+
+    .constellation_header_14 img {
+      height: calc(1rem * 14);
+    }
 }

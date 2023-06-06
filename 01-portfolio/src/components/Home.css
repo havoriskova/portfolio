@@ -24,6 +24,17 @@
     z-index: 3;
 }
 
+.header-container {
+    position: absolute;
+    display: flex;
+    align-self: stretch;
+    background-color: rgba(0 0 0 / .4);
+}
+
+.header-container img {
+    max-width: 100%;
+}
+
 /* ------------------------shooting stars----------------------------*/
 
 .sky_hero_container {
@@ -149,7 +160,7 @@
 
 .robots_hero_container img {
     max-width: 70%;
-    filter: invert(90%);
+    /* filter: invert(90%); */
     padding-bottom: 2rem;
     pointer-events: none;
 }
