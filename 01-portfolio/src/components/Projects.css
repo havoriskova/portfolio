@@ -6,8 +6,14 @@
     justify-content: space-between;
     flex-direction: column;
     gap: 2rem;
-    padding-bottom: 3rem;
+    /* padding-bottom: 1rem; */
     position: relative;
+}
+
+.project h3 {
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 1rem 0;
 }
 
 .projects-hr {
@@ -30,7 +36,7 @@
     border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
     display: inline-block;
     padding: .5rem .6rem;
-    margin: 1rem 0;
+    margin: 2rem 0 1rem;
     position: relative;
 }
 
@@ -53,19 +59,22 @@
     left: .7rem;
 }
 
-/* .col-1 {
-
+.project_photo_phone_width {
+    margin: 3rem 0;
 }
 
-.col-2 {
 
-} */
+
+.col-2 {
+ display: none;
+}
 
 
 @media (min-width: 1000px) {
 
     .project.container {
         flex-direction: row;
+        padding-bottom: 3rem;
     
     }
 
@@ -82,10 +91,11 @@
     }
 
     .col-1 {
-            flex: 1 1 50%;
+        flex: 1 1 50%;
     }
     
     .col-2 {
+        display: block;
         margin-top: 2rem; /*zavisle na '[class*="constellation_header"] img' */
         flex: 1 1 50%;
     }
@@ -93,7 +103,11 @@
 
     .projectsLink {
         padding: .5rem 1rem;
-        margin: 1rem;
+        margin: 2.5rem 1rem 1rem;
+    }
+
+    .project_photo_phone_width {
+        display: none;
     }
 
 }

@@ -20,12 +20,11 @@ const Projects = (props) => {
             </h1>
 
 
-            
-            <Weather />
             <Planner />
-            <CSSChallenge />
-            <Dictionary />
             <Icf />
+            <Dictionary />
+            <Weather />
+            <CSSChallenge />
             {/* <Resume />  */}
 
 

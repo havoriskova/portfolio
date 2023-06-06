@@ -18,6 +18,7 @@ body {
   --primary-color: rgb(27, 27, 27);
   --secondary-color: rgb(43, 42, 42);
   font-size: 14px;
+  line-height: 1.3rem;
 }
 
 code {
@@ -61,6 +62,7 @@ code {
 
   body {
     font-size: 16px;
+    line-height: 1.4rem;
   }
 
   [class*="constellation_header"] img {
