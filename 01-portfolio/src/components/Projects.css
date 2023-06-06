@@ -40,7 +40,7 @@
 }
 
 .projectsLink:hover {
-    filter: brightness(90%);
+    filter: brightness(80%);
 }
 
 .projectsGithubLogo {
@@ -52,13 +52,13 @@
     left: .7rem;
 }
 
-.col-1 {
+/* .col-1 {
 
 }
 
 .col-2 {
 
-}
+} */
 
 
 @media (min-width: 1000px) {

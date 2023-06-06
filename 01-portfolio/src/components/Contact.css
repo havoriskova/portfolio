@@ -38,5 +38,5 @@ form button {
 }
 
 form button:hover {
-    filter: invert(5%);
+    filter: brightness(80%); /*stejne jako u projects*/
 }
