@@ -106,16 +106,16 @@ const Home = (props) => {
                             </div>
                         </div>
                 </div>
-                <div className='header-container'>
+                {/* <div className='header-container'>
                     <div className='development constellation_header_14'><img alt='development' src={developmentHeader}/></div>
                     <div className='web constellation_header_6'><img alt='web' src={webHeader}/></div>
                     <div className='portfolio constellation_header_12'><img alt='portfolio' src={portfolioHeader}/></div>
-                </div>
+                </div> */}
             </div>
             <div>Home !!!!</div>
             <div>
                 <h2 className='constellation_header_6'>
-                        <img alt='header for about' src={aboutHeader}/>
+                         <img alt='header for about' src={aboutHeader}/>
                 </h2>
                 <p></p>
                 <img className='LennonWallImg' alt='me with font jokes on Lennon wall' src={aboutImage}/>

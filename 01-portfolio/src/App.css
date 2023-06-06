@@ -47,7 +47,7 @@
 /* testing 600px width of inner content and 1000px for projects and nav content*/
 
 header > *, main > *, aside > *, footer > * {
-  width: 90%;
+  width: 90%; /*takhle to nemuzu nastavovat na vsechno*/
   margin: 0 auto;
   max-width: 1400px;
     /*might change in the future
