@@ -24,6 +24,10 @@
     
 }
 
+.footerCredits {
+    padding: 2rem 0 1rem;
+}
+
 .socials {
     display: flex;
     justify-content: center;
@@ -38,6 +42,10 @@
 
 .socials .socials-img:hover {
     filter: invert(70%);
+}
+
+.hr ~ div a:hover {
+    filter: brightness(80%);
 }
 
 

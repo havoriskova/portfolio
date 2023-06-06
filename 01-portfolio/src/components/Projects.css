@@ -24,19 +24,20 @@
 }
 
 .projectsLink {
-    padding: .5rem 1rem;
     background: linear-gradient(to left, var(--darkest-color), var(--light-color));
+    border: solid rgb(229, 229, 229) .1rem;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
     display: inline-block;
-    margin: 1rem;
+    padding: .5rem .6rem;
+    margin: 1rem 0;
     position: relative;
 }
 
 .projectsLink:nth-of-type(2n) {
     padding-left: 3rem;
+    margin-left: .5rem;
     background: transparent;
-    border: solid rgb(229, 229, 229) .1rem;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
 }
 
 .projectsLink:hover {
@@ -87,6 +88,12 @@
     .col-2 {
         margin-top: 2rem; /*zavisle na '[class*="constellation_header"] img' */
         flex: 1 1 50%;
+    }
+
+
+    .projectsLink {
+        padding: .5rem 1rem;
+        margin: 1rem;
     }
 
 }

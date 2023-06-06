@@ -195,6 +195,9 @@ filter: var(--light-color-filter-from-black);
  background-color: blue;
 } */
 
+.App footer {
+  padding-top: 5rem;
+}
 
 .App footer a[href*="linkedin"] {
  /* background-color: red; */
