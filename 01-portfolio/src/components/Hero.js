@@ -86,13 +86,11 @@ const Hero = () => {
     return(
         <div className='hero-section'>
             <div className='sky_hero_container'>
-                    <div className="sky_hero_container_half_circle">
-                        {/* <div className="sky_hero_container_stars">
-                            {stars.map(star => {<div className='sky_hero_container_star' key={star.id}>{star}</div>})}
+                        {/*
+                        {stars.map(star => {<div className='sky_hero_star' key={star.id}>{star}</div>})}
+                         */}
+                        {/* <div className="sky_hero_shooting-con"> {}
                         </div> */}
-                        {/* <div className="sky_hero_container_shooting-con">
-                        </div> */}
-                    </div>
             </div>
             {/* <div className='header-container'>
                 <div className='development constellation_header_14'><img alt='development' src={developmentHeader}/></div>

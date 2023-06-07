@@ -57,28 +57,21 @@
 
 /* --------------SKY------------------*/
 
-.sky_hero_container {
-    /* background-color: red; */
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: 95%;
-    bottom: 0;
-}
 
-.sky_hero_container_half_circle {
+.sky_hero_container {
     position: absolute;
+    bottom: 0;
     border-top-left-radius: 50% 20%;
     border-top-right-radius: 50% 20%;
     width: 100%;
-    height: 100%;
+    height: 95%;
     /* background-image: linear-gradient(to top, #30cfd0 0%, rgb(51, 8, 103) 100%);*/
     overflow: hidden;
     box-shadow: inset 0 0 20px rgba(51 8 103 / 0.8);
+    /* animation: stars 4s ease infinite both; --> pro stars */
 }
 
-.sky_hero_container_half_circle::before {
+.sky_hero_container::before {
     background-image: linear-gradient(to top,
             var(--lightest-color) 0%,
             var(--light-color) 30%,
@@ -94,16 +87,9 @@
 }
 
 
-/* ----------------STARS--------------------------*/
-.sky_hero_container_star {
-    background-color: aliceblue;
-    position: absolute;
-    animation: stars 4s ease infinite both;
-}
-
 /* ---------------SHOOTING STARS-----------------------*/
 
-.sky_hero_container_shooting-star {
+.sky_hero_shooting-star {
     --shooting-color: rgb(237, 238, 227);
     background-color: transparent;
     width: 0.1px;
@@ -116,11 +102,11 @@
     position: absolute;
 }
 
-.sky_hero_container_shooting-animation {
+.sky_hero_shooting-animation {
     animation: shooting-star 2s ease-in both var(--animation-delay);
 }
 
-.sky_hero_container_shooting-star::after {
+.sky_hero_shooting-star::after {
     width: 100%;
     height: 100%;
     background-color: rgba(245 231 107 / 0.5);
@@ -130,7 +116,7 @@
         -3px 0 4px 3px rgba(200 100 200 / 0.5);
 }
 
-.sky_hero_container_shooting-con {
+.sky_hero_shooting-con {
     width: 350px;
     height: 120px;
     /* border: black solid 3px; */
@@ -192,7 +178,7 @@
         max-width: 50%;
     }
 
-    .sky_hero_container_half_circle {
+    .sky_hero_container {
         border-radius: 200% 200% 0 0;
     }
     
