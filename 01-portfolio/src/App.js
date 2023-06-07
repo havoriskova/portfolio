@@ -60,7 +60,9 @@ class App extends Component {
           </main>
   
           {/* <aside><p>aside</p></aside> */}
-  
+
+          <div className='footer-absolute-positioning-replacement'>
+          </div>
           <footer>
             <Footer />
           </footer>

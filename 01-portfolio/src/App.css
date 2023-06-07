@@ -39,7 +39,8 @@
   position: relative;
   --color-text: #D7D7D7; /* == invert(90%) z cerne */
   --color-text-hover: #B2B2B2; /* == invert(70%) z cerne*/
-  background-color: var(--secondary-color)
+  position: relative;
+  min-height: 100vh;
 }
 
 
@@ -62,6 +63,17 @@ header > *, main > *, aside > *, footer > * {
 header, main, footer {
   color: var(--color-text);
   position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-absolute-positioning-replacement {
+  width: 1px;
+  height: 400px;
 }
 
 header {

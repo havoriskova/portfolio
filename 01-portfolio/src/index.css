@@ -19,6 +19,8 @@ body {
   --secondary-color: rgb(43, 42, 42);
   font-size: 14px;
   line-height: 1.3rem;
+  min-height: 100vh;
+  background-color: var(--secondary-color)
 }
 
 code {
