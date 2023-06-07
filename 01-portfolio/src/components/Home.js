@@ -1,16 +1,14 @@
 import'./Home.css';
 //import RandomBackground from '../hoc/RandomBackground';
 import heroRobots from '../img/robots_hero.png';
-import aboutHeader from '../img/headers/about_6_rem.png';
-import aboutImage from '../img/about.jpeg';
 // import webHeader from '../img/headers/web_6_rem.png';
 // import developmentHeader from '../img/headers/development_14_rem.png';
 // import portfolioHeader from '../img/headers/portfolio_12_rem.png';
+import About from './About.js';
 
 
 const Home = (props) => {
 
-    console.log("no")
     console.log(props);
 
     /* ------------------shooting stars------------ */
@@ -112,14 +110,8 @@ const Home = (props) => {
                     <div className='portfolio constellation_header_12'><img alt='portfolio' src={portfolioHeader}/></div>
                 </div> */}
             </div>
-            <div>Home !!!!</div>
-            <div>
-                <h2 className='constellation_header_6'>
-                         <img alt='header for about' src={aboutHeader}/>
-                </h2>
-                <p></p>
-                <img className='LennonWallImg' alt='me with font jokes on Lennon wall' src={aboutImage}/>
-            </div>
+            {/* <div>Home !!!!</div> */}
+            <About />
         </div>
     )
 }
