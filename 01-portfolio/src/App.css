@@ -39,6 +39,7 @@
   position: relative;
   --color-text: #D7D7D7; /* == invert(90%) z cerne */
   --color-text-hover: #B2B2B2; /* == invert(70%) z cerne*/
+  background-color: var(--secondary-color)
 }
 
 
@@ -58,25 +59,15 @@ header > *, main > *, aside > *, footer > * {
 
 /*--------- colors & background-colors -------*/
 
-header, main, aside, footer {
+header, main, footer {
   color: var(--color-text);
+  position: relative;
 }
 
 header {
   background-color: var(--primary-color);
 }
 
-main {
-  background-color: var(--secondary-color);
-}
-
-aside {
-  background-color: var(--primary-color);
-}
-
-footer {
-  background-color: var(--secondary-color);
-}
 
 
 /*------------------*/
