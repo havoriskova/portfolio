@@ -51,11 +51,13 @@
 header > *, main > *, aside > *, footer > * {
   width: 90%; /*takhle to nemuzu nastavovat na vsechno*/
   margin: 0 auto;
-  max-width: 1400px;
     /*musi byt stejne jako pro .sky_container - might change in the future
       */
 }
 
+main > * {
+  max-width: 1400px;
+}
 
 
 /*--------- colors & background-colors -------*/
@@ -250,5 +252,16 @@ filter: var(--light-color-filter-from-black);
 
 @media (min-width: 1200px) {
 
+
+}
+
+@media (min-width: 1600px) {
+    .App .logo img {
+      height: 2rem; /*1.2*/
+    }
+
+    .App header .nav-li {
+      height: 1.6rem; /*.8*/
+    }
 
 }
