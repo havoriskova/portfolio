@@ -197,7 +197,7 @@
 
 
 /*------zmenit sky na obloucek uprostred obrazovky pri >1400px */
-@media (min-width:1000px) {
+@media (min-width:1400px) {
     .sky_hero_container {
 
         border-top-left-radius: 50%;

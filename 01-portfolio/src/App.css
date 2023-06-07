@@ -51,7 +51,7 @@ header > *, main > *, aside > *, footer > * {
   width: 90%; /*takhle to nemuzu nastavovat na vsechno*/
   margin: 0 auto;
   max-width: 1400px;
-    /*might change in the future
+    /*musi byt stejne jako pro .sky_container - might change in the future
       */
 }
 
