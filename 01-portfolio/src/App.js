@@ -59,7 +59,7 @@ class App extends Component {
             </Routes>
           </main>
   
-          <aside><p>aside</p></aside>
+          {/* <aside><p>aside</p></aside> */}
   
           <footer>
             <Footer />

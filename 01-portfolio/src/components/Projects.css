@@ -35,15 +35,19 @@
     border-image-slice: 1;
     border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
     display: inline-block;
-    padding: .5rem .6rem;
+    padding: .5rem .3rem;
     margin: 2rem 0 1rem;
     position: relative;
+    color: var(--primary-color);
+    font-weight: 600;
+
 }
 
 .projectsLink:nth-of-type(2n) {
     padding-left: 3rem;
     margin-left: .5rem;
     background: transparent;
+    color: var(--text-color);
 }
 
 .projectsLink:hover {
@@ -69,6 +73,15 @@
  display: none;
 }
 
+@media (min-width: 330px) {
+    .projectsLink {
+        padding: .5rem .6rem;
+    }
+
+    .projectsLink:nth-of-type(2n) {
+        margin-left: .8rem;
+    }
+}
 
 @media (min-width: 1000px) {
 

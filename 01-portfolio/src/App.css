@@ -17,7 +17,7 @@
     --light-color: #F2D388;
     --light-color-filter-from-black: invert(87%) sepia(40%) saturate(484%) hue-rotate(338deg) brightness(99%) contrast(91%);
       /*tohle upravovat v zavislosti na light-color*/
-    --lightest-color: #A7D2CB;
+    --lightest-color: #FFF7D2;
 }
   
 .pastel-cold-theme {

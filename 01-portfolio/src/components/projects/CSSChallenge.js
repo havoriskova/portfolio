@@ -26,7 +26,7 @@ const CSSChallenge = (props) => {
                 {/*img printscreenu pro scroll */}
                <p>budouci fotka pro desktop</p> {/* img optimalizovane pro pc */}
             </div>
-            <div className="projects-hr"></div>
+            {/* <div className="projects-hr"></div> */}
         </div>
     )
 };

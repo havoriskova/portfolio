@@ -18,7 +18,7 @@ const Footer = (props) => {
                 <img alt="robots" src={robots} />
             </div>
             <div className="hr"></div>
-            <div className='footerCredits'>This webpage was coded by <a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US" rel="noreferrer" target='_blank'>Hana Voriskova</a> | 2023
+            <div className='footerCredits'>&#169; 2023 | Coded by <a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US" rel="noreferrer" target='_blank'>Hana Voriskova</a>
             </div>
             <div className="socials">
                 <div><a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US" rel="noreferrer" target='_blank'><img className='socials-img' alt='logo of linkedin' src={logoLinkedin}/></a></div>
