@@ -37,9 +37,9 @@ class App extends Component {
           <header>
             <div className='nav-icon' onClick={this.toggle} id="toggleNavButton"></div>
             <nav>
-              <div className='logo'><NavLink to='/' onClick={this.removeActiveNav}>
+              <div className='logo'>
                 <img alt='logo' src={logo}/>
-                </NavLink></div>
+              </div>
               <ul className='nav-ul'>
                 <li><NavLink to='/home' onClick={this.removeActiveNav}><img className='nav-li' alt='home' src={homeNav}/></NavLink></li>
                 <li><NavLink to='/projects' onClick={this.removeActiveNav}><img className='nav-li' alt='projects' src={projectsNav}/></NavLink></li>

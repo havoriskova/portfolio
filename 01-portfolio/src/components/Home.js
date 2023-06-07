@@ -11,7 +11,7 @@ const Home = (props) => {
 
     return (
         <div className="Home container">
-            <Hero />
+            <div className='black-bkg'><Hero /></div>
 
             <About />
         </div>

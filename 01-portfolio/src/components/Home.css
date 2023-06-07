@@ -4,9 +4,12 @@
     max-width: 100vw;
 }
 
+.Home .black-bkg {
+    background-color: var(--primary-color);
+}
+
 .Home .hero-section {
     height: calc(100vh - 8rem);
-    background-color: var(--primary-color);
     position: relative;
     /* display: flex;
     align-items: flex-end; */
@@ -59,12 +62,12 @@
 
 
 .sky_hero_container {
-    position: absolute;
-    bottom: 0;
     border-top-left-radius: 50% 20%;
     border-top-right-radius: 50% 20%;
     width: 100%;
     height: 95%;
+    position: relative;
+    margin: 0 auto;
     /* background-image: linear-gradient(to top, #30cfd0 0%, rgb(51, 8, 103) 100%);*/
     overflow: hidden;
     box-shadow: inset 0 0 20px rgba(51 8 103 / 0.8);
@@ -192,3 +195,14 @@
 
 }
 
+
+/*------zmenit sky na obloucek uprostred obrazovky pri >1400px */
+@media (min-width:1000px) {
+    .sky_hero_container {
+
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        max-width: 90%;
+
+    }
+}

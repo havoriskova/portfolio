@@ -147,7 +147,7 @@ a {
   filter: invert(90%);
 }
 
-.App header .nav-li:hover, .App header .logo img:hover {
+.App header .nav-li:hover {
   filter: invert(70%);
 }
 
