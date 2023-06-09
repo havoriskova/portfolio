@@ -34,12 +34,11 @@ const Hero = () => {
     createStarrySky(amount, starSize); // pro telefony bude jen staticky obrazek oblohy pres stejny <div> s bkg v media queries
     // console.log(stars);
 
+
  /* ------------------ shooting stars------------ */
-//shooting-stars - osaY a delay
 
 // function createShootingStars() {
 
-//     const shootCont = document.querySelector(".sky_hero_container_shooting-con");
 //     let shootingStars = [];
 //     let intervalCounter = 0;
 
@@ -74,16 +73,11 @@ const Hero = () => {
 //             shootingStar.classList.add("sky_hero_container_shooting-star");
 //             shootingStar.style.setProperty( "--osa-y", `${Math.floor(Math.random()*120) + 1}px`);
 //             shootingStar.style.setProperty("--animation-delay", `${Math.floor(Math.random()*30)*0.1}s`);
-//             shootingStar.classList.add("sky_hero_container_shooting-animation");
 //             shootingStars.push(shootingStar);
 //         }
 
-//         shootingStars.forEach(shoot => shootCont.appendChild(shoot)); 
     
 //     }
-
-    // zkouška na setProperty u --my-variable
-    //document.getElementById("container").style.setProperty("--zkouska", "blue"); 
 // }
 
 // createShootingStars();
@@ -102,9 +96,15 @@ const Hero = () => {
                         top: star.top, left: star.left, animationDelay: star.animationDelay}}></div>)
                         })}
                         
+
+                    {/* {shootingStar.map(shootingStar => {
+                        console.log(shootingStar);
+                        return(
+                            <div className='sky_hero_shooting-star' key={shootingStar.id}></div>
+                        )
+                    })} */}
                     
-                        {/* <div className="sky_hero_shooting-con"> {}
-                        </div> */}
+                      
             </div>
             {/* <div className='header-container'>
                 <div className='development constellation_header_14'>

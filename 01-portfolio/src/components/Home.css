@@ -180,11 +180,10 @@
     transform: scaleX(25) translateX(-70%) translateY(var(--osa-y));
     border-radius: 30%;
     position: absolute;
+    /* animation: shooting-star 2s ease-in both var(--animation-delay); - tohle by se kdyztak dalo do vicero css rules, aby
+        delay mohl byt samostatne setnutej z JSX*/
 }
 
-.sky_hero_shooting-animation {
-    animation: shooting-star 2s ease-in both var(--animation-delay);
-}
 
 .sky_hero_shooting-star::after {
     width: 100%;
@@ -196,15 +195,6 @@
         -3px 0 4px 3px rgba(200 100 200 / 0.5);
 }
 
-.sky_hero_shooting-con {
-    width: 350px;
-    height: 120px;
-    /* border: black solid 3px; */
-    position: absolute;
-    top: 100px;
-    transform: rotate(35deg);
-    overflow: visible;
-}
 
 @keyframes shooting-star {
     0% {
