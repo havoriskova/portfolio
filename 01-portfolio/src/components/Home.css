@@ -14,13 +14,18 @@
     width: 100%;
 }
 
+.Home .About.constellation_header_6 {
+    margin-top: 3rem;
+}
+
 .Home .about_text {
- margin: 1rem;
- text-align: justify;
+    margin: 0 auto;
+    text-align: justify;
+    max-width: 90%;
 }
 
 .Home .about_text p {
-    margin: 1rem 0;
+    margin: 0 0 1rem;
 }
 
 /*--------- WEB DEV PORTFOLIO ----------*/
@@ -262,6 +267,25 @@
     .header-container-phones {
         height: 60%;
     }
+
+    .Home .about_text {
+        max-width: 600px;
+        flex: 0 0 50%;
+    }
+
+    .flex-parent-about {
+        display: flex;
+        gap: 10%;
+        margin: 2rem auto;
+        max-width: 1400px;
+        width: 80%;
+    }
+
+    .LennonWallImg {
+        width: max-content;
+        height: max-content;
+    }
+    
 
 }
 
