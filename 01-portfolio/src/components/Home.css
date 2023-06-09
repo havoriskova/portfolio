@@ -139,7 +139,6 @@
     /* background-image: linear-gradient(to top, #30cfd0 0%, rgb(51, 8, 103) 100%);*/
     overflow: hidden;
     box-shadow: inset 0 0 20px rgba(51 8 103 / 0.8);
-    /* animation: stars 4s ease infinite both; --> pro stars */
 }
 
 .sky_hero_container::before {
@@ -155,6 +154,16 @@
     top: 0px;
     left: 0px;
     animation: moving-gradient 10s ease infinite;
+}
+
+/*------ STARS -------*/
+
+.sky_hero_star {
+    background-color: var(--lightest-color);
+    position: absolute;
+    animation: stars 4s ease infinite both;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
 }
 
 

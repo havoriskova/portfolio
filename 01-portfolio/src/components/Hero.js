@@ -6,28 +6,34 @@ import webdevelopmentportfolio from '../img/headers/WEB_DEVELOPMENT_PORTFOLIO.pn
 
 const Hero = () => {
 
-    /* ------------------shooting stars------------ */
+    /* ------------------ stars------------ */
 
+    const isDesctop = window.matchMedia(`(min-width:800px)`).matches;
 
-    // stars
+    let amount; 
+    isDesctop ? (amount = 100) : (amount = 30);
 
-// function createStarrySky() {
-//     const stars = [];
+    const stars = []; // array s objekty
 
-//     for (let i = 0; i <= 100; i++) {
-//         const star;
-//         star.style.width= `${(Math.floor(Math.random()*15))*0.1}px`;
-//         star.style.height=`${(Math.floor(Math.random()*15))*0.1}px`;
-//         star.style.top= `${Math.floor(Math.random()*98)+1}%`;
-//         star.style.left = `${Math.floor(Math.random()*98)+1}%`;
-//         star.style.animationDelay= `${Math.floor(Math.random()*3)+1}s`;
-//         stars.push(star);
-//     }
+    function createStarrySky(amountOfStars) {
 
-// }
+        for (let i = 0; i <= amountOfStars; i++) {
+            let star ={};
+            star.id = i;
+            star.width= `${(Math.floor(Math.random()*30))*0.1}px`;
+            // star.height=`${(Math.floor(Math.random()*30))*0.1}px`;
+            star.top= `${Math.floor(Math.random()*85)+1}%`;
+            star.left = `${Math.floor(Math.random()*98)+1}%`;
+            star.animationDelay= `${Math.floor(Math.random()*3)+1}s`;
+            stars.push(star);
+        }
 
-// createStarrySky();
+    }
 
+    createStarrySky(amount); // pro telefony bude jen staticky obrazek oblohy pres stejny <div> s bkg v media queries
+    console.log(stars);
+
+ /* ------------------ shooting stars------------ */
 //shooting-stars - osaY a delay
 
 // function createShootingStars() {
@@ -87,9 +93,15 @@ const Hero = () => {
     return(
         <div className='hero-section'>
             <div className='sky_hero_container'>
-                        {/*
-                        {stars.map(star => {<div className='sky_hero_star' key={star.id}>{star}</div>})}
-                         */}
+                        
+                    {stars.map(star => { 
+                        // console.log(star);
+                        return(
+                        <div className='sky_hero_star' key={star.id} style={{width: star.width,
+                        top: star.top, left: star.left, animationDelay: star.animationDelay}}></div>)
+                        })}
+                        
+                    
                         {/* <div className="sky_hero_shooting-con"> {}
                         </div> */}
             </div>
