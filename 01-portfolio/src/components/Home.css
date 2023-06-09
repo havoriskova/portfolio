@@ -14,6 +14,15 @@
     width: 100%;
 }
 
+.Home .about_text {
+ margin: 1rem;
+ text-align: justify;
+}
+
+.Home .about_text p {
+    margin: 1rem 0;
+}
+
 /*--------- WEB DEV PORTFOLIO ----------*/
 
 
