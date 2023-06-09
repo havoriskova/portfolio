@@ -2,6 +2,7 @@ import heroRobots from '../img/robots_hero.png';
 // import webHeader from '../img/headers/web_6_rem.png';
 // import developmentHeader from '../img/headers/development_14_rem.png';
 // import portfolioHeader from '../img/headers/portfolio_12_rem.png';
+import webdevelopmentportfolio from '../img/headers/WEB_DEVELOPMENT_PORTFOLIO.png';
 
 const Hero = () => {
 
@@ -93,10 +94,19 @@ const Hero = () => {
                         </div> */}
             </div>
             {/* <div className='header-container'>
-                <div className='development constellation_header_14'><img alt='development' src={developmentHeader}/></div>
-                <div className='web constellation_header_6'><img alt='web' src={webHeader}/></div>
-                <div className='portfolio constellation_header_12'><img alt='portfolio' src={portfolioHeader}/></div>
+                <div className='development constellation_header_14'>
+                    <img alt='development' src={developmentHeader}/>
+                </div>
+                <div className='web constellation_header_6'>
+                    <img alt='web' src={webHeader}/>
+                </div>
+                <div className='portfolio constellation_header_12'>
+                    <img alt='portfolio' src={portfolioHeader}/>
+                </div>
             </div> */}
+            <div className='header-container-phones'>
+                <img alt='web development portfolio' src={webdevelopmentportfolio}/>
+            </div>
             <div className='robots_hero_container'>
                 <img alt='' src={heroRobots} />
             </div>

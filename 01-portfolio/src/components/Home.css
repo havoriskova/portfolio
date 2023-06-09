@@ -16,15 +16,72 @@
 
 /*--------- WEB DEV PORTFOLIO ----------*/
 
+
+    /* phones */
+
+.header-container-phones {
+    position: absolute;
+    top: 10%;
+    height: 50%;
+    width: 90%;
+    left: 5%;
+    /* background-color: rgba(0 0 0 / .4); */
+}
+
+.header-container-phones img {
+   max-width: 100%;
+   max-height: 100%;
+}
+
+
+
+    /* desctop */
+
 .header-container {
     position: absolute;
+    top: 10%;
+    height: 70%;
+    width: 90%;
+    left: 5%;
     display: flex;
-    align-self: stretch;
+    justify-content: space-between;
     background-color: rgba(0 0 0 / .4);
 }
 
-.header-container img {
-    max-width: 100%;
+.header-container div {
+    background-color: rgba(206, 41, 41, 0.4);
+    height: 50%;
+    width: 84px; /*nejmensi width: (90% z 280px) / 3 */
+    max-width: 30%;
+    position: relative;
+}
+
+.header-container .development {
+    align-self: flex-end;
+}
+
+.header-container .web {
+    align-self: flex-start;
+}
+
+.header-container .portfolio {
+    align-self: flex-start;
+    position: relative;
+}
+
+.header-container .development img {
+    position: relative;
+    top: -20%;
+}
+
+.header-container .web img {
+    position: relative;
+}
+
+.header-container .portfolio img {
+    position: absolute;
+    right: 0;
+    top: 10%;
 }
 
 /*--------- ROBOTS IMAGE ----------*/
@@ -35,7 +92,7 @@
     right: 5%;
     /* display: flex;
     place-content: flex-end; */
-    width: 70%;
+    width: 60%;
 }
 
 
@@ -167,16 +224,19 @@
 
 /*------------------------------------*/
 
+@media (min-width:350px) {
+    .robots_hero_container {
+        max-width: 50%;
+    }
+}
+
 @media (min-width:500px) {
 
     .Home .hero-section {
             height: calc(100vh - 5rem);
         }
 
-        
-    .robots_hero_container {
-        max-width: 50%;
-    }
+    
 
     .sky_hero_container {
         border-radius: 200% 200% 0 0;
@@ -188,6 +248,10 @@
 @media (min-width:800px) {
     .robots_hero_container {
         max-width: 35%;
+    }
+
+    .header-container-phones {
+        height: 60%;
     }
 
 }
