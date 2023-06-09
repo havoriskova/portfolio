@@ -10,17 +10,18 @@ const Hero = () => {
 
     const isDesctop = window.matchMedia(`(min-width:800px)`).matches;
 
-    let amount; 
-    isDesctop ? (amount = 100) : (amount = 30);
+    let amount, starSize; 
+    isDesctop ? (amount = 200) : (amount = 50);
+    isDesctop ? (starSize = 70) : (starSize = 30);
 
     const stars = []; // array s objekty
 
-    function createStarrySky(amountOfStars) {
+    function createStarrySky(amountOfStars, starSize) {
 
         for (let i = 0; i <= amountOfStars; i++) {
             let star ={};
             star.id = i;
-            star.width= `${(Math.floor(Math.random()*30))*0.1}px`;
+            star.width= `${(Math.floor(Math.random()*starSize))*0.1}px`;
             // star.height=`${(Math.floor(Math.random()*30))*0.1}px`;
             star.top= `${Math.floor(Math.random()*85)+1}%`;
             star.left = `${Math.floor(Math.random()*98)+1}%`;
@@ -30,8 +31,8 @@ const Hero = () => {
 
     }
 
-    createStarrySky(amount); // pro telefony bude jen staticky obrazek oblohy pres stejny <div> s bkg v media queries
-    console.log(stars);
+    createStarrySky(amount, starSize); // pro telefony bude jen staticky obrazek oblohy pres stejny <div> s bkg v media queries
+    // console.log(stars);
 
  /* ------------------ shooting stars------------ */
 //shooting-stars - osaY a delay
