@@ -68,6 +68,10 @@
     padding: 0 1rem;
 }
 
+.project_photo_phone_width img {
+  max-width: 100%;
+}
+
 
 
 .col-2 {
@@ -113,6 +117,10 @@
         margin-top: 2rem; /*zavisle na '[class*="constellation_header"] img' */
         flex: 1 1 50%;
         padding: 2rem 0 2rem 2rem;
+    }
+
+    .col-2 img {
+      max-width: 100%;
     }
 
 
