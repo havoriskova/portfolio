@@ -18,7 +18,10 @@ const Dictionary = (props) => {
                         <p>budouci fotka pro telefony</p>{/* <img alt='printscreen of page' src={}/> tady bude fotka optimalizovana pro telefon */}
                     </div>
 
-                    <p>On this fully responsive webpage I am using 2 API calls. One is for getting json data from freeDictionaryAPI. The second API is for getting url of pictures that are rendered in the gallery. Digital collage pictures are made in a vector graphic software Inkscape.</p>
+                    <p>On this fully responsive webpage I am using 2 API calls. One is for getting json data from freeDictionaryAPI. 
+                        The second API is for getting url of pictures that are rendered in the gallery and 
+                        its API key is secured due to serverless function.
+                        Digital collage pictures are made in a vector graphic software Inkscape.</p>
 
                     <a className='projectsLink' href='https://voriskova-dictionary.netlify.app/' target='_blank' rel='noreferrer'>Visit website</a>
                     <a className='projectsLink' href='https://github.com/havoriskova/dictionary' target='_blank' rel='noreferrer'><img className='projectsGithubLogo' src={githubLogo} alt='github logo'/>View code</a>
