@@ -15,7 +15,7 @@ const Weather = (props) => {
                 <h3>React Webpage</h3> {/* mensi font, ale UPPERCASE */}
 
                 <div className='project_photo_phone_width'>
-                    <img alt='weather app' src={phonePhotoWeather}/>{/* <img alt='printscreen of page' src={}/> tady bude fotka optimalizovana pro telefon */}
+                    <img alt='weather app' src={phonePhotoWeather} loading="lazy"/>{/* <img alt='printscreen of page' src={}/> tady bude fotka optimalizovana pro telefon */}
                 </div>
 
                 <p>React weather app which uses API from openweathermap to get data in JSON as current temperature, time of sunset, humidity and forecast for upcoming hours. Styling is made with Bootstrap. Moving icons are from npm package react-animated-weather.</p>
@@ -26,7 +26,7 @@ const Weather = (props) => {
             </div>
             <div className="col-2">
                 {/*img printscreenu pro scroll */}
-                <img alt='weather app' src={phonePhotoWeather}/> {/* img optimalizovane pro pc */}
+                <img alt='weather app' src={phonePhotoWeather} loading="lazy"/> {/* img optimalizovane pro pc */}
             </div>
 
             <div className="projects-hr"></div>

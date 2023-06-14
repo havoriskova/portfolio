@@ -8,7 +8,7 @@ const About = () => {
     return(
         <>
             <h2 className='About constellation_header_6'>
-                        <img alt='header for about' src={aboutHeader}/>
+                        <img alt='header for about' src={aboutHeader} loading="lazy"/>
             </h2>
 
             <div className='flex-parent-about'>
@@ -22,7 +22,7 @@ const About = () => {
                     <p>May the Force be with you!</p>
 
                 </div>
-                <div><img className='LennonWallImg' alt='the web developer you are looking for' src={aboutImage}/></div>
+                <div><img className='LennonWallImg' alt='the web developer you are looking for' src={aboutImage} loading="lazy"/></div>
             </div>
         </>
     )

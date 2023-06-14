@@ -15,7 +15,7 @@ const Footer = (props) => {
                 {/* <img alt="robots" src={robot} srcset={`${robot} 590w, ${robots} 1087w`} sizes="(max-width: 400px) 300px, 700px"/> */}
                 {/* <img alt="robots" src={robot} srcset={`${robot}, ${robots} 2x`}/> */}
                 {/* <img alt="robots" src={robot} srcset={`${robot} 590w, ${robots} 1087w`} sizes="(max-width: 400px) 90vw, 50vw"/> */}
-                <img alt="robots" src={robots} />
+                <img alt="robots" src={robots} loading="lazy"/>
             </div>
             <div className="hr"></div>
             <div className='footerCredits'>&#169; 2023 | Coded by <a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US" rel="noreferrer" target='_blank'>Hana Voriskova</a>
