@@ -22,8 +22,20 @@ const Planner = (props) => {
                 <a className='projectsLink' href='https://github.com/havoriskova/monthly-planner' target='_blank' rel='noreferrer'><img className='projectsGithubLogo' src={githubLogo} alt='github logo'/>View code</a>
             </div>
             <div className="col-2">
-                {/*img printscreenu pro scroll */}
-               <p>budouci fotka pro desktop</p> {/* img optimalizovane pro pc */}
+                {/* img pro pc */}
+                <div className='desktop-pictures-container'> {/*position relative, overflow hidden */}
+                    <img className='printscreen-desktop' alt='printscreen of the project in desktop width' 
+                        srcset=""/> {/* absolute positioning v %, protoze se bude menit velikost obou img */}
+                    <img className='printscreen-phone' alt='printscreen of the project in phone width' 
+                        srcset=""/>
+                    <img className='cutted-photo' alt='desktop and phone with cutted monitors, so the printscreens of page seems to be in there'
+                        srcset=""/> {/*max-width:100% */}
+
+                    {/* Scroll me text: Absolute positioning in %, MUSI BYT SAMOSTATNE - nemuze byt soucasti img, protoze pak by se to pismo furt zvetsovalo, a to nechces */}
+                    {/* <div className='scrollMe-planner-phone'>scroll me!</div>*/}
+                    {/* <div className='scrollMe-planner-desktop'>scroll me!</div> = absolute positioning in % */}
+                </div>
+
             </div>
             <div className="projects-hr"></div>
         </div>
