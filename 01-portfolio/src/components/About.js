@@ -22,7 +22,9 @@ const About = () => {
                     <p>May the Force be with you!</p>
 
                 </div>
-                <div><img className='LennonWallImg' alt='the web developer you are looking for' src={aboutImage} loading="lazy"/></div>
+                <div className='aboutImageContainer'>
+                    <img className='LennonWallImg' alt='the web developer you are looking for' src={aboutImage} loading="lazy"/>
+                </div>
             </div>
         </>
     )

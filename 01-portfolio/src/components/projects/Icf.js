@@ -31,7 +31,9 @@ const Icf = (props) => {
             </div>
             <div className="col-2">
                 {/*img printscreenu pro scroll */}
-                <img alt='desktop and phone with open website' src={icfForDesktop}  loading="lazy"/>
+                <div className='desktop-pictures-container'>
+                    <img alt='desktop and phone with open website' src={icfForDesktop}  loading="lazy"/>
+                </div>
                {/* img optimalizovane pro pc */}
             </div>
             <div className="projects-hr"></div>

@@ -31,7 +31,9 @@ const Dictionary = (props) => {
             <div className="col-2">
                     {/*img printscreenu PC pro scroll */}
                     {/*img printscreenu PHONE pro scroll */}
-                    <img alt='desktop and phone with open website' src={dictionaryForDesktop}  loading="lazy"/>
+                    <div className='desktop-pictures-container'>
+                        <img alt='desktop and phone with open website' src={dictionaryForDesktop}  loading="lazy"/>
+                    </div>
                     {/* img fotky upravene pres inkscape s vyrizlym monitorem jako 2., protoze musi mit vyssi z-index  */}
             </div>
             <div className="projects-hr"></div>

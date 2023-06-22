@@ -26,7 +26,9 @@ const Weather = (props) => {
             </div>
             <div className="col-2">
                 {/*img printscreenu pro scroll */}
-                <img alt='weather app' src={phonePhotoWeather} loading="lazy"/> {/* img optimalizovane pro pc */}
+                <div className='desktop-pictures-container'>
+                    <img alt='weather app' src={phonePhotoWeather} loading="lazy"/> {/* img optimalizovane pro pc */}
+                </div>
             </div>
 
             <div className="projects-hr"></div>

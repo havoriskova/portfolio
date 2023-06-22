@@ -117,10 +117,36 @@
         margin-top: 2rem; /*zavisle na '[class*="constellation_header"] img' */
         flex: 1 1 50%;
         padding: 2rem 0 2rem 2rem;
+        position: relative;
+        max-height: 100%;
     }
 
-    .col-2 img {
-      max-width: 100%;
+
+    .col-2 .desktop-pictures-container {
+       width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .col-2 .desktop-pictures-container img {
+      /* height: 100%; */
+      width: 100%;
+      /* object-fit: cover; */
+      /* box-shadow: 1rem 1rem var(--primary-color), 1.2rem 1.2rem var(--dark-color); */
+    }
+
+    .col-2 .desktop-pictures-container::after {
+      display: inline-block;
+      width: 100%;
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      aspect-ratio: 4/3;
+      content: '';
+      border: solid rgb(229, 229, 229) .1rem;
+      border-image-slice: 1;
+      border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
+      z-index: -1;
     }
 
 
