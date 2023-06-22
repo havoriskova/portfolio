@@ -1,5 +1,6 @@
 import headerDictionary from '../../img/headers/DICTIONARY_5_rem.png';
 import githubLogo from '../../img/github-logo.png';
+import dictionaryForPhones from '../../img/dictionary-for-phones.jpg';
 
 const Dictionary = (props) => {
 
@@ -15,7 +16,7 @@ const Dictionary = (props) => {
                     <h3>React Webpage</h3> {/* mensi font, ale UPPERCASE */}
 
                     <div className='project_photo_phone_width'>
-                        <p>budouci fotka pro telefony</p>{/* <img alt='printscreen of page' src={}/> tady bude fotka optimalizovana pro telefon */}
+                    <img alt='desktop and phone with open website page' src={dictionaryForPhones}/>
                     </div>
 
                     <p>On this fully responsive webpage I am using 2 API calls. One is for getting json data from freeDictionaryAPI. 

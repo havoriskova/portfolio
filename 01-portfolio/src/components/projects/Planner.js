@@ -1,5 +1,6 @@
 import headerPlanner from '../../img/headers/PLANNER_GENERATOR_7_rem.png'
 import githubLogo from '../../img/github-logo.png';
+import plannerForPhones from '../../img/planner-for-phones.JPG';
 
 const Planner = (props) => {
 
@@ -12,7 +13,7 @@ const Planner = (props) => {
                 <h3>Vanilla JavaScript Webpage</h3> {/* mensi font, ale UPPERCASE */}
 
                 <div className='project_photo_phone_width'>
-                    <p>budouci fotka pro telefony</p>{/* <img alt='printscreen of page' src={}/> tady bude fotka optimalizovana pro telefon */}
+                    <img alt='desktop and phone with open website page' src={plannerForPhones}/>
                 </div>
 
                 <p>Monthly planner PDF generator that allows you to download a planner in your desired style. You can choose the color, font, language and space for notes.

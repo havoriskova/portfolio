@@ -1,5 +1,6 @@
 import headerICF from '../../img/headers/ICF_WEBSITE_5_rem.png';
 import githubLogo from '../../img/github-logo.png';
+import icfForPhones from '../../img/icf-for-phones.JPG';
 
 const Icf = (props) => {
 
@@ -14,7 +15,7 @@ const Icf = (props) => {
             <h3>Next.js website + contentful</h3> {/* mensi font, ale UPPERCASE */}
 
             <div className='project_photo_phone_width'>
-                <p>budouci fotka pro telefony</p>{/* <img alt='printscreen of page' src={}/> tady bude fotka optimalizovana pro telefon */}
+                <img alt='desktop and phone with open website' src={icfForPhones}/>
             </div>
 
             <p>I was working as web developer in an interdisciplinary group of students in order to create website for International Conservation Fund. 
