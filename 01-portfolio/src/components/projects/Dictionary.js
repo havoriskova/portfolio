@@ -1,6 +1,7 @@
 import headerDictionary from '../../img/headers/DICTIONARY_5_rem.png';
 import githubLogo from '../../img/github-logo.png';
 import dictionaryForPhones from '../../img/dictionary-for-phones.jpg';
+import dictionaryForDesktop from '../../img/photos-for-scrolling/dictionary.jpg';
 
 const Dictionary = (props) => {
 
@@ -30,6 +31,7 @@ const Dictionary = (props) => {
             <div className="col-2">
                     {/*img printscreenu PC pro scroll */}
                     {/*img printscreenu PHONE pro scroll */}
+                    <img alt='desktop and phone with open website' src={dictionaryForDesktop}  loading="lazy"/>
                     {/* img fotky upravene pres inkscape s vyrizlym monitorem jako 2., protoze musi mit vyssi z-index  */}
             </div>
             <div className="projects-hr"></div>

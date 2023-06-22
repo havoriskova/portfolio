@@ -1,6 +1,7 @@
 import headerICF from '../../img/headers/ICF_WEBSITE_5_rem.png';
 import githubLogo from '../../img/github-logo.png';
 import icfForPhones from '../../img/icf-for-phones.JPG';
+import icfForDesktop from '../../img/photos-for-scrolling/icf.JPG';
 
 const Icf = (props) => {
 
@@ -30,7 +31,8 @@ const Icf = (props) => {
             </div>
             <div className="col-2">
                 {/*img printscreenu pro scroll */}
-               <p>budouci fotka pro desktop</p> {/* img optimalizovane pro pc */}
+                <img alt='desktop and phone with open website' src={icfForDesktop}  loading="lazy"/>
+               {/* img optimalizovane pro pc */}
             </div>
             <div className="projects-hr"></div>
         </div>

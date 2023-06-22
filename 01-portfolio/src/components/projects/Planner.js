@@ -1,6 +1,7 @@
 import headerPlanner from '../../img/headers/PLANNER_GENERATOR_7_rem.png'
 import githubLogo from '../../img/github-logo.png';
 import plannerForPhones from '../../img/planner-for-phones.JPG';
+import plannerForDesktop from '../../img/photos-for-scrolling/planner.JPG';
 
 const Planner = (props) => {
 
@@ -25,12 +26,12 @@ const Planner = (props) => {
             <div className="col-2">
                 {/* img pro pc */}
                 <div className='desktop-pictures-container'> {/*position relative, overflow hidden */}
-                    <img className='printscreen-desktop' alt='printscreen of the project in desktop width' 
-                        srcset=""/> {/* absolute positioning v %, protoze se bude menit velikost obou img */}
+                    {/* <img className='printscreen-desktop' alt='printscreen of the project in desktop width' 
+                        srcset=""/> {/* absolute positioning v %, protoze se bude menit velikost obou img
                     <img className='printscreen-phone' alt='printscreen of the project in phone width' 
-                        srcset=""/>
+                        srcset=""/> */}
                     <img className='cutted-photo' alt='desktop and phone with cutted monitors, so the printscreens of page seems to be in there'
-                        srcset=""/> {/*max-width:100% */}
+                        src={plannerForDesktop}/> {/*max-width:100% */}
 
                     {/* Scroll me text: Absolute positioning in %, MUSI BYT SAMOSTATNE - nemuze byt soucasti img, protoze pak by se to pismo furt zvetsovalo, a to nechces */}
                     {/* <div className='scrollMe-planner-phone'>scroll me!</div>*/}

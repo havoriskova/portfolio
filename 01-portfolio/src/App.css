@@ -202,6 +202,7 @@ filter: var(--light-color-filter-from-black);
 
 .App footer {
   padding-top: 5rem;
+  z-index: -2;
 }
 
 .App footer a[href*="linkedin"] {
