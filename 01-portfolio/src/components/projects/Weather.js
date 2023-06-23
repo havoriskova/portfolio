@@ -1,6 +1,7 @@
 import headerWeather from '../../img/headers/WEATHER_APP_5_rem.png';
 import githubLogo from '../../img/github-logo.png';
-import phonePhotoWeather from '../../img/screenshots/weather-phone.png';
+import phonePhotoWeather from '../../img/weather-for-phones.jpg';
+import weatherForDesktop from '../../img/photos-for-scrolling/weather.jpg';
 
 const Weather = (props) => {
 
@@ -27,7 +28,7 @@ const Weather = (props) => {
             <div className="col-2">
                 {/*img printscreenu pro scroll */}
                 <div className='desktop-pictures-container'>
-                    <img alt='weather app' src={phonePhotoWeather} loading="lazy"/> {/* img optimalizovane pro pc */}
+                    <img alt='weather app' src={weatherForDesktop} loading="lazy"/> {/* img optimalizovane pro pc */}
                 </div>
             </div>
 
