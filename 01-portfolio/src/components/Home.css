@@ -195,8 +195,8 @@
     transform: scaleX(25) translateX(-70%) translateY(var(--osa-y));
     border-radius: 30%;
     position: absolute;
-    /* animation-name: shooting-star; */
-    animation-duration:  2s;
+    animation-name: shooting-star;
+    animation-duration:  3s;
     animation-timing-function:  ease-in both;
     animation-iteration-count: infinite;
 }
@@ -229,7 +229,7 @@
 
 
     100% {
-        transform: scaleX(25) translateX(300%) translateY(var(--osa-y));
+        transform: scaleX(25) translateX(var(--osa-x)) translateY(var(--osa-y));
         opacity: 0;
     }
 }

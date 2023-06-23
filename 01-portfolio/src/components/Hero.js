@@ -41,7 +41,7 @@ const Hero = () => {
 
     //const id = setInterval(createStars, 5000); // 5000 interval musí být dlouhý max-delay(3000) + délka animace(2000)
 
-    function createStars(amount, height) {
+    function createStars(amount, height, width) {
         
 
        // let randomAmount = Math.floor(Math.random()*3) + 2;
@@ -51,6 +51,7 @@ const Hero = () => {
             let shootingStar = {};
             shootingStar.id = i;
             shootingStar.top = `${Math.floor(Math.random()*height) + 1}px`;
+            shootingStar.right = `${Math.floor(Math.random()*width) + 1}px`;
             shootingStar.animationDelay = `${Math.floor(Math.random()*30)*0.1}s`;
             shootingStars.push(shootingStar);
         }
@@ -58,11 +59,12 @@ const Hero = () => {
     
     }
 
-    let amountShooting, heightForShooting; 
+    let amountShooting, heightForShooting, widthForShooting; 
     isDesctop ? (amountShooting = 10) : (amountShooting = 5);
     isDesctop ? (heightForShooting = 700) : (heightForShooting = 300);
+    isDesctop ? (widthForShooting = 2000) : (widthForShooting = 700);
 
-    createStars(amountShooting, heightForShooting);
+    createStars(amountShooting, heightForShooting, widthForShooting);
 
 
 /*--------------------------------------- */
@@ -84,7 +86,8 @@ const Hero = () => {
                                 console.log(shootingStar);
                                 return(
                                     <div className='sky_hero_shooting-star' key={shootingStar.id}
-                                    style={{animationDelay: shootingStar.animationDelay, '--osa-y': shootingStar.top}}></div>
+                                    style={{animationDelay: shootingStar.animationDelay, '--osa-y': shootingStar.top,
+                                    '--osa-x': shootingStar.right}}></div>
                                 )
                         })}
                     </div>
