@@ -1,5 +1,7 @@
 import cssHeader from '../../img/headers/CSS_CHALLENGES_5_rem.png'
 import githubLogo from '../../img/github-logo.png';
+import challengesForPhones from '../../img/challenges-for-phones.jpg';
+import challengesForDesktop from '../../img/photos-for-scrolling/challenges.jpg';
 
 const CSSChallenge = (props) => {
 
@@ -14,7 +16,7 @@ const CSSChallenge = (props) => {
                 <h3>React Webpage</h3> {/* mensi font, ale UPPERCASE */}
 
                 <div className='project_photo_phone_width'>
-                    <div className="Blob frame">
+                    {/* <div className="Blob frame">
                         
                         <div className="center">
                             
@@ -41,7 +43,8 @@ const CSSChallenge = (props) => {
                                 </div>
                         </div>
 
-                    </div>
+                    </div> */}
+                    <img alt='' src={challengesForPhones}/>
                 </div>
 
                 <p>After starting the 100dayscss challenge in vanilla JS, I decided to redesign some of the challenges in React. That's why I created this responsive website to help me track my progress.</p>
@@ -51,7 +54,7 @@ const CSSChallenge = (props) => {
             </div>
             <div className="col-2">
                 {/*img printscreenu pro scroll */}
-                    <div className="Blob frame">
+                    {/* <div className="Blob frame">
             
                         <div className="center">
                             
@@ -78,7 +81,10 @@ const CSSChallenge = (props) => {
                                 </div>
                         </div>
         
-                    </div>
+                    </div> */}
+                <div className='desktop-pictures-container'>
+                    <img alt='challenges' src={challengesForDesktop} loading="lazy"/> {/* img optimalizovane pro pc */}
+                </div>
             </div>
             {/* <div className="projects-hr"></div> */}
         </div>
