@@ -37,50 +37,32 @@ const Hero = () => {
 
  /* ------------------ shooting stars------------ */
 
-// function createShootingStars() {
+    let shootingStars = [];
 
-//     let shootingStars = [];
-//     let intervalCounter = 0;
+    //const id = setInterval(createStars, 5000); // 5000 interval musí být dlouhý max-delay(3000) + délka animace(2000)
 
-//     const id = setInterval(createStars, 5000); // 5000 interval musí být dlouhý max-delay(3000) + délka animace(2000)
-
-//     function createStars() {
+    function createStars(amount, height) {
         
-//         intervalCounter++;
-//         console.log(intervalCounter);
 
-//         if (intervalCounter == 10) {
-//             clearInterval(id);
-//             console.log("funguje if u counteru");
-//         } 
+       // let randomAmount = Math.floor(Math.random()*3) + 2;
 
 
-//         let randomAmount = Math.floor(Math.random()*3) + 2;
-
-//         if (shootingStars.length > 0) {
-//             console.log("funguje");
-        
-//             while (shootCont.firstChild) {shootCont.firstChild.remove();}
-
-//             shootingStars.length = 0;
-
-//             //clearInterval();
-//         }
-
-//         for (let i = 0; i < randomAmount; i++) {
-
-//             let shootingStar = document.createElement("div");
-//             shootingStar.classList.add("sky_hero_container_shooting-star");
-//             shootingStar.style.setProperty( "--osa-y", `${Math.floor(Math.random()*120) + 1}px`);
-//             shootingStar.style.setProperty("--animation-delay", `${Math.floor(Math.random()*30)*0.1}s`);
-//             shootingStars.push(shootingStar);
-//         }
+        for (let i = 0; i < amount; i++) {
+            let shootingStar = {};
+            shootingStar.id = i;
+            shootingStar.top = `${Math.floor(Math.random()*height) + 1}px`;
+            shootingStar.animationDelay = `${Math.floor(Math.random()*30)*0.1}s`;
+            shootingStars.push(shootingStar);
+        }
 
     
-//     }
-// }
+    }
 
-// createShootingStars();
+    let amountShooting, heightForShooting; 
+    isDesctop ? (amountShooting = 10) : (amountShooting = 5);
+    isDesctop ? (heightForShooting = 700) : (heightForShooting = 300);
+
+    createStars(amountShooting, heightForShooting);
 
 
 /*--------------------------------------- */
@@ -96,13 +78,16 @@ const Hero = () => {
                         top: star.top, left: star.left, animationDelay: star.animationDelay}}></div>)
                         })}
                         
-
-                    {/* {shootingStar.map(shootingStar => {
-                        console.log(shootingStar);
-                        return(
-                            <div className='sky_hero_shooting-star' key={shootingStar.id}></div>
-                        )
-                    })} */}
+                    
+                    <div className='sky_hero_shooting_star_container'>
+                        {shootingStars.map(shootingStar => {
+                                console.log(shootingStar);
+                                return(
+                                    <div className='sky_hero_shooting-star' key={shootingStar.id}
+                                    style={{animationDelay: shootingStar.animationDelay, '--osa-y': shootingStar.top}}></div>
+                                )
+                        })}
+                    </div>
                     
                       
             </div>

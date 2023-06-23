@@ -190,8 +190,16 @@
 
 /* ---------------SHOOTING STARS-----------------------*/
 
+.sky_hero_shooting_star_container {
+    position: absolute;
+    inset: 0;
+    transform: rotate(30deg);
+    /* background-color: red; */
+}
+
 .sky_hero_shooting-star {
     --shooting-color: rgb(237, 238, 227);
+    opacity: 0;
     background-color: transparent;
     width: 0.1px;
     height: 0.1px;
@@ -201,8 +209,10 @@
     transform: scaleX(25) translateX(-70%) translateY(var(--osa-y));
     border-radius: 30%;
     position: absolute;
-    /* animation: shooting-star 2s ease-in both var(--animation-delay); - tohle by se kdyztak dalo do vicero css rules, aby
-        delay mohl byt samostatne setnutej z JSX*/
+    /* animation-name: shooting-star; */
+    animation-duration:  2s;
+    animation-timing-function:  ease-in both;
+    animation-iteration-count: infinite;
 }
 
 
@@ -219,11 +229,22 @@
 
 @keyframes shooting-star {
     0% {
-        transform: scaleX(25) translateX(-70%) translateY(var(--osa-y));
+        transform: scaleX(25) translateX(-100%) translateY(var(--osa-y));
+        opacity: 0;
     }
 
+    5%, 95% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+
     100% {
-        transform: scaleX(25) translateX(220%) translateY(var(--osa-y));
+        transform: scaleX(25) translateX(300%) translateY(var(--osa-y));
+        opacity: 0;
     }
 }
 
