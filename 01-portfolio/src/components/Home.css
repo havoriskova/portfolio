@@ -193,7 +193,7 @@
     border-style: solid;
     border-color: transparent var(--shooting-color) transparent transparent;
     transform: scaleX(25);
-    left: -50%;
+    left: var(--left);
     border-radius: 30%;
     position: absolute;
     animation-name: shooting-star;
@@ -212,7 +212,7 @@
     border-style: solid;
     border-color: transparent var(--shooting-color) transparent transparent;
     transform: scaleX(25);
-    left: -50%;
+    left: var(--left);
     border-radius: 30%;
     position: absolute;
     animation-name: shooting-star-2;
@@ -238,7 +238,7 @@
     0% {
         transform: scaleX(25);
         opacity: 0;
-        left: -10%;
+        left: var(--left);
     }
 
     1%, 95% {
@@ -262,7 +262,7 @@
     0% {
         transform: scaleX(25);
         opacity: 0;
-        left: -10%;
+        left: var(--left);
     }
 
     1%, 95% {

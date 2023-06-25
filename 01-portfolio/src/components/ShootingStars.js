@@ -13,10 +13,11 @@ const [counter, setCounter] = useState(0);
 
 const createStars = () => {
 
-    let amountShooting, delay, duration; // amount is for 1 cyclus, height in %
+    let amountShooting, delay, duration, left; // amount is for 1 cyclus, height in %
     isDesctop ? (amountShooting = 2) : (amountShooting = 2);
     isDesctop ? (delay = 3) : (delay = 1); // v ms
     isDesctop ? (duration = 1.7) : (duration = 1); // v s
+    isDesctop ? (left = -10) : (left= -50); // v %
     // isDesctop ? (heightForShooting = 50) : (heightForShooting = 70);
 
     setCounter(counter + 1);
@@ -28,6 +29,7 @@ const createStars = () => {
     for (let i = 0; i < randomAmount; i++) {
         let shootingStar = {};
         shootingStar.id = i;
+        shootingStar.left = `${left}%`;
         shootingStar.top = `${Math.floor(Math.random()*70) + 10}%`; /*zacit uplne nahore a taky moc dole nemusi */
         shootingStar.animationDelay = `${Math.floor(Math.random()*delay)*0.1}s`;
         shootingStarsArr.push(shootingStar);
@@ -44,7 +46,7 @@ const createStars = () => {
         //console.log(shootingStar);
         return(
             <div className={shootingStar.class} key={shootingStar.id}
-            style={{animationDelay: shootingStar.animationDelay, top: shootingStar.top, animationDuration: shootingStar.animationDuration
+            style={{animationDelay: shootingStar.animationDelay, top: shootingStar.top, animationDuration: shootingStar.animationDuration, '--left': shootingStar.left
             }}></div>
         )});
 
