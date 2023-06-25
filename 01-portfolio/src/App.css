@@ -229,6 +229,7 @@ filter: var(--light-color-filter-from-black);
 
 .Thanks.container h1 {
   padding: 2rem;
+  line-height: 2.4rem;
 }
 
 .Thanks.container p {
