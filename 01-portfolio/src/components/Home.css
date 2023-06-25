@@ -180,7 +180,7 @@
     position: absolute;
     inset: 0;
     transform: rotate(30deg);
-    background-color: rgba(242, 96, 96, 0.4);
+    /* background-color: rgba(242, 96, 96, 0.4); */
 }
 
 .sky_hero_shooting-star {
@@ -197,12 +197,33 @@
     border-radius: 30%;
     position: absolute;
     animation-name: shooting-star;
-    animation-duration:  3s;
-    animation-timing-function:  ease-in both;
+    /* animation-duration:  3s; */
+    animation-timing-function:  ease-in;
+    /*animation-iteration-count: infinite; /* pri infinite a ruznych delays se animace usekne jak interval vyvola nove funkci*/
+}
+
+.sky_hero_shooting-star-2 {
+    --shooting-color: rgb(237, 238, 227);
+    /* opacity: 0; */
+    background-color: transparent;
+    width: 0.1px;
+    height: 0.1px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: transparent var(--shooting-color) transparent transparent;
+    transform: scaleX(25);
+    left: -50%;
+    border-radius: 30%;
+    position: absolute;
+    animation-name: shooting-star-2;
+    /* animation-duration:  3s; */
+    animation-timing-function:  ease-in;
+    /*animation-iteration-count: infinite; /* pri infinite a ruznych delays se animace usekne jak interval vyvola nove funkci*/
+    /*animace se automaticky nerestartuji --> musis odebrat a znovu pridat class, a nebo pridat pokazde class jinou a to s jinou animaci, jako ted ja.. */
 }
 
 
-.sky_hero_shooting-star::after {
+.sky_hero_shooting-star::after,  .sky_hero_shooting-star-2::after{
     width: 100%;
     height: 100%;
     background-color: rgba(245 231 107 / 0.5);
@@ -220,7 +241,7 @@
         left: -50%;
     }
 
-    5%, 95% {
+    10%, 80% {
         opacity: 0;
     }
 
@@ -232,6 +253,29 @@
     100% {
         transform: scaleX(25);
         opacity: 0;
+        left: 150%;
+    }
+}
+
+@keyframes shooting-star-2 {
+    0% {
+        transform: scaleX(25);
+        /* opacity: 0; */
+        left: -50%;
+    }
+
+    5%, 95% {
+        /* opacity: 0; */
+    }
+
+    50% {
+        /* opacity: 1; */
+    }
+
+
+    100% {
+        transform: scaleX(25);
+        /* opacity: 0; */
         left: 150%;
     }
 }

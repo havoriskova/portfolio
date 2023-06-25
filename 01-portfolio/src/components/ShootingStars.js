@@ -3,35 +3,46 @@ import { useEffect, useState } from 'react';
 export default function ShootingStars () {
 
 
-/* ------------------ shooting stars------------ */
 const isDesctop = window.matchMedia(`(min-width:800px)`).matches;
 
-let shootingStars = [];
+let shootingStarsArr = [];
 const [shootingStarsDiv, setShootingStarsDiv] = useState();
+const [counter, setCounter] = useState(0);
 
 const createStars = () => {
 
-    let amountShooting, heightForShooting; // amount is for 1 cyclus, height in %
-    isDesctop ? (amountShooting = 5) : (amountShooting = 3);
-    isDesctop ? (heightForShooting = 90) : (heightForShooting = 70);
+    let amountShooting, delay, duration; // amount is for 1 cyclus, height in %
+    isDesctop ? (amountShooting = 10) : (amountShooting = 3);
+    isDesctop ? (delay = 20) : (delay = 30);
+    isDesctop ? (duration = 4) : (duration = 3);
+    // isDesctop ? (heightForShooting = 50) : (heightForShooting = 70);
+
+    setCounter(counter + 1);
 
 
    let randomAmount = Math.floor(Math.random()*amountShooting) + 2; //minimum by mely byt dve
-
+   console.log(randomAmount);
 
     for (let i = 0; i < randomAmount; i++) {
         let shootingStar = {};
         shootingStar.id = i;
-        shootingStar.top = `${Math.floor(Math.random()*heightForShooting) + 1}%`;
-        shootingStar.animationDelay = `${Math.floor(Math.random()*30)*0.1}s`;
-        shootingStars.push(shootingStar);
+        shootingStar.top = `${Math.floor(Math.random()*90) + 10}%`; /*zacit uplne nahore nemusi */
+        shootingStar.animationDelay = `${Math.floor(Math.random()*delay)*0.1}s`;
+        shootingStarsArr.push(shootingStar);
+        shootingStar.animationDuration = `${duration}s`;
+        if (counter % 2 === 0) {
+            shootingStar.class= 'sky_hero_shooting-star';
+        } else {
+            shootingStar.class= 'sky_hero_shooting-star-2';
+        }
+        
     }
 
-    const shootingsStars = shootingStars.map(shootingStar => {
+    const shootingsStars = shootingStarsArr.map(shootingStar => {
         console.log(shootingStar);
         return(
-            <div className='sky_hero_shooting-star' key={shootingStar.id}
-            style={{animationDelay: shootingStar.animationDelay, top: shootingStar.top,
+            <div className={shootingStar.class} key={shootingStar.id}
+            style={{animationDelay: shootingStar.animationDelay, top: shootingStar.top, animationDuration: shootingStar.animationDuration
             }}></div>
         )});
 
@@ -41,6 +52,8 @@ const createStars = () => {
 }
 
 
+useEffect(createStars, []); //init call, mel by se renderovat jen jednou, a pak uz ne, proto je prazdna dependency array ! 
+
 useEffect(() => {
     const interval = setInterval(() => {
       createStars();
@@ -48,6 +61,9 @@ useEffect(() => {
     }, 6000);
     return () => clearInterval(interval);
   });
+
+
+
 
 
 //createStars(); // musi byt vyvolana intervalem
