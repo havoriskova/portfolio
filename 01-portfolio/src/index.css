@@ -10,7 +10,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a, button, #toggleNavButton {
+a, button, #toggleNavButton, img {
   -webkit-tap-highlight-color: transparent;
 }
 

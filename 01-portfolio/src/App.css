@@ -78,6 +78,7 @@ footer {
 .footer-absolute-positioning-replacement {
   width: 1px;
   height: 400px;
+  /* z-index: -10; nefunguje, takze neresi situaci */
 }
 
 header {
@@ -202,9 +203,13 @@ filter: var(--light-color-filter-from-black);
  background-color: blue;
 } */
 
+.App main {
+  z-index:1;
+}
+
 .App footer {
   padding-top: 5rem;
-  z-index: -2;
+  z-index: 0;
 }
 
 .App footer a[href*="linkedin"] {
@@ -225,7 +230,7 @@ filter: var(--light-color-filter-from-black);
     background-color: transparent;
     width: 90%;
     padding-top: 2rem; 
-    top: 1rem;
+    /* top: 1rem; */
     display: flex;
   }
 
@@ -254,7 +259,9 @@ filter: var(--light-color-filter-from-black);
 }
 
 @media (min-width: 1200px) {
-
+  .App header .nav-ul {
+    gap: 2.5rem;
+  }
 
 }
 
@@ -265,6 +272,10 @@ filter: var(--light-color-filter-from-black);
 
     .App header .nav-li {
       height: 1.6rem; /*.8*/
+    }
+
+    .App header .nav-ul {
+      gap: 3.5rem;
     }
 
 }

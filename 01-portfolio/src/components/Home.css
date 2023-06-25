@@ -16,6 +16,7 @@
 
 .Home .About.constellation_header_6 {
     margin-top: 3rem;
+    pointer-events: none;
 }
 
 .Home .about_text {
@@ -40,11 +41,13 @@
     width: 90%;
     left: 5%;
     /* background-color: rgba(0 0 0 / .4); */
+    pointer-events: none;
 }
 
 .header-container-phones img {
    max-width: 100%;
    max-height: 100%;
+   pointer-events: none;
 }
 
 
@@ -107,6 +110,7 @@
     /* display: flex;
     place-content: flex-end; */
     width: 60%;
+    pointer-events: none;
 }
 
 
@@ -362,18 +366,22 @@
             width: 80%;
         }
     
+        .aboutImageContainer {
+            width: 100%;
+            aspect-ratio: 4/3;
+        }
+
         .LennonWallImg {
-            width: max-content;
-            height: max-content;
+            max-width: 100%;
         }
 
         .aboutImageContainer::after {
             display: inline-block;
             width: 100%;
+            aspect-ratio: 4/3;
             position: absolute;
             left: 1rem;
             top: 1rem;
-            aspect-ratio: 4/3;
             content: '';
             border: solid rgb(229, 229, 229) .1rem;
             border-image-slice: 1;
