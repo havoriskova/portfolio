@@ -20,11 +20,11 @@ const Projects = (props) => {
             </h1>
 
 
-            <Planner />
-            <Icf />
-            <Dictionary />
-            <Weather />
-            <CSSChallenge />
+            <Planner url='https://hanavoriskova.netlify.app'/>
+            <Icf url='https://hanavoriskova.netlify.app'/>
+            <Dictionary url='https://hanavoriskova.netlify.app'/>
+            <Weather url='https://hanavoriskova.netlify.app'/>
+            <CSSChallenge url='https://hanavoriskova.netlify.app'/>
             {/* <Resume />  */}
 
 

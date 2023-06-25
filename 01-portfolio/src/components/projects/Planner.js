@@ -2,11 +2,35 @@ import headerPlanner from '../../img/headers/PLANNER_GENERATOR_7_rem.png'
 import githubLogo from '../../img/github-logo.png';
 import plannerForPhones from '../../img/planner-for-phones.JPG';
 import plannerForDesktop from '../../img/photos-for-scrolling/planner.JPG';
+import {useState} from 'react';
 
-const Planner = (props) => {
+const Planner = ({url}) => {
+
+    const [isPictureClicked, setGallery] = useState(false);
+    const [src, setSrc] = useState('');
+
+    const showPicture = (e) => {
+       // console.log('show picture funkce funguje');
+      //  console.dir(e.target.attributes);
+       // console.log(e.target.attributes.src.nodeValue); // mi da tohle: /static/media/planner.1c242bf63d54130bfbfc.JPG, coz je adresa z hanavoriskova.netlify.app/static...
+        const urlImg = url;
+        const srcImg = e.target.attributes.src.nodeValue;
+        setSrc(`${urlImg}${srcImg}`);
+        setGallery(true);
+    };
+
+    const shutGallery = () => {
+      //  console.log('shutGallery funguje');
+        setGallery(false);
+    }
 
     return(
         <div className="project container">
+            { isPictureClicked ? (
+                <div className='galleryContainer' onClick={shutGallery}>
+                    <img src={src} alt='project' className='galleryImg'></img>
+                </div>
+            ) : (null) }
             <div className="col-1">
                 <h2 className='constellation_header_7'>
                         <img alt='header for planner generator' src={headerPlanner}/>
@@ -31,7 +55,7 @@ const Planner = (props) => {
                     <img className='printscreen-phone' alt='printscreen of the project in phone width' 
                         srcset=""/> */}
                     <img className='cutted-photo' alt='desktop and phone with cutted monitors, so the printscreens of page seems to be in there'
-                        src={plannerForDesktop}/> {/*max-width:100% */}
+                        src={plannerForDesktop}  onClick={showPicture}/> {/*max-width:100% */}
 
                     {/* Scroll me text: Absolute positioning in %, MUSI BYT SAMOSTATNE - nemuze byt soucasti img, protoze pak by se to pismo furt zvetsovalo, a to nechces */}
                     {/* <div className='scrollMe-planner-phone'>scroll me!</div>*/}

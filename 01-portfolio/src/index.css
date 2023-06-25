@@ -16,11 +16,11 @@ a, button, #toggleNavButton {
 
 body {
   --primary-color: rgb(27, 27, 27);
-  --secondary-color: rgb(43, 42, 42);
+  --secondary-color: rgb(37, 25, 72);
   font-size: 14px;
   line-height: 1.3rem;
   min-height: 100vh;
-  background-color: var(--secondary-color)
+  background-color: var(--secondary-color);
 }
 
 code {

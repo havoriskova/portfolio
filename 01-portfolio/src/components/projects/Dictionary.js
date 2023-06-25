@@ -2,12 +2,35 @@ import headerDictionary from '../../img/headers/DICTIONARY_5_rem.png';
 import githubLogo from '../../img/github-logo.png';
 import dictionaryForPhones from '../../img/dictionary-for-phones.jpg';
 import dictionaryForDesktop from '../../img/photos-for-scrolling/dictionary.jpg';
+import {useState} from 'react';
 
-const Dictionary = (props) => {
+const Dictionary = ({url}) => {
 
+    const [isPictureClicked, setGallery] = useState(false);
+    const [src, setSrc] = useState('');
+
+    const showPicture = (e) => {
+       // console.log('show picture funkce funguje');
+      //  console.dir(e.target.attributes);
+       // console.log(e.target.attributes.src.nodeValue); // mi da tohle: /static/media/planner.1c242bf63d54130bfbfc.JPG, coz je adresa z hanavoriskova.netlify.app/static...
+        const urlImg = url;
+        const srcImg = e.target.attributes.src.nodeValue;
+        setSrc(`${urlImg}${srcImg}`);
+        setGallery(true);
+    };
+
+    const shutGallery = () => {
+      //  console.log('shutGallery funguje');
+        setGallery(false);
+    }
 
     return(
         <div className="project container">
+              { isPictureClicked ? (
+                <div className='galleryContainer' onClick={shutGallery}>
+                    <img src={src} alt='project' className='galleryImg'></img>
+                </div>
+            ) : (null) }
         
             <div className="col-1">
                     <h2 className='constellation_header_5'>
@@ -32,7 +55,7 @@ const Dictionary = (props) => {
                     {/*img printscreenu PC pro scroll */}
                     {/*img printscreenu PHONE pro scroll */}
                     <div className='desktop-pictures-container'>
-                        <img alt='desktop and phone with open website' src={dictionaryForDesktop}  loading="lazy"/>
+                        <img alt='desktop and phone with open website' src={dictionaryForDesktop}  onClick={showPicture} loading="lazy"/>
                     </div>
                     {/* img fotky upravene pres inkscape s vyrizlym monitorem jako 2., protoze musi mit vyssi z-index  */}
             </div>

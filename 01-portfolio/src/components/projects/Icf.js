@@ -2,12 +2,35 @@ import headerICF from '../../img/headers/ICF_WEBSITE_5_rem.png';
 import githubLogo from '../../img/github-logo.png';
 import icfForPhones from '../../img/icf-for-phones.JPG';
 import icfForDesktop from '../../img/photos-for-scrolling/icf.JPG';
+import {useState} from 'react';
 
-const Icf = (props) => {
+const Icf = ({url}) => {
 
+    const [isPictureClicked, setGallery] = useState(false);
+    const [src, setSrc] = useState('');
+
+    const showPicture = (e) => {
+       // console.log('show picture funkce funguje');
+      //  console.dir(e.target.attributes);
+       // console.log(e.target.attributes.src.nodeValue); // mi da tohle: /static/media/planner.1c242bf63d54130bfbfc.JPG, coz je adresa z hanavoriskova.netlify.app/static...
+        const urlImg = url;
+        const srcImg = e.target.attributes.src.nodeValue;
+        setSrc(`${urlImg}${srcImg}`);
+        setGallery(true);
+    };
+
+    const shutGallery = () => {
+      //  console.log('shutGallery funguje');
+        setGallery(false);
+    }
 
     return(
         <div className="project container">
+               { isPictureClicked ? (
+                <div className='galleryContainer' onClick={shutGallery}>
+                    <img src={src} alt='project' className='galleryImg'></img>
+                </div>
+            ) : (null) }
             <div className="col-1">
             <h2 className='constellation_header_5'>
                 <img alt='header for ICF' src={headerICF}/>
@@ -32,7 +55,7 @@ const Icf = (props) => {
             <div className="col-2">
                 {/*img printscreenu pro scroll */}
                 <div className='desktop-pictures-container'>
-                    <img alt='desktop and phone with open website' src={icfForDesktop}  loading="lazy"/>
+                    <img alt='desktop and phone with open website' src={icfForDesktop}  loading="lazy" onClick={showPicture}/>
                 </div>
                {/* img optimalizovane pro pc */}
             </div>

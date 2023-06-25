@@ -32,6 +32,7 @@
   /*------------- */
 
 
+  
 .App {
   text-align: center;
   /* color: var(--lightest-color); */
@@ -41,6 +42,7 @@
   --color-text-hover: #B2B2B2; /* == invert(70%) z cerne*/
   position: relative;
   min-height: 100vh;
+  /* background-color: var(--darkest-color); */
 }
 
 
@@ -215,7 +217,7 @@ filter: var(--light-color-filter-from-black);
 
 @media (min-width: 500px) {
   header > *, main > *, aside > *, footer > * {
-    width: 80%;
+    width: 90%;
   }
 
   .App header nav, .App header .nav-icon.active ~ nav {
