@@ -15,14 +15,14 @@ const createStars = () => {
 
     let amountShooting, delay, duration; // amount is for 1 cyclus, height in %
     isDesctop ? (amountShooting = 2) : (amountShooting = 1);
-    isDesctop ? (delay = 10) : (delay = 10);
-    isDesctop ? (duration = 2) : (duration = 2);
+    isDesctop ? (delay = 5) : (delay = 5);
+    isDesctop ? (duration = 1.5) : (duration = 1);
     // isDesctop ? (heightForShooting = 50) : (heightForShooting = 70);
 
     setCounter(counter + 1);
 
 
-   let randomAmount = Math.floor(Math.random()*amountShooting) + 2; //minimum by mely byt dve
+   let randomAmount = Math.floor(Math.random()*amountShooting) + 1; //minimum jedna
    //console.log(randomAmount);
 
     for (let i = 0; i < randomAmount; i++) {
@@ -59,8 +59,8 @@ const createStars = () => {
 useEffect(() => {
     const interval = setInterval(() => {
       createStars();
-     // console.log('This will run every 3 seconds!');
-    }, 3000);
+     // console.log('This will run every 2 seconds!');
+    }, 2000);
     return () => clearInterval(interval);
   });
 
