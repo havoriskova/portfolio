@@ -218,6 +218,19 @@ filter: var(--light-color-filter-from-black);
 }
 
 
+.Thanks.container {
+  padding-top: 4rem;
+}
+
+.Thanks.container h1 {
+  padding: 2rem;
+}
+
+.Thanks.container p {
+  padding: 1rem 2rem;
+}
+
+
 /* mobile first */
 
 @media (min-width: 500px) {
