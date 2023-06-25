@@ -14,9 +14,9 @@ const [counter, setCounter] = useState(0);
 const createStars = () => {
 
     let amountShooting, delay, duration; // amount is for 1 cyclus, height in %
-    isDesctop ? (amountShooting = 10) : (amountShooting = 3);
-    isDesctop ? (delay = 20) : (delay = 30);
-    isDesctop ? (duration = 4) : (duration = 3);
+    isDesctop ? (amountShooting = 2) : (amountShooting = 1);
+    isDesctop ? (delay = 10) : (delay = 10);
+    isDesctop ? (duration = 2) : (duration = 2);
     // isDesctop ? (heightForShooting = 50) : (heightForShooting = 70);
 
     setCounter(counter + 1);
@@ -60,12 +60,14 @@ useEffect(() => {
     const interval = setInterval(() => {
       createStars();
       console.log('This will run every 6 seconds!');
-    }, 6000);
+    }, 3000);
     return () => clearInterval(interval);
   });
 
 
-
+// useEffect(() => {
+//     createStars();
+// })
 
 
 //createStars(); // musi byt vyvolana intervalem
