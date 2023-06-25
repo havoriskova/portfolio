@@ -8,11 +8,18 @@ form {
 form input,
 form textarea {
     background-color: var(--primary-color);
+    /* background-color: var(--color-text); */
+    /* filter: invert(5%); */
     padding: .7rem;
     margin: .3rem 0;
     border: none;
-    color: white;
+    color: var(--color-text);
+    transition: filter ease .3s;
 }
+
+/* input:-internal-autofill-selected {
+    background-color: -internal-light-dark(var(--color-text));
+} */
 
 form textarea {
     height: 150px;
@@ -21,6 +28,7 @@ form textarea {
 form input:focus-visible, form textarea:focus-visible {
     outline: none;
     filter: invert(5%);
+    transition: filter ease .3s;
 }
 
 form input[type='search']:focus {
