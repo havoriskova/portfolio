@@ -54,6 +54,7 @@
     position: relative;
     color: var(--dark-color-bkg);
     font-weight: 600;
+    transition: filter ease .3s;
 
 }
 

@@ -167,6 +167,7 @@ a {
 .App header .nav-li {
   height: 1.2rem;
   filter: invert(90%);
+  transition: filter ease .3s;
 }
 
 .App header .nav-li:hover {

@@ -38,10 +38,15 @@
 .socials .socials-img {
     height: 2rem;
     filter: invert(90%);
+    transition: filter ease .3s;
 }
 
 .socials .socials-img:hover {
     filter: invert(70%);
+}
+
+.hr ~ div a {
+    transition: filter ease .3s;
 }
 
 .hr ~ div a:hover {
