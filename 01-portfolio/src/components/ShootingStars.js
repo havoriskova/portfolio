@@ -15,7 +15,7 @@ const createStars = () => {
 
     let amountShooting, delay, duration, left; // amount is for 1 cyclus, height in %
     isDesctop ? (amountShooting = 2) : (amountShooting = 2);
-    isDesctop ? (delay = 3) : (delay = 1); // v ms
+    isDesctop ? (delay = 3) : (delay = 10); // v ms
     isDesctop ? (duration = 1.7) : (duration = 1); // v s
     isDesctop ? (left = -10) : (left= -50); // v %
     // isDesctop ? (heightForShooting = 50) : (heightForShooting = 70);
