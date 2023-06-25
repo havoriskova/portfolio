@@ -227,7 +227,7 @@ filter: var(--light-color-filter-from-black);
 }
 
 .Thanks.container p {
-  padding: 1rem 2rem 5rem;
+  padding: 1rem 2rem;
 }
 
 
