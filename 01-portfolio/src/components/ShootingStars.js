@@ -14,9 +14,9 @@ const [counter, setCounter] = useState(0);
 const createStars = () => {
 
     let amountShooting, delay, duration; // amount is for 1 cyclus, height in %
-    isDesctop ? (amountShooting = 2) : (amountShooting = 1);
-    isDesctop ? (delay = 5) : (delay = 5);
-    isDesctop ? (duration = 1.5) : (duration = 1);
+    isDesctop ? (amountShooting = 2) : (amountShooting = 2);
+    isDesctop ? (delay = 3) : (delay = 1); // v ms
+    isDesctop ? (duration = 1.7) : (duration = 1); // v s
     // isDesctop ? (heightForShooting = 50) : (heightForShooting = 70);
 
     setCounter(counter + 1);
@@ -28,7 +28,7 @@ const createStars = () => {
     for (let i = 0; i < randomAmount; i++) {
         let shootingStar = {};
         shootingStar.id = i;
-        shootingStar.top = `${Math.floor(Math.random()*90) + 10}%`; /*zacit uplne nahore nemusi */
+        shootingStar.top = `${Math.floor(Math.random()*70) + 10}%`; /*zacit uplne nahore a taky moc dole nemusi */
         shootingStar.animationDelay = `${Math.floor(Math.random()*delay)*0.1}s`;
         shootingStarsArr.push(shootingStar);
         shootingStar.animationDuration = `${duration}s`;
@@ -41,7 +41,7 @@ const createStars = () => {
     }
 
     const shootingsStars = shootingStarsArr.map(shootingStar => {
-        console.log(shootingStar);
+        //console.log(shootingStar);
         return(
             <div className={shootingStar.class} key={shootingStar.id}
             style={{animationDelay: shootingStar.animationDelay, top: shootingStar.top, animationDuration: shootingStar.animationDuration
