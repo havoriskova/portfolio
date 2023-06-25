@@ -11,7 +11,9 @@
 .galleryImg {
   max-width: 90%;
   max-height: 95vh;
+  cursor: pointer;
 }
+
 
 .project.container {
     display: flex;
@@ -145,6 +147,12 @@
       width: 100%;
       /* object-fit: cover; */
       /* box-shadow: 1rem 1rem var(--primary-color), 1.2rem 1.2rem var(--dark-color); */
+      cursor: pointer;
+      transition: filter ease .3s;
+    }
+
+    .col-2 .desktop-pictures-container img:hover {
+        filter: brightness(90%);
     }
 
     .col-2 .desktop-pictures-container::after {
