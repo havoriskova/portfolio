@@ -34,27 +34,35 @@
 
 .Loader circle {
     fill: none;
-	stroke: var(--primary-color); /**/
+	stroke: var(--primary-color); 
+	/* stroke: red; */
 	stroke-width: 95%; /**/
-	animation: strokeAnimation 4s forwards infinite;
+	animation: strokeAnimation 2s forwards infinite;
 	stroke-dasharray: 760; /*délka mezery pro zakrytí celého kruhu!*/
 	transform: rotate(-90deg);
 	transform-origin: center center;
 }
 
+
+/*-----------------------------------------------------*/
 @media (max-width: 400px) {
 	.Loader circle {
 		/* transform: scale(0.5, 0.5) translate(-20px, -20px); */
-		animation: strokeAnimationSmaller 4s forwards infinite;
+		animation: strokeAnimationSmaller 2s forwards infinite;
 		stroke-width: 118%;
 		stroke: var(--primary-color); /**/
 	}
 
 	@keyframes strokeAnimationSmaller {
-		0% {stroke-dashoffset: 760; transform: rotate(-90deg) scale(0.5, 0.5) translate(-25px, -25px);}
+		/* 0% {stroke-dashoffset: 760; transform: rotate(-90deg) scale(0.5, 0.5) translate(-25px, -25px);}
 		50% {stroke-dashoffset: 0; transform: rotate(-90deg) scale(0.5, 0.5) translate(-25px, -25px);}
 		50.0001%  {transform: rotate(-90deg) scale(0.5, -0.5) translate(-25px, -25px);}
-		100% {stroke-dashoffset: 760; transform: rotate(-90deg) scale(0.5, -0.5) translate(-25px, -25px);}
+		100% {stroke-dashoffset: 760; transform: rotate(-90deg) scale(0.5, -0.5) translate(-25px, -25px);} */
+
+		0% {transform: rotate(-90deg) scale(0.5, -0.5) translate(-25px, -25px);}
+		50% {stroke-dashoffset: 760; transform: rotate(-90deg) scale(0.5, -0.5) translate(-25px, -25px);}
+		50.0001%  {stroke-dashoffset: 760; transform: rotate(-90deg) scale(0.5, 0.5) translate(-25px, -25px);}
+		100% {stroke-dashoffset: 0; transform: rotate(-90deg) scale(0.5, 0.5) translate(-25px, -25px);}
 	}
 }
 
@@ -78,10 +86,18 @@
 */
 
 @keyframes strokeAnimation {
+	/* takhle zacina cely napis:
+	
 	0% {stroke-dashoffset: 760; transform: scaleY(1) rotate(-90deg);}
 	50% {stroke-dashoffset: 0; transform:scaleY(1) rotate(-90deg);}
 	50.0001%  {transform: rotate(-90deg) scaleY(-1);}
-	100% {stroke-dashoffset: 760; transform: rotate(-90deg) scaleY(-1);}
+	100% {stroke-dashoffset: 760; transform: rotate(-90deg) scaleY(-1);} */
+
+	0% {stroke-dashoffset: 0; transform: rotate(-90deg) scaleY(-1);}
+	50% {stroke-dashoffset: 760; transform: rotate(-90deg) scaleY(-1);}
+	50.0001%  {stroke-dashoffset: 760; transform: rotate(-90deg) scaleY(1);}
+	100% {stroke-dashoffset: 0; transform:  rotate(-90deg) scaleY(1);}
+
 }
 
 /* @keyframes changeZIndex {
