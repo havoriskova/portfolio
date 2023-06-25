@@ -184,7 +184,7 @@
 }
 
 .sky_hero_shooting-star {
-    --shooting-color: rgb(237, 238, 227);
+    --shooting-color: var(--lightest-color);
     /* opacity: 0; */
     background-color: transparent;
     width: 0.1px;
@@ -203,7 +203,7 @@
 }
 
 .sky_hero_shooting-star-2 {
-    --shooting-color: rgb(237, 238, 227);
+    --shooting-color: var(--lightest-color);
     /* opacity: 0; */
     background-color: transparent;
     width: 0.1px;
@@ -238,10 +238,10 @@
     0% {
         transform: scaleX(25);
         opacity: 0;
-        left: -50%;
+        left: -10%;
     }
 
-    10%, 80% {
+    10%, 90% {
         opacity: 0;
     }
 
@@ -253,44 +253,44 @@
     100% {
         transform: scaleX(25);
         opacity: 0;
-        left: 150%;
+        left: 90%;
     }
 }
 
 @keyframes shooting-star-2 {
     0% {
         transform: scaleX(25);
-        /* opacity: 0; */
-        left: -50%;
+        opacity: 0;
+        left: -10%;
     }
 
     5%, 95% {
-        /* opacity: 0; */
+        opacity: 0;
     }
 
     50% {
-        /* opacity: 1; */
+        opacity: 1;
     }
 
 
     100% {
         transform: scaleX(25);
-        /* opacity: 0; */
-        left: 150%;
+        opacity: 0;
+        left: 90%;
     }
 }
 
 @keyframes stars {
     0% {
-        opacity: 1;
+        opacity: .7;
     }
 
     50% {
-        opacity: 0.2;
+        opacity: 0.1;
     }
 
     100% {
-        opacity: 1;
+        opacity: .7;
     }
 }
 

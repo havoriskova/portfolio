@@ -9,6 +9,8 @@ let shootingStarsArr = [];
 const [shootingStarsDiv, setShootingStarsDiv] = useState();
 const [counter, setCounter] = useState(0);
 
+
+
 const createStars = () => {
 
     let amountShooting, delay, duration; // amount is for 1 cyclus, height in %
@@ -51,8 +53,8 @@ const createStars = () => {
 
 }
 
-
-//useEffect(createStars, []); //init call, mel by se renderovat jen jednou, a pak uz ne, proto je prazdna dependency array, ale takhle mi to netlify nenacte :(  
+// init call - rada bych, ale chce to po mne dat fci createStars do useCallback hooku, a ten pak chce dat states do useMemo hooku :(
+//useEffect(() => {createStars()}, [createStars]); //init call, mel by se renderovat jen jednou, a pak uz ne, proto je prazdna dependency array, ale takhle mi to netlify nenacte :(  
 
 useEffect(() => {
     const interval = setInterval(() => {

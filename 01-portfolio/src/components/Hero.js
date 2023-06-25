@@ -12,7 +12,7 @@ const Hero = () => {
     const isDesctop = window.matchMedia(`(min-width:800px)`).matches;
 
     let amount, starSize; 
-    isDesctop ? (amount = 200) : (amount = 50);
+    isDesctop ? (amount = 300) : (amount = 100);
     isDesctop ? (starSize = 70) : (starSize = 30);
 
     const stars = []; // array s objekty
