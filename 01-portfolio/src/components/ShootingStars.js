@@ -23,7 +23,7 @@ const createStars = () => {
 
 
    let randomAmount = Math.floor(Math.random()*amountShooting) + 2; //minimum by mely byt dve
-   console.log(randomAmount);
+   //console.log(randomAmount);
 
     for (let i = 0; i < randomAmount; i++) {
         let shootingStar = {};
@@ -59,7 +59,7 @@ const createStars = () => {
 useEffect(() => {
     const interval = setInterval(() => {
       createStars();
-      console.log('This will run every 6 seconds!');
+     // console.log('This will run every 3 seconds!');
     }, 3000);
     return () => clearInterval(interval);
   });
