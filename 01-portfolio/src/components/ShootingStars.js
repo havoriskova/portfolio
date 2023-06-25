@@ -52,7 +52,7 @@ const createStars = () => {
 }
 
 
-useEffect(createStars, []); //init call, mel by se renderovat jen jednou, a pak uz ne, proto je prazdna dependency array ! 
+//useEffect(createStars, []); //init call, mel by se renderovat jen jednou, a pak uz ne, proto je prazdna dependency array, ale takhle mi to netlify nenacte :(  
 
 useEffect(() => {
     const interval = setInterval(() => {
