@@ -29,7 +29,7 @@ export default function Contact() {
                             both the Force and the intricacies of coding. Well, you've found your Jedi Master of websites!
                             </p>
                             <p>
-                            You can drop me a message using any transmission device you fancy: an astromech droid's holographic projector, a communication beacon, or you can use the form bellow. 
+                            You can drop me a message using any transmission device you fancy: an astromech droid's holographic projector, a communication beacon, or you can use this form. 
                             Whichever path you choose, I promise to respond faster than Han Solo can make the Kessel Run.
                             </p>
                         </div>
