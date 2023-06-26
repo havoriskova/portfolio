@@ -1,5 +1,5 @@
 import aboutHeader from '../img/headers/about_6_rem.png';
-import aboutImage from '../img/about.jpeg';
+import aboutImage from '../img/about.jpg';
 import { NavLink } from 'react-router-dom';
 
 
@@ -12,8 +12,8 @@ const About = () => {
                         <img alt='header for about' src={aboutHeader} loading="lazy"/>
             </h2>
 
-            <div className='flex-parent-about'>
-                <div className='about_text'>
+            <div className='flex-parent-two-coll'>
+                <div className='text-container about_text'>
                     <p>Hello there! I'm Hana, a web developer hailing from the Czech Republic and currently residing 
                     in the Netherlands. Despite of the fact, that Yoda said I was too old to begin the training, I've learned to wield the force of web development over the past three years.</p>
 
@@ -26,7 +26,7 @@ const About = () => {
                     <NavLink to='/contact' className='secondary-action-button'>Contact me</NavLink>
 
                 </div>
-                <div className='aboutImageContainer'>
+                <div className='aboutImageContainer flex-container-col-2'>
                     <img className='LennonWallImg' alt='the web developer you are looking for' src={aboutImage} loading="lazy"/>
                 </div>
             </div>

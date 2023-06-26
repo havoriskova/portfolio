@@ -21,16 +21,6 @@
 
 
 
-.Home .about_text {
-    margin: 0 auto;
-    text-align: justify;
-    max-width: 90%;
-}
-
-.Home .about_text p {
-    margin: 0 0 1rem;
-}
-
 /*--------- WEB DEV PORTFOLIO ----------*/
 
 
@@ -364,19 +354,9 @@
 
 
 @media (min-width: 1000px) {
-    .Home .about_text {
-            max-width: 600px;
-            flex: 0 0 50%;
-        }
+
     
-        .flex-parent-about {
-            display: flex;
-            gap: 10%;
-            margin: 2rem auto;
-            max-width: 1400px;
-            width: 80%;
-        }
-    
+
         .aboutImageContainer {
             width: 100%;
             aspect-ratio: 4/3;
@@ -385,6 +365,7 @@
 
         .LennonWallImg {
             max-width: 100%;
+            width: auto;
         }
 
         .aboutImageContainer::after {

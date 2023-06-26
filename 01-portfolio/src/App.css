@@ -181,7 +181,15 @@ a {
   filter: brightness(80%);
 }
 
+.text-container {
+  margin: 0 auto;
+  text-align: justify;
+  max-width: 90%;
+}
 
+.text-container p {
+  margin: 0 0 1rem;
+}
 
 .App header .nav-ul {
   list-style: none;
@@ -320,13 +328,31 @@ filter: var(--light-color-filter-from-black);
 }
 
 @media (min-width: 1000px) {
-    [class*='action-button'] {
+      
+  .flex-parent-two-coll {
+    display: flex;
+    gap: 10%;
+    margin: 2rem auto;
+    max-width: 1400px;
+    width: 80%;
+  }
+  
+  .text-container {
+    max-width: 600px;
+    flex: 0 0 50%;
+  }
+
+  .flex-container-col-2 {
+    width: 600px;
+  }
+
+  [class*='action-button'] {
       padding: .5rem 1rem;
   }
 
   .secondary-action-button {
     margin-left: 2rem;
-}
+  }
 }
 
 @media (min-width: 1200px) {

@@ -17,12 +17,13 @@ form textarea {
     transition: filter ease .3s;
 }
 
-/* input:-internal-autofill-selected {
-    background-color: -internal-light-dark(var(--color-text));
-} */
-
 form textarea {
     height: 150px;
+}
+
+.pastel-warm-theme form input, .pastel-warm-theme form textarea {
+    background-color: var(--color-text);
+    color: var(--primary-color);
 }
 
 form input:focus-visible, form textarea:focus-visible {
@@ -36,11 +37,11 @@ form input[type='search']:focus {
 }
 
 form button.primary-action-button {
-    padding: .7rem;
+    padding: .7rem 2rem;
     margin: .3rem 0;
 }
 
 .pastel-warm-theme form button.primary-action-button {
-    background: var(--color-text);
-    color: var(--dark-color-bkg);
+    background: var(--dark-color-bkg);
+    color: var(--color-text);
 }
