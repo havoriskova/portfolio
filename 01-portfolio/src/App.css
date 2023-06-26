@@ -4,7 +4,7 @@
 /*-------- themes, that are randomly choosed through HOC RandomBackground.js ----------*/
 
 .warm-theme  {
-  --dark-color-bkg: rgb(37, 25, 72);
+  --dark-color-bkg: #242424;
   --darkest-color: #97102f;
   --dark-color: #DC3535;
   --light-color: #F49D1A;
@@ -14,13 +14,16 @@
   
 .pastel-warm-theme {
     /* --dark-color-bkg: #a15c4d; tahle barva je bozi jako bkg, ale nefunguje mi se zbytkem */
-    --dark-color-bkg: #401c11;
-    --darkest-color: #874C62;
-    --dark-color: #C98474;
-    --light-color: #F2D388;
+    --dark-color-bkg: #a15c4d;
+    --darkest-color: #3f071c;
+    /* --dark-color: #C98474; */
+    --dark-color: #a15c4d;
+    /* --light-color: #F2D388; */
+    --light-color: #b48f3a;
     --light-color-filter-from-black: invert(87%) sepia(40%) saturate(484%) hue-rotate(338deg) brightness(99%) contrast(91%);
       /*tohle upravovat v zavislosti na light-color*/
-    --lightest-color: #FFF7D2;
+    /* --lightest-color: #FFF7D2; */
+    --lightest-color: #f0dd8a;
 }
   
 .pastel-cold-theme {

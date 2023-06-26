@@ -43,6 +43,11 @@
 
 }
 
+.pastel-warm-theme .projects-hr {
+    border-image-slice: 0;
+    border-image-source: none;
+}
+
 .projectsLink {
     background: linear-gradient(to left, var(--darkest-color), var(--light-color));
     border: solid rgb(229, 229, 229) .1rem;
@@ -58,11 +63,23 @@
 
 }
 
+.pastel-warm-theme .projectsLink {
+    background: var(--color-text);
+    border-image-slice: 0;
+    border-image-source: none;
+
+}
+
 .projectsLink:nth-of-type(2n) {
     padding-left: 3rem;
     margin-left: .5rem;
     background: transparent;
     color: var(--text-color);
+}
+
+.pastel-warm-theme .projectsLink:nth-of-type(2n) {
+    background: var(--dark-color-bkg);
+    
 }
 
 .projectsLink:hover {
@@ -170,6 +187,10 @@
       z-index: -1;
     }
 
+    .pastel-warm-theme .col-2 .desktop-pictures-container::after {
+        border-image-slice: 0;
+        border-image-source: none;
+    }
 
     .projectsLink {
         padding: .5rem 1rem;

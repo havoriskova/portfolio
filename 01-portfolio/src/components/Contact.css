@@ -47,6 +47,13 @@ form button {
     transition: filter ease .3s;
 }
 
+.pastel-warm-theme form button {
+    /* background: var(--dark-color-bkg); */
+    background: var(--color-text);
+    color: var(--dark-color-bkg);
+    /* border: var(--color-text) solid 2px; */
+}
+
 form button:hover {
     filter: brightness(80%); /*stejne jako u projects*/
 }

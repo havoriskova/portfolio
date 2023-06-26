@@ -19,6 +19,8 @@
     pointer-events: none;
 }
 
+
+
 .Home .about_text {
     margin: 0 auto;
     text-align: justify;
@@ -48,6 +50,10 @@
    max-width: 100%;
    max-height: 100%;
    pointer-events: none;
+}
+
+.pastel-warm-theme .header-container-phones img {
+    filter: invert(90%);
 }
 
 
@@ -119,6 +125,10 @@
     /* filter: invert(90%); */
     /* padding-bottom: 2rem; */
     pointer-events: none;
+}
+
+.pastel-warm-theme .robots_hero_container img {
+    filter: invert(90%);
 }
 
 /*--------- LENNON WALL IMAGE ----------*/
@@ -387,6 +397,11 @@
             border-image-slice: 1;
             border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
             z-index: -1;
+        }
+
+        .pastel-warm-theme .aboutImageContainer::after  {
+            border-image-slice: 0;
+            border-image-source: none;
         }
 }
 
