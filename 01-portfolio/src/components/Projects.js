@@ -6,12 +6,17 @@ import Icf from "./projects/Icf.js";
 // import Resume from "./projects/Resume.js";
 import headerProject from '../img/headers/projects_4_rem.png';
 import './Projects.css';
+import { useEffect } from "react";
 
 
 const Projects = (props) => {
 
 
     // scroll, paralax effect
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+    })
 
     return(
         <div className="Projects container">

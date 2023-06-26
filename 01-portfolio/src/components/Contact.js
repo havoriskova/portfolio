@@ -3,9 +3,14 @@
 // import {Route, BrowserRouter, Routes} from 'react-router-dom';
 import contactHeader from '../img/headers/contact_4_rem.png';
 import './Contact.css';
+import { useEffect } from 'react';
 
 
 export default function Contact() {
+
+    useEffect(() => {
+        window.scrollTo(0,0);
+    })
 
     return (
 
