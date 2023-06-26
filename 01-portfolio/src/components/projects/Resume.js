@@ -9,5 +9,3 @@ const Resume = (props) => {
 
 export default Resume;
 
-
-// zalezi, co vyberes, ale klidne bych nechala Bootstrap, at jeden projekt s Bootstrapem v porfoliu mam !!

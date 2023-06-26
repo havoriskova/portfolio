@@ -10,7 +10,6 @@ const Icf = ({url}) => {
     const [src, setSrc] = useState('');
 
     const showPicture = (e) => {
-       // console.log('show picture funkce funguje');
       //  console.dir(e.target.attributes);
        // console.log(e.target.attributes.src.nodeValue); // mi da tohle: /static/media/planner.1c242bf63d54130bfbfc.JPG, coz je adresa z hanavoriskova.netlify.app/static...
         const urlImg = url;
@@ -20,7 +19,6 @@ const Icf = ({url}) => {
     };
 
     const shutGallery = () => {
-      //  console.log('shutGallery funguje');
         setGallery(false);
     }
 
@@ -34,9 +32,9 @@ const Icf = ({url}) => {
             <div className="col-1">
             <h2 className='constellation_header_5'>
                 <img alt='header for ICF' src={headerICF}/>
-            </h2> {/* link => img souhvezdi */}
+            </h2>
 
-            <h3>Next.js website + contentful</h3> {/* mensi font, ale UPPERCASE */}
+            <h3>Next.js website + contentful</h3>
 
             <div className='project_photo_phone_width'>
                 <img alt='desktop and phone with open website' src={icfForPhones}/>
@@ -47,17 +45,15 @@ const Icf = ({url}) => {
                 This website is made in Next.js, and it's connected to headless CMS Contentful.
                 For donating were used widgets from Donorbox and the Giving Block (crypto donating).</p>
 
-                <a className='projectsLink' href='https://icf-website-havoriskova.vercel.app/' target='_blank' rel='noreferrer'>Visit website</a>
-                <a className='projectsLink' href='https://github.com/havoriskova/icf-website' target='_blank' rel='noreferrer'><img className='projectsGithubLogo' src={githubLogo} alt='github logo'/>View code</a>
+                <a className='primary-action-button' href='https://icf-website-havoriskova.vercel.app/' target='_blank' rel='noreferrer'>Visit website</a>
+                <a className='secondary-action-button github-link' href='https://github.com/havoriskova/icf-website' target='_blank' rel='noreferrer'><img className='projectsGithubLogo' src={githubLogo} alt='github logo'/>View code</a>
 
             
             </div>
             <div className="col-2">
-                {/*img printscreenu pro scroll */}
                 <div className='desktop-pictures-container'>
                     <img alt='desktop and phone with open website' src={icfForDesktop}  loading="lazy" onClick={showPicture}/>
                 </div>
-               {/* img optimalizovane pro pc */}
             </div>
             <div className="projects-hr"></div>
         </div>
@@ -65,6 +61,3 @@ const Icf = ({url}) => {
 };
 
 export default Icf;
-
-
-// zalezi, co vyberes, ale klidne bych nechala Bootstrap, at jeden projekt s Bootstrapem v porfoliu mam !!

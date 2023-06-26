@@ -35,25 +35,12 @@ form input[type='search']:focus {
     box-shadow: 0 0 0 4px rgba(31, 116, 152, 0.3);
 }
 
-form button {
-    border: none;
-    background: linear-gradient(to left, var(--darkest-color), var(--light-color));
-    /* color: inherit; */
+form button.primary-action-button {
     padding: .7rem;
     margin: .3rem 0;
-    cursor: pointer;
-    color: var(--primary-color);
-    font-weight: 600;
-    transition: filter ease .3s;
 }
 
-.pastel-warm-theme form button {
-    /* background: var(--dark-color-bkg); */
+.pastel-warm-theme form button.primary-action-button {
     background: var(--color-text);
     color: var(--dark-color-bkg);
-    /* border: var(--color-text) solid 2px; */
-}
-
-form button:hover {
-    filter: brightness(80%); /*stejne jako u projects*/
 }

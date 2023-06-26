@@ -1,4 +1,3 @@
-// import logo from './logo.svg';    <img src={logo} className="App-logo" alt="logo" />
 import './App.css';
 import {NavLink, Route, BrowserRouter, Routes} from 'react-router-dom';
 import Projects from './components/Projects.js';
@@ -20,17 +19,11 @@ class App extends Component {
     super(props);
     this.state = {
       isLoading: true,
-      // isActive: false
     };
     this.toggle = (e) => {
       e.target.classList.toggle('active');
-      // this.setState(state => ({
-      //   isActive: true
-      // }));
-      //   console.log(this.isActive);
     };
     this.removeActiveNav = (e) => {setTimeout(() => {
-      // console.log('hi, remove active class from nav-icon');
       document.getElementById('toggleNavButton').classList.remove('active')}, 0)};
     this.myPage = (<BrowserRouter>
       <div className="App">
@@ -58,8 +51,6 @@ class App extends Component {
               <Route path='/thanks' element={<Thanks />} />
             </Routes>
           </main>
-  
-          {/* <aside><p>aside</p></aside> */}
 
           <div className='footer-absolute-positioning-replacement'>
           </div>

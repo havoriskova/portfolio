@@ -21,13 +21,17 @@ export default function Contact() {
                         <textarea name="text" required placeholder='text'></textarea>
                         <input type="hidden" name="_captcha" value="false" />
                         <input type="hidden" name="_next" value="https://hanavoriskova.netlify.app/thanks" /> 
-                        <button type="submit">Send</button>
+                        <button type="submit" className='primary-action-button'>Send</button>
                         
                     </form>
-{/* ve finale staci, ze mam /thanks route definovanou v App.js > Routes
-                    <Routes>
-                        <Route path='/thanks' element={<Thanks />} />
-                    </Routes> */}
+
+                    {/*
+                        <Routes>
+                            <Route path='/thanks' element={<Thanks />} />
+                        </Routes> 
+                        
+                        it is enough that I have /thanks route in App.js > Routes, so it doesn't need to be here
+                    */}
 
             </div>
    

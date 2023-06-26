@@ -56,13 +56,10 @@
 
 
 /* ------ width of content ----------*/
-/* testing 600px width of inner content and 1000px for projects and nav content*/
 
 header > *, main > *, aside > *, footer > * {
-  width: 90%; /*takhle to nemuzu nastavovat na vsechno*/
+  width: 90%;
   margin: 0 auto;
-    /*musi byt stejne jako pro .sky_container - might change in the future
-      */
 }
 
 main > * {
@@ -86,7 +83,6 @@ footer {
 .footer-absolute-positioning-replacement {
   width: 1px;
   height: 400px;
-  /* z-index: -10; nefunguje, takze neresi situaci */
 }
 
 header {
@@ -98,15 +94,8 @@ header {
 /*------------------*/
 
 .App header {
-  /* min-height: 100vh; */
   height: 5rem;
   position: static;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white; */
 }
 
 .App header nav {
@@ -122,15 +111,9 @@ header {
   place-content: center;
   background-color: var(--dark-color);
   z-index: 2;
-
-  /* padding-top: 2rem; */
-  /* top: 1rem; */
-  /* display: flex; */
 }
 
 .App .logo {
-  /* height: 40vmin; */
-  /* pointer-events: none; */
   padding: 1rem 0;
   flex: 1;
   text-align: left;
@@ -156,6 +139,47 @@ a {
   a.active {
     color: var(--contrast-color);
   }
+
+.primary-action-button, .secondary-action-button {
+  background: linear-gradient(to left, var(--darkest-color), var(--light-color));
+  border: solid rgb(229, 229, 229) .1rem;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
+  display: inline-block;
+  padding: .5rem .3rem;
+  margin: 2rem 0 1rem;
+  position: relative;
+  color: var(--dark-color-bkg);
+  font-weight: 600;
+  transition: filter ease .3s;
+  cursor: pointer;
+}
+
+.pastel-warm-theme [class*='action-button'] {
+  background: var(--color-text);
+  border-image-slice: 0;
+  border-image-source: none;
+
+}
+
+.secondary-action-button {
+  background: transparent;
+  color: var(--text-color);
+  margin-left: .5rem;
+}
+
+.secondary-action-button.github-link {
+  padding-left: 3rem;
+}
+
+.pastel-warm-theme .secondary-action-button {
+  background: var(--dark-color-bkg);
+  
+}
+
+[class*='action-button']:hover {
+  filter: brightness(80%);
+}
 
 
 
@@ -221,6 +245,9 @@ filter: var(--light-color-filter-from-black);
   z-index: 0;
 }
 
+
+
+
 .App footer a[href*="linkedin"] {
  /* background-color: red; */
  color: inherit; /*prebere barvu od parent el*/
@@ -242,6 +269,17 @@ filter: var(--light-color-filter-from-black);
 
 
 /* mobile first */
+
+@media (min-width: 330px) {
+  [class*='action-button'] {
+      padding: .5rem .6rem;
+  }
+
+  .secondary-action-button {
+      margin-left: .8rem;
+  }
+}
+
 
 @media (min-width: 500px) {
   header > *, main > *, aside > *, footer > * {
@@ -279,6 +317,16 @@ filter: var(--light-color-filter-from-black);
     flex-direction: row;
     display: flex;
   }
+}
+
+@media (min-width: 1000px) {
+    [class*='action-button'] {
+      padding: .5rem 1rem;
+  }
+
+  .secondary-action-button {
+    margin-left: 2rem;
+}
 }
 
 @media (min-width: 1200px) {

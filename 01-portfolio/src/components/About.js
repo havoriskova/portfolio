@@ -1,5 +1,6 @@
 import aboutHeader from '../img/headers/about_6_rem.png';
 import aboutImage from '../img/about.jpeg';
+import { NavLink } from 'react-router-dom';
 
 
 const About = () => {
@@ -20,6 +21,9 @@ const About = () => {
                     {/* { isDesctop ? (<p>Remember, collaboration is strong with this one! I value effective communication and teamwork, believing they are crucial elements for achieving successful project outcomes. Whether I'm working alongside clients, designers, or fellow developers, I strive to create exceptional web experiences that leave a lasting impact, much like the epic battles fought in a galaxy far, far away.</p>) : null} */}
                     <p>So, as you explore my portfolio website, may the code be with you. If you have any questions or would like to embark on a web development adventure together, don't hesitate to reach out. Together, we can bring balance to the web development universe!</p>
                     <p>May the Force be with you!</p>
+
+                    <NavLink to='/projects' className='primary-action-button'> Check my projects</NavLink>
+                    <NavLink to='/contact' className='secondary-action-button'>Contact me</NavLink>
 
                 </div>
                 <div className='aboutImageContainer'>
