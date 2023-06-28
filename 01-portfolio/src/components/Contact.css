@@ -21,7 +21,7 @@ form textarea {
     height: 150px;
 }
 
-.pastel-warm-theme form input, .pastel-warm-theme form textarea {
+.light-mode form input, .light-mode form textarea {
     background-color: var(--color-text);
     color: var(--primary-color);
 }
@@ -41,7 +41,9 @@ form button.primary-action-button {
     margin: .3rem 0;
 }
 
-.pastel-warm-theme form button.primary-action-button {
+.light-mode form button.primary-action-button {
     background: var(--dark-color-bkg);
     color: var(--color-text);
 }
+
+

@@ -42,7 +42,7 @@
    pointer-events: none;
 }
 
-.pastel-warm-theme .header-container-phones img {
+.light-mode .header-container-phones img {
     filter: invert(90%);
 }
 
@@ -117,7 +117,7 @@
     pointer-events: none;
 }
 
-.pastel-warm-theme .robots_hero_container img {
+.light-mode .robots_hero_container img {
     filter: invert(90%);
 }
 
@@ -382,7 +382,7 @@
             z-index: -1;
         }
 
-        .pastel-warm-theme .aboutImageContainer::after  {
+        .light-mode .aboutImageContainer::after  {
             border-image-slice: 0;
             border-image-source: none;
         }
