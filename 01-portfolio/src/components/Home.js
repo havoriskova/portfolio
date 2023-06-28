@@ -2,11 +2,17 @@ import'./Home.css';
 //import RandomBackground from '../hoc/RandomBackground';
 import Hero from './Hero.js';
 import About from './About.js';
+import { useEffect } from 'react';
 
 
-const Home = (props) => {
+const Home = () => {
 
-    console.log(props);
+    
+    useEffect(() => {
+        window.scrollTo(0,0);
+    })
+
+    //console.log(props);
 
 
     return (

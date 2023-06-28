@@ -41,10 +41,6 @@
     transition: filter ease .3s;
 }
 
-.socials .socials-img:hover {
-    filter: invert(80%);
-}
-
 .hr ~ div a {
     transition: filter ease .3s;
 }
