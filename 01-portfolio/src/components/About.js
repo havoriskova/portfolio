@@ -22,8 +22,10 @@ const About = () => {
                     <p>So, as you explore my portfolio website, may the code be with you. If you have any questions or would like to embark on a web development adventure together, don't hesitate to reach out. Together, we can bring balance to the web development universe!</p>
                     <p>May the Force be with you!</p>
 
-                    <NavLink to='/projects' className='primary-action-button'> Check my projects</NavLink>
-                    <NavLink to='/contact' className='secondary-action-button'>Contact me</NavLink>
+                    <div className='buttons_container'>
+                        <NavLink to='/projects' className='primary-action-button'> Check my projects</NavLink>
+                        <NavLink to='/contact' className='secondary-action-button'>Contact me</NavLink>
+                    </div>
 
                 </div>
                 <div className='aboutImageContainer flex-container-col-2'>

@@ -143,11 +143,15 @@ a {
     color: var(--contrast-color);
   }
 
+
+.buttons_container {
+ display: flex;
+ justify-content: center;
+ gap: 0.5rem;
+}
+
 .primary-action-button, .secondary-action-button {
   background: linear-gradient(to left, var(--darkest-color), var(--light-color));
-  border: solid rgb(229, 229, 229) .1rem;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
   display: inline-block;
   padding: .5rem .3rem;
   margin: 2rem 0 1rem;
@@ -159,17 +163,18 @@ a {
   transition: all ease .5s; /* because of the light/dark modes */
 }
 
+.secondary-action-button {
+  border: solid rgb(229, 229, 229) .1rem;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
+  background: transparent;
+  color: var(--text-color);
+}
+
 .light-mode [class*='action-button'] {
   background: var(--color-text);
   border-image-slice: 0;
   border-image-source: none;
-
-}
-
-.secondary-action-button {
-  background: transparent;
-  color: var(--text-color);
-  margin-left: .5rem;
 }
 
 .secondary-action-button.github-link {
@@ -311,9 +316,9 @@ filter: var(--light-color-filter-from-black);
       padding: .5rem .6rem;
   }
 
-  .secondary-action-button {
-      margin-left: .8rem;
-  }
+  .buttons_container {
+    gap: 0.8rem;
+   }
 }
 
 
@@ -388,9 +393,9 @@ filter: var(--light-color-filter-from-black);
       padding: .5rem 1rem;
   }
 
-  .secondary-action-button {
-    margin-left: 2rem;
-  }
+  .buttons_container {
+    gap: 2rem;
+   }
 }
 
 @media (min-width: 1200px) {

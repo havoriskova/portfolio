@@ -19,7 +19,9 @@
     pointer-events: none;
 }
 
-
+.Home .buttons_container {
+    justify-content: flex-start;
+}
 
 /*--------- WEB DEV PORTFOLIO ----------*/
 

@@ -42,8 +42,10 @@ const Weather = ({url}) => {
 
                 <p>React weather app which uses API from openweathermap to get data in JSON as current temperature, time of sunset, humidity and forecast for upcoming hours. Styling is made with Bootstrap. Moving icons are from npm package react-animated-weather.</p>
 
-                <a className='primary-action-button' href='https://voriskova-weather-app.netlify.app/' target='_blank' rel='noreferrer'>Visit website</a>
-                <a className='secondary-action-button github-link' href='https://github.com/havoriskova/React-Weather-App' target='_blank' rel='noreferrer'><img className='projectsGithubLogo' src={githubLogo} alt='github logo'/>View code</a>
+                <div className='buttons_container'>
+                    <a className='primary-action-button' href='https://voriskova-weather-app.netlify.app/' target='_blank' rel='noreferrer'>Visit website</a>
+                    <a className='secondary-action-button github-link' href='https://github.com/havoriskova/React-Weather-App' target='_blank' rel='noreferrer'><img className='projectsGithubLogo' src={githubLogo} alt='github logo'/>View code</a>
+                </div>
 
             </div>
             <div className="col-2">

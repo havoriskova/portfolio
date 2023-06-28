@@ -46,8 +46,10 @@ const Dictionary = ({url}) => {
                         its API key is secured due to serverless function.
                         Digital collage pictures are made in a vector graphic software Inkscape.</p>
 
-                    <a className='primary-action-button' href='https://voriskova-dictionary.netlify.app/' target='_blank' rel='noreferrer'>Visit website</a>
-                    <a className='secondary-action-button github-link' href='https://github.com/havoriskova/dictionary' target='_blank' rel='noreferrer'><img className='projectsGithubLogo' src={githubLogo} alt='github logo'/>View code</a>
+                    <div className='buttons_container'>
+                        <a className='primary-action-button' href='https://voriskova-dictionary.netlify.app/' target='_blank' rel='noreferrer'>Visit website</a>
+                        <a className='secondary-action-button github-link' href='https://github.com/havoriskova/dictionary' target='_blank' rel='noreferrer'><img className='projectsGithubLogo' src={githubLogo} alt='github logo'/>View code</a>
+                    </div>
             </div>
             <div className="col-2">
                     
