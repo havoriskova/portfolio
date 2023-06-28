@@ -98,9 +98,15 @@ header {
   padding: 1rem 0;
   flex: 1;
   text-align: left;
-  order: 3;
   width: max-content;
 }
+
+.App header .nav-icon.active ~ nav .logo {
+  position: absolute;
+  top: 0;
+  left: 5%; /* because nav has 90% width all the time*/
+}
+
 
 .App .logo a {
   color: var(--light-color);
@@ -184,6 +190,11 @@ a {
   height: 1.2rem;
   filter: invert(90%);
   transition: filter ease .3s;
+}
+
+.App header .nav-li__mode-swich {
+  height: 2rem;
+  cursor: pointer;
 }
 
 .App header .nav-li:hover {
@@ -302,6 +313,10 @@ filter: var(--light-color-filter-from-black);
     height: .8rem;
   }
 
+  .App header .nav-li__mode-swich {
+    height: 1.3rem;
+  }
+
   .App header .nav-ul, .App header .icon-nav:not(.active) ~ nav .nav-ul {
     flex-direction: row;
     display: flex;
@@ -350,6 +365,10 @@ filter: var(--light-color-filter-from-black);
 
     .App header .nav-li {
       height: 1.6rem; /*.8*/
+    }
+
+    .App header .nav-li__mode-swich {
+      height: 2.3rem;
     }
 
     .App header .nav-ul {

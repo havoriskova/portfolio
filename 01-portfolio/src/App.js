@@ -44,7 +44,7 @@ class App extends Component {
                 <li><NavLink to='/home' onClick={this.removeActiveNav}><img className='nav-li' alt='home' src={homeNav}/></NavLink></li>
                 <li><NavLink to='/projects' onClick={this.removeActiveNav}><img className='nav-li' alt='projects' src={projectsNav}/></NavLink></li>
                 <li><NavLink to='/contact' onClick={this.removeActiveNav}><img className='nav-li' alt='contact' src={contactNav}/></NavLink></li>
-                <li className='light-mode' onClick={this.toggleLightMode}><img className='nav-li' alt='mode switch' src={modeSwitch}/></li>
+                <li className='light-mode' onClick={this.toggleLightMode}><img className='nav-li nav-li__mode-swich' alt='mode switch' src={modeSwitch}/></li>
               </ul>
             </nav>
           </header>
