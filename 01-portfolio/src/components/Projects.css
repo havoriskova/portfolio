@@ -43,7 +43,7 @@
 
 }
 
-.pastel-warm-theme .projects-hr {
+.light-mode .projects-hr {
     border-image-slice: 0;
     border-image-source: none;
 }
@@ -142,7 +142,7 @@
       z-index: -1;
     }
 
-    .pastel-warm-theme .col-2 .desktop-pictures-container::after {
+    .light-mode .col-2 .desktop-pictures-container::after {
         border-image-slice: 0;
         border-image-source: none;
     }

@@ -1,47 +1,17 @@
 
 /*-----MOBILE FIRST */
 
-/*-------- themes, that are randomly choosed through HOC RandomBackground.js ----------*/
-
-.warm-theme  {
-  --dark-color-bkg: #242424;
-  --darkest-color: #97102f;
-  --dark-color: #DC3535;
-  --light-color: #F49D1A;
-  --light-color-filter-from-black: invert(73%) sepia(19%) saturate(4007%) hue-rotate(347deg) brightness(98%) contrast(95%); /*tohle upravovat v zavislosti na light-color*/
-  --lightest-color: #FFE15D;
-}
-  
-.pastel-warm-theme {
-    /* --dark-color-bkg: #a15c4d; tahle barva je bozi jako bkg, ale nefunguje mi se zbytkem */
-    --dark-color-bkg: #a15c4d;
-    --darkest-color: #3f071c;
-    /* --dark-color: #C98474; */
-    --dark-color: #a15c4d;
-    /* --light-color: #F2D388; */
-    --light-color: #b48f3a;
-    --light-color-filter-from-black: invert(87%) sepia(40%) saturate(484%) hue-rotate(338deg) brightness(99%) contrast(91%);
-      /*tohle upravovat v zavislosti na light-color*/
-    /* --lightest-color: #FFF7D2; */
-    --lightest-color: #f0dd8a;
-}
-  
-.pastel-cold-theme {
-    /* --dark-color-bkg: #217875; tahle barva je bozi jako bkg, ale nefunguje mi se zbytkem*/
-    --dark-color-bkg: #242424;
-    --darkest-color: #0D4C92;
-    --dark-color: #59C1BD;
-    --light-color: #A0E4CB;
-    --light-color-filter-from-black: invert(93%) sepia(11%) saturate(968%) hue-rotate(92deg) brightness(95%) contrast(88%);
-      /*tohle upravovat v zavislosti na light-color*/
-    --lightest-color: #CFF5E7;
-}
-  
-  /*------------- */
-
-
+/*-------- by default dark mode ----------*/
   
 .App {
+    /* --dark-color-bkg: #217875; tahle barva je bozi jako bkg, ale nefunguje mi se zbytkem*/
+  --dark-color-bkg: #393939;
+  --darkest-color: #0D4C92;
+  --dark-color: #59C1BD;
+  --light-color: #A0E4CB;
+  --light-color-filter-from-black: invert(93%) sepia(11%) saturate(968%) hue-rotate(92deg) brightness(95%) contrast(88%);
+    /*tohle upravovat v zavislosti na light-color*/
+  --lightest-color: #CFF5E7;
   text-align: center;
   /* color: var(--lightest-color); */
   --contrast-color: var(--light-color);
@@ -51,6 +21,17 @@
   position: relative;
   min-height: 100vh;
   background-color: var(--dark-color-bkg);
+}
+
+
+.light-mode {
+  --dark-color-bkg: #a15c4d;
+  --darkest-color: #3f071c;
+  --dark-color: #a15c4d;
+  --light-color: #b48f3a;
+  --light-color-filter-from-black: invert(87%) sepia(40%) saturate(484%) hue-rotate(338deg) brightness(99%) contrast(91%);
+    /*tohle upravovat v zavislosti na light-color*/
+  --lightest-color: #f0dd8a;
 }
 
 
@@ -155,7 +136,7 @@ a {
   cursor: pointer;
 }
 
-.pastel-warm-theme [class*='action-button'] {
+.light-mode [class*='action-button'] {
   background: var(--color-text);
   border-image-slice: 0;
   border-image-source: none;
@@ -172,7 +153,7 @@ a {
   padding-left: 3rem;
 }
 
-.pastel-warm-theme .secondary-action-button {
+.light-mode .secondary-action-button {
   background: var(--dark-color-bkg);
   
 }
