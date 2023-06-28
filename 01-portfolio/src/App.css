@@ -270,7 +270,7 @@ filter: var(--light-color-filter-from-black);
 }
 
 
-@media (min-width: 500px) {
+@media (min-width: 650px) {
   header > *, main > *, aside > *, footer > * {
     width: 90%;
   }
