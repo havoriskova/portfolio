@@ -40,11 +40,13 @@ form input[type='search']:focus {
 form button.primary-action-button {
     padding: .7rem 2rem;
     margin: .3rem 0;
+    border: none;
 }
 
 .light-mode form button.primary-action-button {
     background: var(--dark-color-bkg);
     color: var(--color-text);
+    border: solid var(--color-text) .1rem;
 }
 
 
