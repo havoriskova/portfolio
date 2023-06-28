@@ -232,9 +232,10 @@ filter: var(--light-color-filter-from-black);
   display: flex;
 }
 
-/* .App header nav li {
- background-color: blue;
-} */
+.App header .nav-icon.active ~ nav .nav-li__mode-swich {
+  margin-top: 1rem;
+}
+
 
 .App main {
   z-index:1;
