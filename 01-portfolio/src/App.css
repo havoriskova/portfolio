@@ -48,6 +48,10 @@ header > *, main > *, aside > *, footer > * {
   margin: 0 auto;
 }
 
+main {
+  padding-top: 5rem; /*because of the fixed header*/
+}
+
 main > * {
   max-width: 1400px;
 }
@@ -81,9 +85,12 @@ header {
 
 .App header {
   height: 5rem;
-  position: static;
+  position: fixed;
+  left: 0;
+  right: 0;
   display: grid;
   align-items: center;
+  z-index: 1000;
 }
 
 .App header nav {
