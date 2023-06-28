@@ -7,10 +7,12 @@
     /* --dark-color-bkg: #217875; tahle barva je bozi jako bkg, ale nefunguje mi se zbytkem*/
   --dark-color-bkg: #393939;
   --darkest-color: #0D4C92;
+  --nav-li-bkg-color: var(--darkest-color);
   --dark-color: #59C1BD;
+  /*these two are the same colors, needed because of changing the color on img from black */
   --light-color: #A0E4CB;
   --light-color-filter-from-black: invert(93%) sepia(11%) saturate(968%) hue-rotate(92deg) brightness(95%) contrast(88%);
-    /*tohle upravovat v zavislosti na light-color*/
+  /*----------r*/
   --lightest-color: #CFF5E7;
   text-align: center;
   /* color: var(--lightest-color); */
@@ -21,16 +23,19 @@
   position: relative;
   min-height: 100vh;
   background-color: var(--dark-color-bkg);
+  transition: background-color ease .5s; /* because of the light/dark modes */
 }
 
 
 .light-mode {
   --dark-color-bkg: #a15c4d;
+  --nav-li-bkg-color: var(--dark-color-bkg);
   --darkest-color: #3f071c;
   --dark-color: #a15c4d;
-  --light-color: #b48f3a;
+  /*these two are the same colors, needed because of changing the color on img from black */
+  --light-color: #F2D388;
   --light-color-filter-from-black: invert(87%) sepia(40%) saturate(484%) hue-rotate(338deg) brightness(99%) contrast(91%);
-    /*tohle upravovat v zavislosti na light-color*/
+  /*-----------------r*/
   --lightest-color: #f0dd8a;
 }
 
@@ -77,9 +82,12 @@ header {
 .App header {
   height: 5rem;
   position: static;
+  display: grid;
+  align-items: center;
 }
 
 .App header nav {
+  display: flex;
   position: relative;
   width: 90%;
 }
@@ -90,8 +98,9 @@ header {
   width: 100vw;
   display: grid;
   place-content: center;
-  background-color: var(--dark-color);
+  background-color: var(--nav-li-bkg-color);
   z-index: 2;
+  transition: background-color ease .5s; /* because of the light/dark modes */
 }
 
 .App .logo {
@@ -140,6 +149,7 @@ a {
   font-weight: 600;
   transition: filter ease .3s;
   cursor: pointer;
+  transition: all ease .5s; /* because of the light/dark modes */
 }
 
 .light-mode [class*='action-button'] {
@@ -192,15 +202,6 @@ a {
   transition: filter ease .3s;
 }
 
-.App header .nav-li__mode-swich {
-  height: 2rem;
-  cursor: pointer;
-}
-
-.App header .nav-li:hover {
-  filter: invert(70%);
-}
-
 .App header a.active .nav-li {
 filter: var(--light-color-filter-from-black);
 }
@@ -232,10 +233,37 @@ filter: var(--light-color-filter-from-black);
   display: flex;
 }
 
-.App header .nav-icon.active ~ nav .nav-li__mode-swich {
-  margin-top: 1rem;
+
+
+.App header .mode-switch-icon {
+  position: relative;
+  /* background-color: rgba(0 0 0 /.3); */
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
+.App header .nav-li__mode-switch {
+  /* background-color: rgba(238, 10, 10, 0.5); */
+  height: 2rem;
+}
+
+.App header .nav-li__mode-switch-ball {
+  position: absolute;
+  top: 10%;
+  left: 8%; /*8, 52*/
+  width: 40%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: var(--light-color);
+  transition: left ease .5s;
+
+}
+
+.App.light-mode header .nav-li__mode-switch-ball {
+
+  left: 52%; /*8, 52*/
+}
 
 .App main {
   z-index:1;
@@ -287,6 +315,12 @@ filter: var(--light-color-filter-from-black);
     width: 90%;
   }
 
+  .App header .nav-li:hover {
+    filter: invert(70%);
+  }
+
+  .App header .nav-li
+
   .App header nav, .App header .nav-icon.active ~ nav {
     position: relative;
     background-color: transparent;
@@ -314,7 +348,7 @@ filter: var(--light-color-filter-from-black);
     height: .8rem;
   }
 
-  .App header .nav-li__mode-swich {
+  .App header .nav-li__mode-switch {
     height: 1.3rem;
   }
 
@@ -368,8 +402,8 @@ filter: var(--light-color-filter-from-black);
       height: 1.6rem; /*.8*/
     }
 
-    .App header .nav-li__mode-swich {
-      height: 2.3rem;
+    .App header .nav-li__mode-switch {
+      height: 1.8rem;
     }
 
     .App header .nav-ul {

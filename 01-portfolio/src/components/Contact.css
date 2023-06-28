@@ -15,6 +15,7 @@ form textarea {
     border: none;
     color: var(--color-text);
     transition: filter ease .3s;
+    transition: all ease .5s; /* because of the light/dark modes */
 }
 
 form textarea {
