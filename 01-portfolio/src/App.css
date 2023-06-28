@@ -144,6 +144,7 @@ a {
   }
 
 
+
 .buttons_container {
  display: flex;
  justify-content: center;
@@ -209,11 +210,12 @@ a {
   text-transform: uppercase;
 }
 
-.App header .nav-li {
+.App header .nav-li, .nav-li__mode-switch {
   height: 1.2rem;
   filter: invert(90%);
   transition: filter ease .3s;
 }
+
 
 .App header a.active .nav-li {
 filter: var(--light-color-filter-from-black);
@@ -329,8 +331,13 @@ filter: var(--light-color-filter-from-black);
   }
 
   .App header .nav-li:hover {
-    filter: invert(70%);
+    filter: invert(75%);
   }
+
+  .mode-switch-icon:hover {
+    filter: brightness(90%);
+  }
+
 
   .App header .nav-li
 
