@@ -13,7 +13,7 @@ const Hero = () => {
 
     let amount, starSize; 
     isDesctop ? (amount = 300) : (amount = 100);
-    isDesctop ? (starSize = 70) : (starSize = 30);
+    isDesctop ? (starSize = 50) : (starSize = 30);
 
     const stars = []; // array s objekty
 

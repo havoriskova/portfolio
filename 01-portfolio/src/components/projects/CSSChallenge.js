@@ -17,10 +17,12 @@ const CSSChallenge = ({url}) => {
         const srcImg = e.target.attributes.src.nodeValue;
         setSrc(`${urlImg}${srcImg}`);
         setGallery(true);
+        document.querySelector('header').style.position = 'absolute';
     };
 
     const shutGallery = () => {
         setGallery(false);
+        document.querySelector('header').style.position = 'fixed';
     }
 
     return(

@@ -17,7 +17,7 @@ const Home = () => {
 
     return (
         <div className="Home container">
-            <div className='black-bkg'><Hero /></div>
+            <div className='hero-bkg'><Hero /></div>
 
             <About />
         </div>

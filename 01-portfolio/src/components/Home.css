@@ -4,8 +4,12 @@
     max-width: 100vw;
 }
 
-.Home .black-bkg {
+.Home .hero-bkg {
     background-color: var(--primary-color);
+}
+
+.light-mode .Home .hero-bkg {
+    background-color: var(--nav-li-bkg-color);
 }
 
 .Home .hero-section {
@@ -44,9 +48,9 @@
    pointer-events: none;
 }
 
-.light-mode .header-container-phones img {
+/* .light-mode .header-container-phones img {
     filter: invert(90%);
-}
+} */
 
 
 
@@ -119,9 +123,9 @@
     pointer-events: none;
 }
 
-.light-mode .robots_hero_container img {
+/* .light-mode .robots_hero_container img {
     filter: invert(90%);
-}
+} */
 
 /*--------- LENNON WALL IMAGE ----------*/
 
