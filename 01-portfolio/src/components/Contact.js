@@ -40,7 +40,7 @@ export default function Contact() {
                             <input type="email" name="email" required placeholder='email' />
                             <textarea name="text" required placeholder='text'></textarea>
                             <input type="hidden" name="_captcha" value="false" />
-                            <input type="hidden" name="_next" value="https://hanavoriskova.netlify.app/thanks" /> 
+                            <input type="hidden" name="_next" value="https://hanavoriskova.cz/thanks" /> 
                             <button type="submit" className='primary-action-button'>Send</button>
                             
                         </form>
