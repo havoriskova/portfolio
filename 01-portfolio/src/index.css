@@ -15,12 +15,10 @@ a, button, #toggleNavButton, img {
 }
 
 body {
-  --primary-color: rgb(27, 27, 27);
-  --secondary-color: rgb(37, 25, 72);
   font-size: 14px;
   line-height: 1.3rem;
   min-height: 100vh;
-  /* background-color: var(--secondary-color); */
+  --primary-color: rgb(27, 27, 27);
 }
 
 code {
@@ -29,7 +27,7 @@ code {
 }
 
 [class*="constellation_header"] img {
-  filter: invert(90%);
+  filter: var(--filter-for-black-img);
   margin: 1.5rem auto; /*se asi zmeni, a margin bude mit container projektu*/
   pointer-events: none;
   /* -webkit-touch-callout: none */

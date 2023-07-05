@@ -12,7 +12,7 @@
     /* min-width: fit-content; v mozile to dela bordel */
     position: relative;
    /* bottom: .2rem; */
-   filter: invert(90%);
+   filter: var(--filter-for-black-img);
     pointer-events: none;
 
 }
@@ -20,7 +20,7 @@
 .robots_footer_container ~ .hr {
     position: relative;
     top: -2.8rem;
-    border-top: solid rgb(229, 229, 229) .1rem; /*must be same as .project.container bottom border*/
+    border-top: solid var(--color-text) .1rem; /*must be same as .project.container bottom border*/
     
 }
 
@@ -32,21 +32,17 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
-    padding: 1rem;
+    padding-bottom: 2rem;
 }
 
 .socials .socials-img {
-    height: 2rem;
-    filter: invert(90%);
+    height: 1.5rem;
+    filter: var(--filter-for-black-img);
     transition: filter ease .3s;
 }
 
 .hr ~ div a {
     transition: filter ease .3s;
-}
-
-.hr ~ div a:hover {
-    filter: brightness(80%);
 }
 
 
@@ -58,4 +54,14 @@
     .robots_footer_container ~ .hr {
         top: -4.2rem;
     }
+
+    .hr ~ div a:hover {
+        filter: brightness(80%);
+    }
+    
+    .light-mode .hr ~ div a:hover {
+        filter: invert(30%);
+    }
+
+
 }

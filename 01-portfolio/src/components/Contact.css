@@ -23,8 +23,8 @@ form textarea {
 }
 
 .light-mode form input, .light-mode form textarea {
-    background-color: var(--color-text);
-    color: var(--primary-color);
+    background-color: var(--white);
+    color: var(--black);
 }
 
 form input:focus-visible, form textarea:focus-visible {

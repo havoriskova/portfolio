@@ -29,105 +29,31 @@
 
 /*--------- WEB DEV PORTFOLIO ----------*/
 
-
-    /* phones */
-
-.header-container-phones {
+.hero__heading {
     position: absolute;
-    top: 10%;
-    height: 50%;
-    width: 90%;
-    left: 5%;
-    /* background-color: rgba(0 0 0 / .4); */
-    pointer-events: none;
+    padding: 10rem 2rem 1rem;
+    text-align: left;
 }
 
-.header-container-phones img {
-   max-width: 100%;
-   max-height: 100%;
-   pointer-events: none;
+.hero__h1 {
+    line-height: 2.5rem;
 }
 
-/* .light-mode .header-container-phones img {
-    filter: invert(90%);
-} */
-
-
-
-    /* desctop */
-
-.header-container {
-    position: absolute;
-    top: 10%;
-    height: 70%;
-    width: 90%;
-    left: 5%;
+.hero__socials {
+    padding: 1.5rem 0;
     display: flex;
-    justify-content: space-between;
-    background-color: rgba(0 0 0 / .4);
-}
-
-.header-container div {
-    background-color: rgba(206, 41, 41, 0.4);
-    height: 50%;
-    width: 84px; /*nejmensi width: (90% z 280px) / 3 */
-    max-width: 30%;
+    gap: 1rem;
     position: relative;
 }
 
-.header-container .development {
-    align-self: flex-end;
+
+.hero__socials .socials-img {
+    height: 1.5rem;
+    filter: var(--filter-for-black-img);
+    transition: filter ease .3s;
 }
 
-.header-container .web {
-    align-self: flex-start;
-}
-
-.header-container .portfolio {
-    align-self: flex-start;
-    position: relative;
-}
-
-.header-container .development img {
-    position: relative;
-    top: -20%;
-}
-
-.header-container .web img {
-    position: relative;
-}
-
-.header-container .portfolio img {
-    position: absolute;
-    right: 0;
-    top: 10%;
-}
-
-/*--------- ROBOTS IMAGE ----------*/
-
-.robots_hero_container {
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    /* display: flex;
-    place-content: flex-end; */
-    width: 60%;
-    pointer-events: none;
-}
-
-
-.robots_hero_container img {
-    max-width: 100%;
-    /* filter: invert(90%); */
-    /* padding-bottom: 2rem; */
-    pointer-events: none;
-}
-
-/* .light-mode .robots_hero_container img {
-    filter: invert(90%);
-} */
-
-/*--------- LENNON WALL IMAGE ----------*/
+/*--------- ABOUT IMAGE ----------*/
 
 .aboutImageContainer {
     position: relative;
@@ -135,7 +61,7 @@
 }
 
 
-.LennonWallImg {
+.aboutImg {
     max-width: 100%;
     width: 600px;
     aspect-ratio: 4/3;
@@ -161,10 +87,10 @@
 
 .sky_hero_container::before {
     background-image: linear-gradient(to top,
-            var(--lightest-color) 0%,
-            var(--light-color) 30%,
-            var(--dark-color) 50%,
-            var(--darkest-color) 100%);
+            var(--lightest-color-gradient) 0%,
+            var(--light-color-gradient) 20%,
+            var(--dark-color-gradient) 50%,
+            var(--darkest-color-gradient) 100%);
     content: "";
     position: absolute;
     width: 100%;
@@ -341,6 +267,16 @@
         border-radius: 200% 200% 0 0;
     }
      */
+
+     .hero__socials a:hover .socials-img {
+        filter: invert(70%);
+    }
+    
+    .light-mode .hero__socials a:hover .socials-img {
+        filter: var(--black-img-hover-filter);
+    }
+    
+
     
 }
 
@@ -352,6 +288,11 @@
     .header-container-phones {
         height: 60%;
     }
+
+    .hero__heading {
+        max-width: 700px;
+        margin: 5% 15%;
+     }
 
    
     
@@ -369,7 +310,7 @@
             margin: 0;
         }
 
-        .LennonWallImg {
+        .aboutImg {
             max-width: 100%;
             width: auto;
         }
@@ -382,7 +323,7 @@
             left: 1rem;
             top: 1rem;
             content: '';
-            border: solid rgb(229, 229, 229) .1rem;
+            border: solid var(--color-text) .1rem;
             border-image-slice: 1;
             border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
             z-index: -1;

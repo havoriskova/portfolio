@@ -1,9 +1,9 @@
-import heroRobots from '../img/robots_hero.png';
-// import webHeader from '../img/headers/web_6_rem.png';
-// import developmentHeader from '../img/headers/development_14_rem.png';
-// import portfolioHeader from '../img/headers/portfolio_12_rem.png';
-import webdevelopmentportfolio from '../img/headers/WEB_DEVELOPMENT_PORTFOLIO.png';
+
 import ShootingStars from './ShootingStars.js';
+import logoLinkedin from '../img/linkedin-logo.png';
+import logoGithub from '../img/github-logo.png';
+import logoMail from '../img/mail-logo.png';
+import logoInstagram from '../img/instagram-logo.png';
 
 const Hero = () => {
 
@@ -32,7 +32,7 @@ const Hero = () => {
 
     }
 
-    createStarrySky(amount, starSize); // pro telefony bude jen staticky obrazek oblohy pres stejny <div> s bkg v media queries
+    createStarrySky(amount, starSize);
     // console.log(stars);
 
 
@@ -56,25 +56,19 @@ const Hero = () => {
 
                     </div>
                     
+                    <div className='hero__heading'>
+                        <h1 className='hero__h1'><span>Hi, I'm Hana</span>{isDesctop ? ' | ' : ', '}<span>Frontend Developer</span></h1>
+                        <div className='hero__socials'>
+                            <div><a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US" rel="noreferrer" target='_blank'><img className='socials-img' alt='logo of linkedin' src={logoLinkedin}/></a></div>
+                            <div><a href="https://github.com/havoriskova" rel="noreferrer" target='_blank'><img className='socials-img' alt='logo of github' src={logoGithub}/></a></div>
+                            <div><a href="mailto:ha.voriskova@gmail.com"><img className='socials-img' alt='icon of mail' src={logoMail}/></a></div>
+                            <div><a href="https://www.instagram.com/hana_voriskova/" rel="noreferrer" target='_blank'><img className='socials-img' alt='logo of instagram' src={logoInstagram}/></a></div>
+                        </div>
+                        <div className='hero__p'>I like creating responsive websites. I'm a lifelong learner and I might be addicted to baking desserts.</div>
+                    </div>
                       
             </div>
-            {/* <div className='header-container'>
-                <div className='development constellation_header_14'>
-                    <img alt='development' src={developmentHeader}/>
-                </div>
-                <div className='web constellation_header_6'>
-                    <img alt='web' src={webHeader}/>
-                </div>
-                <div className='portfolio constellation_header_12'>
-                    <img alt='portfolio' src={portfolioHeader}/>
-                </div>
-            </div> */}
-            <div className='header-container-phones'>
-                <img alt='web development portfolio' src={webdevelopmentportfolio}/>
-            </div>
-            <div className='robots_hero_container'>
-                <img alt='' src={heroRobots} />
-            </div>
+           
         </div>
             
     )

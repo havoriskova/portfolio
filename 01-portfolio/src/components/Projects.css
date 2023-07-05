@@ -31,7 +31,7 @@
 }
 
 .projects-hr {
-    border-bottom: solid rgb(229, 229, 229) .1rem;
+    border-bottom: solid var(--color-text) .1rem;
     width: 80%;
     /* position: absolute; */
     /* bottom: 0; */
@@ -53,9 +53,9 @@
 .projectsGithubLogo {
     height: 1.5rem;
     /* padding-right: 1rem; */
-    filter: invert(90%);
+    filter: var(--filter-for-black-img);
     position: absolute;
-    top: .3rem;
+    top: .4rem;
     left: .7rem;
 }
 
@@ -136,7 +136,7 @@
       top: 1rem;
       aspect-ratio: 4/3;
       content: '';
-      border: solid rgb(229, 229, 229) .1rem;
+      border: solid var(--color-text) .1rem;
       border-image-slice: 1;
       border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
       z-index: -1;

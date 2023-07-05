@@ -14,6 +14,15 @@ const About = () => {
 
             <div className='flex-parent-two-coll'>
                 <div className='text-container about_text'>
+                    {/* short version :
+                    
+                     */}
+
+                    {/* long version :
+                    I started to learn to code when I moved to the Netherlands. You see, coding is for me more than just the hobby -
+                    it is for me part of my identity, because I've been coding during my evenings and weekend when I come home from my work. 
+                    Currently I am in my 'abroud journey', and I am making chocolate bars.
+                     */}
                     <p>Hello there! I'm Hana, a web developer hailing from the Czech Republic and currently residing 
                     in the Netherlands. Despite of the fact, that Yoda said I was too old to begin the training, I've learned to wield the force of web development over the past three years.</p>
 
@@ -29,7 +38,7 @@ const About = () => {
 
                 </div>
                 <div className='aboutImageContainer flex-container-col-2'>
-                    <img className='LennonWallImg' alt='the web developer you are looking for' src={aboutImage} loading="lazy"/>
+                    <img className='aboutImg' alt='the web developer you are looking for' src={aboutImage} loading="lazy"/>
                 </div>
             </div>
         </>

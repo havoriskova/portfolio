@@ -4,6 +4,8 @@
 /*-------- by default dark mode ----------*/
   
 .App {
+  --primary-color: rgb(27, 27, 27);
+  --secondary-color: rgb(37, 25, 72);
     /* --dark-color-bkg: #217875; tahle barva je bozi jako bkg, ale nefunguje mi se zbytkem*/
   --dark-color-bkg: #393939;
   --darkest-color: #0D4C92;
@@ -18,12 +20,19 @@
   /* color: var(--lightest-color); */
   --contrast-color: var(--light-color);
   position: relative;
-  --color-text: #D7D7D7; /* == invert(90%) z cerne */
+  --white: #D7D7D7; /* == invert(90%) z cerne */
+  --black: var(--primary-color);
+  --color-text: var(--white);
   --color-text-hover: #B2B2B2; /* == invert(70%) z cerne*/
   position: relative;
   min-height: 100vh;
   background-color: var(--dark-color-bkg);
   transition: background-color ease .5s; /* because of the light/dark modes */
+  --filter-for-black-img: invert(90%);
+  --lightest-color-gradient: var(--dark-color);
+  --light-color-gradient: var(--darkest-color); 
+  --dark-color-gradient: #42014a;
+  --darkest-color-gradient: var(--black);
 }
 
 
@@ -38,6 +47,13 @@
   /*-----------------r*/
   --lightest-color: #f0dd8a;
   --contrast-color: var(--dark-color);
+  --color-text: var(--black);
+  --filter-for-black-img: none;
+  --darkest-color-gradient: var(--darkest-color);
+  --dark-color-gradient: var(--dark-color);
+  --light-color-gradient: var(--light-color);
+  --lightest-color-gradient: var(--lightest-color);
+  --black-img-hover-filter: invert(30%);
 }
 
 
@@ -123,7 +139,7 @@ header {
 
 .App header .nav-icon.active ~ nav .logo {
   position: absolute;
-  top: 0;
+  top: .6rem;
   left: 5%; /* because nav has 90% width all the time*/
 }
 
@@ -134,7 +150,7 @@ header {
 
 .App .logo img {
   height: 1.5rem;
-  margin-top: .5rem;
+  margin-top: 0;
   filter: invert(90%);
 }
 
@@ -174,7 +190,7 @@ a {
 }
 
 .secondary-action-button {
-  border: solid rgb(229, 229, 229) .1rem;
+  border: solid var(--color-text) .1rem;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
   background: transparent;
@@ -194,10 +210,6 @@ a {
 .light-mode .secondary-action-button {
   background: var(--dark-color-bkg);
   
-}
-
-[class*='action-button']:hover {
-  filter: brightness(80%);
 }
 
 .text-container {
@@ -288,6 +300,7 @@ filter: var(--light-color-filter-from-black);
   border-radius: 50%;
   background-color: var(--light-color);
   transition: left ease .5s;
+  pointer-events: none;
 
 }
 
@@ -338,6 +351,8 @@ filter: var(--light-color-filter-from-black);
   .buttons_container {
     gap: 0.8rem;
    }
+
+  
 }
 
 
@@ -350,9 +365,19 @@ filter: var(--light-color-filter-from-black);
     filter: invert(75%);
   }
 
+  .light-mode header .nav-li:hover {
+    filter: var(--black-img-hover-filter);
+  }
+
   .mode-switch-icon:hover {
     filter: brightness(90%);
   }
+
+    [class*='action-button']:hover {
+    filter: brightness(80%);
+  }
+
+  
 
 
   .App header .nav-li

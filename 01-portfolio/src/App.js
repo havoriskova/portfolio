@@ -30,6 +30,8 @@ class App extends Component {
       // console.log(document.body);
       document.querySelector('.App').classList.toggle('light-mode');
     };
+    // localStorage function for remembering user's preference about dark/light mode:
+    //
     this.removeActiveNav = (e) => {setTimeout(() => {
       document.getElementById('toggleNavButton').classList.remove('active')}, 0)};
     this.myPage = (<BrowserRouter>
