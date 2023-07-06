@@ -165,7 +165,7 @@ const About = () => {
         in the Netherlands. Despite of the fact, that Yoda said I was too old to begin the training, 
         I've learned to wield the force of web development over the past three years.</p>
     
-        <p>My techStack:</p>
+        <p>My techstack:</p>
         <p className='about__icons--stack'>{techStack}</p>
         <p>If you have any questions or would 
         like to embark on a web development adventure together, don't hesitate to reach out. Together,
@@ -177,11 +177,11 @@ const About = () => {
         <p>Hello there! I'm Hana, a web developer from the Czech Republic and currently residing 
         in the Netherlands. Despite of the fact, that Yoda said I was too old to begin the training, 
         I've learned to wield the force of web development over the past three years.</p>
-        <p>My techStack:</p>
+        <p>My techstack:</p>
         <p className='about__icons--stack'>{techStack}</p>
         <p>
-        I started to learn to code when I moved to the Netherlands. I've been coding during my evenings and weekends 
-        when I am not at work. Currently I am making chocolate bars.
+        I started to learn to code in my free time when I moved to the Netherlands. I've been coding during my evenings and weekends 
+        when I am not at work. Currently I am making chocolate bars. Otherwise I like baking, photography (you can see my photos also on this page), reading and drawing.
         </p>
       
         {/* <p>When I'm not laughing at Lennon's wall font jokes or exploring galaxies far, far away, 
