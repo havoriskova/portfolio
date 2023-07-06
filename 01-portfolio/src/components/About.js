@@ -181,7 +181,7 @@ const About = () => {
         <p className='about__icons--stack'>{techStack}</p>
         <p>
         I started to learn to code in my free time when I moved to the Netherlands. I've been coding during my evenings and weekends 
-        when I am not at work. Currently I am making chocolate bars. Otherwise I like baking, photography (you can see my photos also on this page), reading and drawing.
+        when I am not at work. Currently I am making chocolate bars, you can find out more about me on my <a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US" rel="noreferrer" target='_blank'>linkedin profile</a>. Otherwise I like baking, photography (you can see my photos also on this page), reading and drawing.
         </p>
       
         {/* <p>When I'm not laughing at Lennon's wall font jokes or exploring galaxies far, far away, 

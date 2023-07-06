@@ -57,6 +57,39 @@
     transition: filter ease .3s;
 }
 
+.hero__svg--falcon {
+    position: absolute;
+    transform: rotate(80deg);
+    width: 50px;
+    fill: var(--darkest-color);
+    aspect-ratio: 1/1;
+    z-index: 100;
+    left: 10%;
+    top: 10%;
+    animation-name: falconFlight;
+    animation-timing-function: cubic-bezier(0.75, 1, 0.1, 1); /*cubic-bezier(.03,.8,1,.34)*/
+    animation-duration:  15s;
+    animation-iteration-count:  infinite;
+}
+
+@keyframes falconFlight {
+    0%, 30% {
+        left: 0%;
+        top: 0%;
+        transform: rotate(80deg);
+    }
+
+    40% {
+        transform: rotate(40deg); /*20-90*/
+    }
+
+    100% {
+        transform: rotate(90deg); /*50-70*/
+        top: 60%; /*10-60*/
+        left: 110%;
+    }
+    
+}
 /*--------- ABOUT IMAGE ----------*/
 
 

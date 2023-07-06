@@ -4,6 +4,7 @@ import logoLinkedin from '../img/linkedin-logo.png';
 import logoGithub from '../img/github-logo.png';
 import logoMail from '../img/mail-logo.png';
 import logoInstagram from '../img/instagram-logo.png';
+import Falcon from './Falcon.js';
 
 const Hero = () => {
 
@@ -41,6 +42,7 @@ const Hero = () => {
     return(
         <div className='hero-section'>
             <div className='sky_hero_container'>
+
                         
                     {stars.map(star => { 
                         // console.log(star);
@@ -64,11 +66,14 @@ const Hero = () => {
                             <div><a href="mailto:ha.voriskova@gmail.com"><img className='socials-img' alt='icon of mail' src={logoMail}/></a></div>
                             <div><a href="https://www.instagram.com/hana_voriskova/" rel="noreferrer" target='_blank'><img className='socials-img' alt='logo of instagram' src={logoInstagram}/></a></div>
                         </div>
-                        <div className='hero__p'>I like creating responsive websites. I'm a lifelong learner and I might be addicted to baking desserts.</div>
+                        <div className='hero__p'>I like creating responsive websites. I'm a lifelong learner and I might be addicted to scifi and baking desserts.</div>
                     </div>
+
+                    <Falcon />
                       
             </div>
-           
+
+
         </div>
             
     )
