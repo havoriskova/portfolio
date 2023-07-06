@@ -43,10 +43,14 @@ const Dictionary = ({url}) => {
                     <img alt='desktop and phone with open website page' src={dictionaryForPhones}/>
                     </div>
 
-                    <p>On this fully responsive webpage I am using 2 API calls. One is for getting json data from freeDictionaryAPI. 
-                        The second API is for getting url of pictures that are rendered in the gallery and 
-                        its API key is secured due to serverless function.
+                    <div  className='text-container'>
+                        <p> On this fully responsive webpage I am using 2 API calls. One is for getting json data from freeDictionaryAPI. 
+                        The second API is for getting url of pictures that are rendered in the gallery. 
+                        This project was a part of React course on <a href='https://www.shecodes.io/workshops' target='_blank' rel='noreferrer'>SheCodes</a>. I refactored the code with adding new feature -
+                         serverless function which protects API key for pictures.
                         Digital collage pictures are made in a vector graphic software Inkscape.</p>
+                    </div>
+              
 
                     <div className='buttons_container'>
                         <a className='primary-action-button' href='https://voriskova-dictionary.netlify.app/' target='_blank' rel='noreferrer'>Visit website</a>

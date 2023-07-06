@@ -11,8 +11,8 @@ const Weather = ({url}) => {
 
     const showPicture = (e) => {
       //  console.dir(e.target.attributes);
-       // console.log(e.target.attributes.src.nodeValue); // mi da tohle: /static/media/planner.1c242bf63d54130bfbfc.JPG, coz je adresa z hanavoriskova.netlify.app/static...
-        const urlImg = url;
+       // console.log(e.target.attributes.src.nodeValue); // --> /static/media/planner.1c242bf63d54130bfbfc.JPG
+        const urlImg = url; // local or hanavoriskova.cz domain
         const srcImg = e.target.attributes.src.nodeValue;
         setSrc(`${urlImg}${srcImg}`);
         setGallery(true);
@@ -42,7 +42,13 @@ const Weather = ({url}) => {
                     <img alt='weather app' src={phonePhotoWeather} loading="lazy"/>
                 </div>
 
-                <p>React weather app which uses API from openweathermap to get data in JSON as current temperature, time of sunset, humidity and forecast for upcoming hours. Styling is made with Bootstrap. Moving icons are from npm package react-animated-weather.</p>
+                <div  className='text-container'>
+                    <p>React weather app which uses API from openweathermap to get data in JSON as current temperature, 
+                    time of sunset, humidity and forecast for upcoming hours. Styling is made with Bootstrap. 
+                    Moving icons are from npm package react-animated-weather. 
+                    I built this app during the React course from <a href='https://www.shecodes.io/workshops' target='_blank' rel='noreferrer'>SheCodes</a>.</p>
+                </div>
+                
 
                 <div className='buttons_container'>
                     <a className='primary-action-button' href='https://voriskova-weather-app.netlify.app/' target='_blank' rel='noreferrer'>Visit website</a>

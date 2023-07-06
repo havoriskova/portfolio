@@ -33,6 +33,7 @@
   --light-color-gradient: var(--darkest-color); 
   --dark-color-gradient: #42014a;
   --darkest-color-gradient: var(--black);
+  --accent-color: var(--light-color);
 }
 
 
@@ -54,19 +55,21 @@
   --light-color-gradient: var(--light-color);
   --lightest-color-gradient: var(--lightest-color);
   --black-img-hover-filter: invert(30%);
+  --accent-color: var(--lightest-color);
 }
 
 
 
 /* ------ width of content ----------*/
 
-header > *, main > *, aside > *, footer > * {
+header > *, footer > * {
   width: 90%;
   margin: 0 auto;
 }
 
 main {
   padding-top: 5rem; /*because of the fixed header*/
+  margin: 0 auto;
 }
 
 main > * {
@@ -159,8 +162,9 @@ header {
 }
 
 a {
-  color: white;
+  color: var(--color-text);
   text-decoration: none;
+  font-weight: 600;
   }
   
   a.active {
@@ -197,6 +201,17 @@ a {
   color: var(--text-color);
 }
 
+.secondary-action-button.about__button--version {
+  border-image-source: none;
+  margin: 0 0 1rem;
+}
+
+.secondary-action-button.about__button--version.active {
+  border-color: var(--light-color);
+  color: var(--light-color);
+}
+
+
 .light-mode [class*='action-button'] {
   background: var(--color-text);
   border-image-slice: 0;
@@ -212,15 +227,24 @@ a {
   
 }
 
-.text-container {
+.text-container, .contact__form {
   margin: 0 auto;
   text-align: justify;
   max-width: 90%;
 }
 
+.contact__form {
+  width: 600px;
+}
+
 .text-container p {
   margin: 0 0 1rem;
 }
+
+.rounded-corners {
+  border-radius: 20px;
+}
+
 
 .App header .nav-ul {
   list-style: none;
@@ -340,6 +364,54 @@ filter: var(--light-color-filter-from-black);
   padding: 1rem 2rem;
 }
 
+/*----------- pictures, breakpoint 1000px ----------------------*/
+
+
+.aboutImageContainer, .project_photo_phone_width {
+  position: relative;
+  margin: 3rem 0;
+}
+
+
+.aboutImg, .project_photo_phone_width img {
+  max-width: 100%;
+  width: 600px;
+}
+
+.aboutImg {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  filter: brightness(0.9) contrast(1.1);
+}
+
+
+
+
+/*--------------*/
+
+/*--- techStack icons --------------*/
+
+.about__icons--stack {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: var(--accent-color);
+}
+
+.about__icons--stack svg {
+  height: 2rem;
+}
+
+.about__icons--stack svg > * {
+  fill: var(--accent-color);
+}
+
+/* .about__icons--stack svg .icon--lighter-color {
+  filter: brightness(120%);
+} */
+
+/*---------------*/
+
 
 /* mobile first */
 
@@ -357,8 +429,13 @@ filter: var(--light-color-filter-from-black);
 
 
 @media (min-width: 650px) {
-  header > *, main > *, aside > *, footer > * {
+  header > *, footer > * {
     width: 90%;
+  }
+
+  main > * {
+    width: 90%;
+    margin: 0 auto;
   }
 
   .App header .nav-li:hover {
@@ -445,6 +522,49 @@ filter: var(--light-color-filter-from-black);
   .buttons_container {
     gap: 2rem;
    }
+
+   /*--- pictures ----*/
+
+    .aboutImageContainer, .desktop-pictures-container {
+        width: 100%;
+        aspect-ratio: 4/3;
+        margin: 0;
+        position: relative;
+    }
+
+    .aboutImg, .desktop-pictures-container img {
+        width: 100%;
+    }
+
+    .desktop-pictures-container img {
+      cursor: pointer;
+      transition: filter ease .3s;
+    }
+
+  
+    .desktop-pictures-container img:hover {
+      filter: brightness(90%);
+    }
+
+
+    .aboutImageContainer::after, .desktop-pictures-container::after {
+        display: inline-block;
+        width: 100%;
+        aspect-ratio: 4/3;
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        content: '';
+        border: solid var(--color-text) .1rem;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
+        z-index: -1;
+    }
+
+    .light-mode .aboutImageContainer::after, .light-mode .desktop-pictures-container::after  {
+        border-image-slice: 0;
+        border-image-source: none;
+    }
 }
 
 @media (min-width: 1200px) {

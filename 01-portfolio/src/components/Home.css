@@ -55,19 +55,6 @@
 
 /*--------- ABOUT IMAGE ----------*/
 
-.aboutImageContainer {
-    position: relative;
-    margin: 3rem 0;
-}
-
-
-.aboutImg {
-    max-width: 100%;
-    width: 600px;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    filter: brightness(0.9) contrast(1.1);
-}
 
 
 /* --------------SKY------------------*/
@@ -300,40 +287,6 @@
 }
 
 
-@media (min-width: 1000px) {
-
-    
-
-        .aboutImageContainer {
-            width: 100%;
-            aspect-ratio: 4/3;
-            margin: 0;
-        }
-
-        .aboutImg {
-            max-width: 100%;
-            width: auto;
-        }
-
-        .aboutImageContainer::after {
-            display: inline-block;
-            width: 100%;
-            aspect-ratio: 4/3;
-            position: absolute;
-            left: 1rem;
-            top: 1rem;
-            content: '';
-            border: solid var(--color-text) .1rem;
-            border-image-slice: 1;
-            border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
-            z-index: -1;
-        }
-
-        .light-mode .aboutImageContainer::after  {
-            border-image-slice: 0;
-            border-image-source: none;
-        }
-}
 
 
 /*------zmenit sky na obloucek uprostred obrazovky pri >1400px */

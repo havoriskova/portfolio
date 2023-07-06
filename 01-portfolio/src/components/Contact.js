@@ -34,7 +34,7 @@ export default function Contact() {
                             </p>
                         </div>
 
-                        <form action="https://formsubmit.co/89f7a2105b81292e989a4eee19407380" method="POST" className='flex-container-col-2'>
+                        <form action="https://formsubmit.co/89f7a2105b81292e989a4eee19407380" method="POST" className='flex-container-col-2 contact__form'>
                             <input type="hidden" name="_subject" value="New message from portfolio page!" />
                             <input type="text" name="name" required placeholder='name'/>
                             <input type="email" name="email" required placeholder='email' />

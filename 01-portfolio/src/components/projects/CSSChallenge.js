@@ -43,7 +43,11 @@ const CSSChallenge = ({url}) => {
                     <img alt='' src={challengesForPhones}/>
                 </div>
 
-                <p>After starting the 100dayscss challenge in vanilla JS, I decided to redesign some of the challenges in React. That's why I created this responsive website to help me track my progress.</p>
+                <div  className='text-container'>
+                    <p>After starting the 100dayscss challenge in vanilla JS, I decided to redesign some of the challenges in React. 
+                    That's why I created this responsive website to help me track my progress.</p>
+                </div>
+                
 
                 <div className='buttons_container'>
                     <a className='primary-action-button' href='https://voriskova-css-challenge.netlify.app/' target='_blank' rel='noreferrer'>Visit website</a>

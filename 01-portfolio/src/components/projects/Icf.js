@@ -42,10 +42,13 @@ const Icf = ({url}) => {
                     <img alt='desktop and phone with open website' src={icfForPhones}/>
                 </div>
 
-                <p>I was working as web developer in an interdisciplinary group of students in order to create website for International Conservation Fund. 
-                    Wireframes were made by students of web design in Figma. 
+                <div  className='text-container'>
+                    <p>I was working as web developer in an interdisciplinary group of students in order to create website for International Conservation Fund. 
+                        Wireframes were made by students of web design in Figma. 
                     This website is made in Next.js, and it's connected to headless CMS Contentful.
                     For donating were used widgets from Donorbox and the Giving Block (crypto donating).</p>
+                </div>
+                
 
                 <div className='buttons_container'>
                     <a className='primary-action-button' href='https://icf-website-havoriskova.vercel.app/' target='_blank' rel='noreferrer'>Visit website</a>

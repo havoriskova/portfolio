@@ -42,8 +42,15 @@ const Planner = ({url}) => {
                     <img alt='desktop and phone with open website page' src={plannerForPhones}/>
                 </div>
 
-                <p>Monthly planner PDF generator that allows you to download a planner in your desired style. You can choose the color, font, language and space for notes.
-                It is possible to generate planner for the whole year or for just one month. Webpage is fully responsive. I was using 2 npm packages - html2canvas to save screenshots of planner into images and jsPDF for generating (multi-page) pdf from the images.</p>
+
+                <div  className='text-container'>
+                    <p>Monthly planner PDF generator that allows you to download a planner in your desired style. 
+                        You can choose the color, font, language and space for notes.
+                    It is possible to generate planner for the whole year or for just one month. Webpage is fully responsive. 
+                    I was using 2 npm packages - html2canvas to save screenshots of planner into images and jsPDF for generating (multi-page) pdf from the images.
+                    </p>
+                </div>
+                
 
                 <div className='buttons_container'>
                     <a className='primary-action-button' href='https://voriskova-planner.netlify.app/' target='_blank' rel='noreferrer'>Visit website</a>
