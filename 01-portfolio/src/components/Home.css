@@ -39,6 +39,10 @@
     line-height: 2.5rem;
 }
 
+/* .hero__h1--position {
+    color: var(--accent-color);
+} */
+
 .hero__socials {
     padding: 1.5rem 0;
     display: flex;

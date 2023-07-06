@@ -392,14 +392,21 @@ filter: var(--light-color-filter-from-black);
 /*--- techStack icons --------------*/
 
 .about__icons--stack {
-  display: flex;
+  /* display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   color: var(--accent-color);
+  font-size: .6rem;
+  text-align: center;
+  /* justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 4rem);
+  grid-gap: 1rem;
+  justify-content: space-between;
 }
 
 .about__icons--stack svg {
-  height: 2rem;
+  height: 3rem;
 }
 
 .about__icons--stack svg > * {

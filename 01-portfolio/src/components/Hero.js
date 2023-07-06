@@ -57,7 +57,7 @@ const Hero = () => {
                     </div>
                     
                     <div className='hero__heading'>
-                        <h1 className='hero__h1'><span>Hi, I'm Hana</span>{isDesctop ? ' | ' : ', '}<span>Frontend Developer</span></h1>
+                        <h1 className='hero__h1'><span>Hi, I'm Hana</span>{isDesctop ? ' | ' : ', '}<span className='hero__h1--position'>Frontend Developer</span></h1>
                         <div className='hero__socials'>
                             <div><a href="https://www.linkedin.com/in/hanavoriskova/?locale=en_US" rel="noreferrer" target='_blank'><img className='socials-img' alt='logo of linkedin' src={logoLinkedin}/></a></div>
                             <div><a href="https://github.com/havoriskova" rel="noreferrer" target='_blank'><img className='socials-img' alt='logo of github' src={logoGithub}/></a></div>
