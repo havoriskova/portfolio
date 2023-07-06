@@ -57,19 +57,24 @@
     transition: filter ease .3s;
 }
 
-.hero__svg--falcon {
+.hero__svg--move {
     position: absolute;
     transform: rotate(80deg);
+    left: 10%;
+    top: 10%;
+    animation-name: falconFlight;
+    animation-timing-function: cubic-bezier(0.75, 1, 0.1, 1); /*cubic-bezier(.03,.8,1,.34)
+    /* /* animation-timing-function: ease; */
+    animation-duration:  15s;
+    animation-iteration-count:  infinite;
+}
+
+
+.hero__svg--falcon {
     width: 50px;
     fill: var(--darkest-color);
     aspect-ratio: 1/1;
     z-index: 100;
-    left: 10%;
-    top: 10%;
-    animation-name: falconFlight;
-    animation-timing-function: cubic-bezier(0.75, 1, 0.1, 1); /*cubic-bezier(.03,.8,1,.34)*/
-    animation-duration:  15s;
-    animation-iteration-count:  infinite;
 }
 
 
@@ -90,8 +95,8 @@
         left: 110%;
     }
     
-}
-/*--------- ABOUT IMAGE ----------*/
+} 
+/*--------- ABOUT IMAGE ---------- */
 
 
 

@@ -1,33 +1,12 @@
-import { useState } from "react";
-
 
 export default function Falcon () {
 
-    let [animationPlayState, setAnimationPlayState] = useState('running');
-
-    function catchFalcon(e) {
-        console.log(e);
-        console.log(e.pageX);
-        // pauze the animation:
-        setAnimationPlayState('paused');
-
-        // follow the cursor, if it's within the parent div:
-
-
-        // if cursor leaves the parent div, continue the animation:
-
-    }
-
-    function continueAnimation(e) {
-            //continue the animation from current position to the ending point (transform:rotate(80deg), top:80%; left: 100%):
-            setAnimationPlayState('running');
-
-    }
 
     return (<>
-            <div onMouseEnter={(e) => catchFalcon(e)} onClick={(e) => continueAnimation(e)}>
-                <svg className='hero__svg--falcon' style={{animationPlayState: animationPlayState}} viewBox='0 0 140 140'><use href="#falcon"></use></svg>
+            <div className="hero__svg--move">
+                <svg className='hero__svg--falcon' viewBox='0 0 140 140'><use href="#falcon"></use></svg>
             </div>
+
 
             <div className='hidden'>
                     
