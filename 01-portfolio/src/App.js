@@ -21,6 +21,7 @@ class App extends Component {
     super(props);
     this.state = {
       isLoading: true,
+      mode: localStorage.getItem('mode') ? localStorage.getItem('mode') : 'nightMode',
     };
     this.toggleNavButton = (e) => {
       e.target.classList.toggle('active');
@@ -29,13 +30,23 @@ class App extends Component {
       // console.dir(e);
       // console.log(document.body);
       document.querySelector('.App').classList.toggle('light-mode');
+
+      if (document.querySelector('.App').classList.contains('light-mode')) {
+        localStorage.setItem('mode', 'lightMode');
+        this.setState(state => ({
+          mode: 'lightMode'
+        }))
+      } else {
+        localStorage.setItem('mode', 'nightMode');
+        this.setState(state => ({
+          mode: 'nightMode'
+        }))
+      }
     };
-    // localStorage function for remembering user's preference about dark/light mode:
-    //
     this.removeActiveNav = (e) => {setTimeout(() => {
       document.getElementById('toggleNavButton').classList.remove('active')}, 0)};
     this.myPage = (<BrowserRouter>
-      <div className="App">
+      <div className={(this.state.mode === 'nightMode') ? 'App' : 'App light-mode'}>
           <header>
             <div className='nav-icon' onClick={this.toggleNavButton} id="toggleNavButton"></div>
             <nav>
@@ -90,6 +101,9 @@ class App extends Component {
         this.myPage
       );
     };
+
+
+
     
 }}
 
