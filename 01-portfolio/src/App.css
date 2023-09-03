@@ -211,6 +211,18 @@ a {
   color: var(--light-color);
 }
 
+.button--show-more {
+      border-color: var(--light-color);
+      color: var(--light-color);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: all ease .5s;
+        /* because of the light/dark modes */
+      height: 4rem;
+      text-align: center;
+}
+
 
 .light-mode [class*='action-button'] {
   background: var(--color-text);
@@ -457,7 +469,7 @@ filter: var(--light-color-filter-from-black);
     filter: brightness(90%);
   }
 
-    [class*='action-button']:hover {
+    [class*='action-button']:hover, .button--show-more:hover {
     filter: brightness(80%);
   }
 
