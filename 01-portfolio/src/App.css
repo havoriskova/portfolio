@@ -549,10 +549,12 @@ filter: var(--light-color-filter-from-black);
         aspect-ratio: 4/3;
         margin: 0;
         position: relative;
+        display: grid;
     }
 
     .aboutImg, .desktop-pictures-container img {
         width: 100%;
+        position: absolute;
     }
 
     .desktop-pictures-container img {
@@ -566,21 +568,18 @@ filter: var(--light-color-filter-from-black);
     }
 
 
-    .aboutImageContainer::after, .desktop-pictures-container::after {
-        display: inline-block;
+    .aboutImageContainer .frame, .desktop-pictures-container .frame {
         width: 100%;
         aspect-ratio: 4/3;
         position: absolute;
         left: 1rem;
         top: 1rem;
-        content: '';
         border: solid var(--color-text) .1rem;
         border-image-slice: 1;
         border-image-source: linear-gradient(to left, var(--darkest-color), var(--light-color));
-        z-index: -1;
     }
 
-    .light-mode .aboutImageContainer::after, .light-mode .desktop-pictures-container::after  {
+    .light-mode .aboutImageContainer .frame, .light-mode .desktop-pictures-container .frame  {
         border-image-slice: 0;
         border-image-source: none;
     }

@@ -2,6 +2,7 @@ import headerWeather from '../../img/headers/WEATHER_APP_5_rem.png';
 import githubLogo from '../../img/github-logo.png';
 import phonePhotoWeather from '../../img/weather-for-phones.jpg';
 import weatherForDesktop from '../../img/photos-for-scrolling/weather.jpg';
+import weatherForDesktopTwo from '../../img/photos-for-scrolling/weatherTwoGallery.JPG';
 import {useState} from 'react';
 
 const Weather = ({url}) => {
@@ -58,7 +59,13 @@ const Weather = ({url}) => {
             </div>
             <div className="col-2">
                 <div className='desktop-pictures-container'>
+                    <div className='frame'></div>
                     <img alt='weather app' src={weatherForDesktop} loading="lazy" onClick={showPicture}/>
+                    <img alt='weather app' src={weatherForDesktopTwo} loading="lazy" onClick={showPicture}/>
+                    <div className='gallery-controls'>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
 
